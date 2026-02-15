@@ -16,6 +16,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 .nav a.active { background: #764ba2; }
 .day-section { background: white; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .day-header { font-size: 16px; font-weight: 600; color: #667eea; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; margin-bottom: 12px; }
+.day-summary { background: linear-gradient(135deg, #f0f4ff 0%, #fef9f0 100%); border-left: 3px solid #667eea; padding: 10px 14px; margin-bottom: 12px; border-radius: 0 6px 6px 0; font-size: 13.5px; color: #555; line-height: 1.7; }
 .entry { padding: 6px 0; border-bottom: 1px solid #f8f8f8; display: flex; align-items: flex-start; gap: 8px; font-size: 14px; }
 .entry:last-child { border-bottom: none; }
 .emoji { flex-shrink: 0; font-size: 16px; }
@@ -30,6 +31,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   body { background: #1a1a2e; color: #e0e0e0; }
   .day-section { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
   .day-header { color: #a29bfe; border-bottom-color: #2d3436; }
+  .day-summary { background: linear-gradient(135deg, #1a1a3e 0%, #2d2a1e 100%); border-left-color: #a29bfe; color: #ccc; }
   .entry { border-bottom-color: #2d3436; }
 }
 </style>
@@ -46,6 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-15 周日 · 5条提交</div>
+  <div class="day-summary">💡 今天主要完成了 MCP（Model Context Protocol）支持的集成工作，包括工具名称存储优化和公开接口调整。同时加强了 LLM 响应解析的稳健性，通过引入 json_repair 库提升系统容错能力。此外新增了自定义提供商配置指南，为用户扩展功能提供了更好的文档支持。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加自定义提供商指南</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 json_repair 进行稳健的 LLM 响应解析</span></div>
@@ -56,23 +59,25 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-14 周六 · 12条提交</div>
+  <div class="day-summary">💡 今天主要围绕内容处理和系统稳定性进行了重点优化，新增了富文本消息内容提取功能和本地化内容格式支持，特别是完善了飞书富文本内容接收能力。同时修复了时区计算、LLM调用参数配置等关键问题，并优化了用户引导流程，整体提升了系统的兼容性和用户体验。通过重构简化了时区逻辑，使代码更加清晰易维护。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持直接和本地化帖子内容格式</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加富文本消息内容提取功能</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">通过合并或覆盖提示改进入门体验</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">添加时区支持以准确计算下次运行时间</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 max_tokens/temperature 连接到所有聊天调用，清理冗余注释</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 temperature 参数添加缺失的逗号和类型注解</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新行数统计</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 .gitignore 以移除测试</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(providers): 在调用 LiteLLM 前将 max_tokens 限制为 &gt;= 1 (#617)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">support both direct and localized post content formats</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Add rich text message content extraction feature</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">improve onboard with merge-or-overwrite prompt</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">add timezone support for accurate next run time calculation</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">wire max_tokens/temperature to all chat calls, clean up redundant comments</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">add missing comma and type annotation for temperature param</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">update line count</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">update .gitignore to remove tests</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(providers): clamp max_tokens to &gt;= 1 before calling LiteLLM (#617)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">增加支持飞书富文本内容接收。Add support for receiving Feishu rich text content. (#629)</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">简化时区逻辑并合并条件分支</span></div>
-    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">tests: 更新 test_commands.py</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">simplify timezone logic and merge conditional branches</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">tests: update test_commands.py</span></div>
   </div>
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-13 周五 · 6条提交</div>
+  <div class="day-summary">💡 今天主要围绕入门体验优化和系统稳定性提升展开工作。重点实现了自定义提供商功能并优化了入门流程，移除了覆盖工作区的询问逻辑，提升了用户体验的流畅性。同时修复了 LiteLLM 调用中的 max_tokens 参数限制问题，并临时调整 max_messages 上限至 500 以解决消息处理瓶颈。通过代码重构进一步清理了入门相关逻辑，整体提升了系统的健壮性和用户友好度。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加自定义提供商和非破坏性入门</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新入门函数逻辑，不再询问是否覆盖工作区，因为...</span></div>
