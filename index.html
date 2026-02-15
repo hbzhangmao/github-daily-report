@@ -1,0 +1,1712 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GitHub 每日简报 - 2026-02-15</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+.header {
+    text-align: center;
+    padding: 30px 0 20px;
+    border-bottom: 1px solid #21262d;
+    margin-bottom: 30px;
+}
+.header h1 {
+    font-size: 28px;
+    color: #f0f6fc;
+    margin-bottom: 8px;
+}
+.header .subtitle {
+    color: #8b949e;
+    font-size: 14px;
+}
+.repo-section {
+    background: #161b22;
+    border: 1px solid #21262d;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+.repo-header {
+    padding: 20px 24px;
+    border-bottom: 1px solid #21262d;
+    background: #161b22;
+}
+.repo-header h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.repo-header h2 a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+.repo-header h2 a:hover {
+    text-decoration: underline;
+}
+.repo-stats {
+    color: #8b949e;
+    font-size: 13px;
+}
+.stat-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 2px;
+}
+.date-group {
+    padding: 0 24px;
+}
+.date-header {
+    padding: 14px 0 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f0f6fc;
+    border-bottom: 1px solid #21262d;
+}
+.date-count {
+    color: #8b949e;
+    font-weight: 400;
+    font-size: 12px;
+    margin-left: 8px;
+}
+.commit-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid #21262d10;
+}
+.commit-item:last-child {
+    border-bottom: none;
+}
+.commit-emoji {
+    font-size: 16px;
+    margin-right: 12px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+.commit-content {
+    flex: 1;
+    min-width: 0;
+}
+.commit-summary {
+    display: block;
+    color: #c9d1d9;
+    font-size: 14px;
+    word-break: break-word;
+}
+.commit-meta {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #8b949e;
+}
+.sha {
+    color: #58a6ff;
+    text-decoration: none;
+    font-family: monospace;
+}
+.sha:hover {
+    text-decoration: underline;
+}
+.author {
+    margin-left: 8px;
+}
+.pr-link {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+.pr-link:hover {
+    text-decoration: underline;
+}
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #484f58;
+    font-size: 12px;
+}
+@media (max-width: 600px) {
+    body { padding: 10px; }
+    .repo-header { padding: 14px 16px; }
+    .date-group { padding: 0 16px; }
+    .header h1 { font-size: 22px; }
+}
+</style>
+</head>
+<body>
+<div class="header">
+    <h1>📋 GitHub 每日简报</h1>
+    <div class="subtitle">最近 3 天动态 | 更新于 2026-02-15 18:40</div>
+</div>
+
+        <div class="repo-section">
+            <div class="repo-header">
+                <h2><a href="https://github.com/HKUDS/nanobot" target="_blank">📦 HKUDS/nanobot</a></h2>
+                <div class="repo-stats">共 52 条提交 | <span class="stat-badge" style="background:#2ecc7120;color:#2ecc71">新功能 15</span> <span class="stat-badge" style="background:#e74c3c20;color:#e74c3c">修复 13</span> <span class="stat-badge" style="background:#3498db20;color:#3498db">重构 2</span> <span class="stat-badge" style="background:#9b59b620;color:#9b59b6">文档 2</span> <span class="stat-badge" style="background:#f39c1220;color:#f39c12">测试 1</span> <span class="stat-badge" style="background:#1abc9c20;color:#1abc9c">发布 1</span> </div>
+            </div>
+            
+            <div class="date-group">
+                <div class="date-header">2026-02-15 <span class="date-count">7 条提交</span></div>
+                
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">fix: use json_repair for robust LLM response parsing <a href="https://github.com/HKUDS/nanobot/pull/664" target="_blank" class="pr-link">#664</a></span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/69f80ec" target="_blank" class="sha">69f80ec</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">use json_repair for robust LLM response parsing</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/49fec36" target="_blank" class="sha">49fec36</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">feat(tools): add mcp support <a href="https://github.com/HKUDS/nanobot/pull/554" target="_blank" class="pr-link">#554</a></span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/7288741" target="_blank" class="sha">7288741</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">store original MCP tool name, make close_mcp public</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/52cf1da" target="_blank" class="sha">52cf1da</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">merge main into pr-554</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/54d5f63" target="_blank" class="sha">54d5f63</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">add custom provider guideline</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/e2ef1f9" target="_blank" class="sha">e2ef1f9</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">Merge branch 'main' into pr-625</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/fd480bb" target="_blank" class="sha">fd480bb</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="date-group">
+                <div class="date-header">2026-02-14 <span class="date-count">15 条提交</span></div>
+                
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">fix(providers): clamp max_tokens to >= 1 before calling LiteLLM <a href="https://github.com/HKUDS/nanobot/pull/617" target="_blank" class="pr-link">#617</a></span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/3411035" target="_blank" class="sha">3411035</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">增加支持飞书富文本内容接收。Add support for receiving Feishu rich text content. <a href="https://github.com/HKUDS/nanobot/pull/629" target="_blank" class="pr-link">#629</a></span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/6e3f867" target="_blank" class="sha">6e3f867</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">support both direct and localized post content formats</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/5e08269" target="_blank" class="sha">5e08269</a>
+                            <span class="author">@C-Li</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">Add rich text message content extraction feature</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/4e4eb21" target="_blank" class="sha">4e4eb21</a>
+                            <span class="author">@C-Li</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">simplify timezone logic and merge conditional branches</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/d3f6c95" target="_blank" class="sha">d3f6c95</a>
+                            <span class="author">@C-Li</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">add timezone support for accurate next run time calculation</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/153c83e" target="_blank" class="sha">153c83e</a>
+                            <span class="author">@C-Li</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">wire max_tokens/temperature to all chat calls, clean up redundant comments</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/f821e95" target="_blank" class="sha">f821e95</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">merge: resolve conflict with main, keep extracted _run_agent_loop with temperatu</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/155fc48" target="_blank" class="sha">155fc48</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">📝</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">update line count</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/59d5e3c" target="_blank" class="sha">59d5e3c</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">add missing comma and type annotation for temperature param</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/2f2c55f" target="_blank" class="sha">2f2c55f</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">Merge branch 'main' into pr-560</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/9a83301" target="_blank" class="sha">9a83301</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">📝</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">update .gitignore to remove tests</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/d6d73c8" target="_blank" class="sha">d6d73c8</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">tests: update test_commands.py</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/3b580fd" target="_blank" class="sha">3b580fd</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">improve onboard with merge-or-overwrite prompt</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/12540ba" target="_blank" class="sha">12540ba</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">merge: resolve conflict with main, keep load-merge-save approach</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/835a10e" target="_blank" class="sha">835a10e</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="date-group">
+                <div class="date-header">2026-02-13 <span class="date-count">23 条提交</span></div>
+                
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">clamp max_tokens to >= 1 before calling LiteLLM (#523)</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/10e9e0c" target="_blank" class="sha">10e9e0c</a>
+                            <span class="author">@themavik</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">feat: add custom provider and non-destructive onboard <a href="https://github.com/HKUDS/nanobot/pull/604" target="_blank" class="pr-link">#604</a></span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/bc045fa" target="_blank" class="sha">bc045fa</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">add custom provider and non-destructive onboard</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/b76cf05" target="_blank" class="sha">b76cf05</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">increase max_messages to 500 as temporary workaround</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/a3f4bb7" target="_blank" class="sha">a3f4bb7</a>
+                            <span class="author">@chengyongru</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">cleaned up logic for onboarding</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/bd55bf5" target="_blank" class="sha">bd55bf5</a>
+                            <span class="author">@lukemilby</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">Merge branch 'HKUDS:main' into feature/onboard_workspace</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/a9d911c" target="_blank" class="sha">a9d911c</a>
+                            <span class="author">@lukemilby</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">updated logic for onboard function not ask for to overwrite workspace since the logic already e...</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/8a11490" target="_blank" class="sha">8a11490</a>
+                            <span class="author">@lukemilby</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">优化飞书卡片信息中的markdown标题显示 <a href="https://github.com/HKUDS/nanobot/pull/593" target="_blank" class="pr-link">#593</a></span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/3f59a8e" target="_blank" class="sha">3f59a8e</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">add comprehensive tests for consolidate offset functionality</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/afc8d50" target="_blank" class="sha">afc8d50</a>
+                            <span class="author">@chengyongru</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">useasyncio.create_task to avoid block</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/98a7624" target="_blank" class="sha">98a7624</a>
+                            <span class="author">@chengyongru</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">convert markdown headings to div elements in card messages</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/ccf9a6c" target="_blank" class="sha">ccf9a6c</a>
+                            <span class="author">@C-Li</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">history messages should not be change[kvcache]</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/740294f" target="_blank" class="sha">740294f</a>
+                            <span class="author">@chengyongru</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">update v0.1.3.post7 news</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/43e2f26" target="_blank" class="sha">43e2f26</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">📦</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">bump: 0.1.3.post7</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/202f0a3" target="_blank" class="sha">202f0a3</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">fix(security): bind WhatsApp bridge to localhost + optional token auth <a href="https://github.com/HKUDS/nanobot/pull/587" target="_blank" class="pr-link">#587</a></span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/92191ad" target="_blank" class="sha">92191ad</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">bind WhatsApp bridge to localhost + optional token auth</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/fd7e477" target="_blank" class="sha">fd7e477</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">Merge branch 'main' into fix/config-temperature</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/3e9f6d0" target="_blank" class="sha">3e9f6d0</a>
+                            <span class="author">@wymcmh</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">Add max iterations info to fallback message <a href="https://github.com/HKUDS/nanobot/pull/567" target="_blank" class="pr-link">#567</a></span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/5c398c5" target="_blank" class="sha">5c398c5</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">add venv/ to .gitignore</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/e1c359a" target="_blank" class="sha">e1c359a</a>
+                            <span class="author">@C-Li</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">align CLI session_id default to "cli:direct" for backward compatibility</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/32c9431" target="_blank" class="sha">32c9431</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">feat: add /new command <a href="https://github.com/HKUDS/nanobot/pull/569" target="_blank" class="pr-link">#569</a></span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/64feec6" target="_blank" class="sha">64feec6</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">unified slash commands (/new, /help) across all channels</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/903caaa" target="_blank" class="sha">903caaa</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">add feature to onboarding that will ask to generate missing workspace files</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/f016025" target="_blank" class="sha">f016025</a>
+                            <span class="author">@lukemilby</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="date-group">
+                <div class="date-header">2026-02-12 <span class="date-count">7 条提交</span></div>
+                
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">Merge branch 'HKUDS:main' into feat/add_new_command</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/0fc4f10" target="_blank" class="sha">0fc4f10</a>
+                            <span class="author">@Qinnnnnn</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">add /new command</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/24a90af" target="_blank" class="sha">24a90af</a>
+                            <span class="author">@Qinnnnnn</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">improve fallback message when max iterations reached</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/dbbbecb" target="_blank" class="sha">dbbbecb</a>
+                            <span class="author">@3927o</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">news about the redesigned memory system</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/890d7cf" target="_blank" class="sha">890d7cf</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🔀</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">feat: redesign memory system — two-layer architecture with grep-based retrieval <a href="https://github.com/HKUDS/nanobot/pull/565" target="_blank" class="pr-link">#565</a></span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/dd4c06b" target="_blank" class="sha">dd4c06b</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">redesign memory system — two-layer architecture with grep-based retrieval</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/94c21fc" target="_blank" class="sha">94c21fc</a>
+                            <span class="author">@Re-bin</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">bug #370, support temperature configuration</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/HKUDS/nanobot/commit/a3599b9" target="_blank" class="sha">a3599b9</a>
+                            <span class="author">@lemon</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="repo-section">
+            <div class="repo-header">
+                <h2><a href="https://github.com/OpenClaw/OpenClaw" target="_blank">📦 OpenClaw/OpenClaw</a></h2>
+                <div class="repo-stats">共 100 条提交 | <span class="stat-badge" style="background:#3498db20;color:#3498db">重构 57</span> <span class="stat-badge" style="background:#e74c3c20;color:#e74c3c">修复 21</span> <span class="stat-badge" style="background:#f39c1220;color:#f39c12">测试 13</span> <span class="stat-badge" style="background:#9b59b620;color:#9b59b6">文档 4</span> <span class="stat-badge" style="background:#2ecc7120;color:#2ecc71">新功能 2</span> <span class="stat-badge" style="background:#1abc9c20;color:#1abc9c">发布 1</span> <span class="stat-badge" style="background:#95a5a620;color:#95a5a6">配置 1</span> <span class="stat-badge" style="background:#f1c40f20;color:#f1c40f">性能 1</span> </div>
+            </div>
+            
+            <div class="date-group">
+                <div class="date-header">2026-02-15 <span class="date-count">100 条提交</span></div>
+                
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">stop dropping voice messages on getFile network errors (#16136) (#16154)</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/80abb5a" target="_blank" class="sha">80abb5a</a>
+                            <span class="author">@yinghaosang</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">apply telegram voice transcript body substitution (#16789) (thanks @Limitless2023) (#16970)</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/2fc479b" target="_blank" class="sha">2fc479b</a>
+                            <span class="author">@obviyus</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">include voice transcript in body text instead of raw audio (#16789)</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/b65b3c6" target="_blank" class="sha">b65b3c6</a>
+                            <span class="author">@Limitless2023</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">stabilize respawn + subagent usage assertions</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/229376f" target="_blank" class="sha">229376f</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">don't force store=true for codex responses</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/d306d59" target="_blank" class="sha">d306d59</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">📦</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">regenerate swift protocol models</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/cbd9395" target="_blank" class="sha">cbd9395</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share token usage formatting</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/dec28e5" target="_blank" class="sha">dec28e5</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe role snapshot parsing</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/46392e0" target="_blank" class="sha">46392e0</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share model alias line builder</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/cb2f978" target="_blank" class="sha">cb2f978</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe reaction listener params</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/913b137" target="_blank" class="sha">913b137</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe WhatsApp group + ack types</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/6e1b3ac" target="_blank" class="sha">6e1b3ac</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe inline action command handling</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/2c1a4dd" target="_blank" class="sha">2c1a4dd</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share channel access token resolver</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/eb79785" target="_blank" class="sha">eb79785</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe OpenAI default model apply</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/aa2d74a" target="_blank" class="sha">aa2d74a</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe command arg formatting</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/ceacc26" target="_blank" class="sha">ceacc26</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe outbound hook handling</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/a39a5a3" target="_blank" class="sha">a39a5a3</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe session usage patch updates</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/57d0130" target="_blank" class="sha">57d0130</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe web login provider checks</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/600260e" target="_blank" class="sha">600260e</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe model scan sorting</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/261e2c1" target="_blank" class="sha">261e2c1</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share batch create retry</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/ebb54d7" target="_blank" class="sha">ebb54d7</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe moonshot non-interactive auth</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/99da4c8" target="_blank" class="sha">99da4c8</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe probe auth resolution</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/6c7a7d9" target="_blank" class="sha">6c7a7d9</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share IPv4 input validator</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/4950fcf" target="_blank" class="sha">4950fcf</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe exec/fs zod schemas</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/cc2a63c" target="_blank" class="sha">cc2a63c</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe provider config + default model helpers</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/6217561" target="_blank" class="sha">6217561</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe component context + reaction timing</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/2bd672f" target="_blank" class="sha">2bd672f</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe browser download command</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/6491182" target="_blank" class="sha">6491182</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share toolResult details stripping</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/a4bf619" target="_blank" class="sha">a4bf619</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe workspace config prompt</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/55b7100" target="_blank" class="sha">55b7100</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe subagent announce flow</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/26bf041" target="_blank" class="sha">26bf041</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share formatting helpers</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/bdc3e44" target="_blank" class="sha">bdc3e44</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe session usage file resolution</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/2c5e24c" target="_blank" class="sha">2c5e24c</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe allow-from store updates</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/7793f2e" target="_blank" class="sha">7793f2e</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe model fallback candidate logic</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/ed03b83" target="_blank" class="sha">ed03b83</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe moonshot api key prompt</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/adee048" target="_blank" class="sha">adee048</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">Agents: add nested subagent orchestration controls and reduce subagent token waste (#14447)</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/b8f66c2" target="_blank" class="sha">b8f66c2</a>
+                            <span class="author">@tyler6204</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe config raw validation</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/c46f395" target="_blank" class="sha">c46f395</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe allowlist match selection</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/628c7b2" target="_blank" class="sha">628c7b2</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share turn validation skeleton</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/806c8b3" target="_blank" class="sha">806c8b3</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe firecrawl payload builder</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/485b78b" target="_blank" class="sha">485b78b</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe subagent announce cleanup</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/2f4b91d" target="_blank" class="sha">2f4b91d</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">avoid unsafe param stringification</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/a457782" target="_blank" class="sha">a457782</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe agent file request resolution</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/2fe16af" target="_blank" class="sha">2fe16af</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe route resolution</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/45f7ef1" target="_blank" class="sha">45f7ef1</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe portal CLI credential parsing</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/ef1f98e" target="_blank" class="sha">ef1f98e</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share allowFrom normalization</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/91c041e" target="_blank" class="sha">91c041e</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share deliver payload params</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/21df9eb" target="_blank" class="sha">21df9eb</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share reaction send helper</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/e163883" target="_blank" class="sha">e163883</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe exec spawn fallback wiring</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/a14d275" target="_blank" class="sha">a14d275</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe ws log meta formatting</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/50b7607" target="_blank" class="sha">50b7607</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe group gating history capture</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/10e6d92" target="_blank" class="sha">10e6d92</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe browser tab listing output</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/c1ad0e8" target="_blank" class="sha">c1ad0e8</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">cover deliver reply media kinds</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/12c37a9" target="_blank" class="sha">12c37a9</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe heartbeat ok sender</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/4295ff7" target="_blank" class="sha">4295ff7</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">expand send API coverage</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/ca97c47" target="_blank" class="sha">ca97c47</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe plugin install config wiring</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/29bec2b" target="_blank" class="sha">29bec2b</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">consolidate heartbeat runner tests</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/1b8dd2e" target="_blank" class="sha">1b8dd2e</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe update status formatting</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/47beace" target="_blank" class="sha">47beace</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">dedupe plugin SDK alias lookup</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/b93aa7f" target="_blank" class="sha">b93aa7f</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">extend crypto error util coverage</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/c2deba3" target="_blank" class="sha">c2deba3</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share allowlist user resolve helpers</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/f41f6d3" target="_blank" class="sha">f41f6d3</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">cover heartbeat runner branches</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/164c1a3" target="_blank" class="sha">164c1a3</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share directive handling params</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/48fd9d7" target="_blank" class="sha">48fd9d7</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">⚙️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">isolate profile hot-reload config refresh</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/64aff2d" target="_blank" class="sha">64aff2d</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share provider config merge helper</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/2b52ded" target="_blank" class="sha">2b52ded</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">📝</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">credit non-admin status redaction hardening</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/0954618" target="_blank" class="sha">0954618</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">redact sensitive status details for non-admin scopes</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/fac040c" target="_blank" class="sha">fac040c</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">⚡</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">split diagnostic session state module</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/0dec234" target="_blank" class="sha">0dec234</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share param-B inference</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/bbe3b2b" target="_blank" class="sha">bbe3b2b</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share tool call id extraction</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/21dfac9" target="_blank" class="sha">21dfac9</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">credit chat.send input hardening fix</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/186925f" target="_blank" class="sha">186925f</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">harden chat.send message input sanitization</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/a2fe3b6" target="_blank" class="sha">a2fe3b6</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share browser resize request</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/457e530" target="_blank" class="sha">457e530</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">raise node heap for CI vitest</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/3faf5ad" target="_blank" class="sha">3faf5ad</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share directive arg parsing</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/935ca39" target="_blank" class="sha">935ca39</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">credit #7010 NO_REPLY fallback fix</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/5c746d7" target="_blank" class="sha">5c746d7</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">suppress NO_REPLY final text when message tool already sent text</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/356ce76" target="_blank" class="sha">356ce76</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">consolidate deliver reply retry coverage</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/758fbc2" target="_blank" class="sha">758fbc2</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share daemon action reporting</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/8a50936" target="_blank" class="sha">8a50936</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">cover web reply delivery</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/21082f7" target="_blank" class="sha">21082f7</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">note tui external empty-final placeholder fix</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/e96229e" target="_blank" class="sha">e96229e</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">suppress false no-output placeholders for external empty finals</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/9f2cb3b" target="_blank" class="sha">9f2cb3b</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share response size limiter</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/b289441" target="_blank" class="sha">b289441</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">📝</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">note windows git-bash multiline paste fallback</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/7d89beb" target="_blank" class="sha">7d89beb</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">coalesce rapid git-bash submit bursts into multiline paste</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/cd53387" target="_blank" class="sha">cd53387</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">remove duplicate daemon-cli entry</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/d815c7c" target="_blank" class="sha">d815c7c</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">✨</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">cover newline preservation in submit and render paths</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/2facead" target="_blank" class="sha">2facead</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">add daemon-cli bundle for legacy shim</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/fa1aca8" target="_blank" class="sha">fa1aca8</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">📝</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">note daemon-cli compat shim hardening</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/135899d" target="_blank" class="sha">135899d</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">harden daemon compat shim for minimal bundle exports</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/277b2de" target="_blank" class="sha">277b2de</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">cover anthropic orphaned toolResult drop on provider switch</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/beee14d" target="_blank" class="sha">beee14d</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">restore daemon-cli legacy shim</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/9608504" target="_blank" class="sha">9608504</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share git install label formatting</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/887ca60" target="_blank" class="sha">887ca60</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">isolate imessage monitor tests from vmForks</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/3b08f30" target="_blank" class="sha">3b08f30</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">reuse lan ip picker</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/cc15b8c" target="_blank" class="sha">cc15b8c</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">♻️</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">share common server middleware</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/28014de" target="_blank" class="sha">28014de</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🐛</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">force store=true for direct openai responses</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/909b541" target="_blank" class="sha">909b541</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">📝</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">note openai responses store hardening</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/9020277" target="_blank" class="sha">9020277</a>
+                            <span class="author">@vignesh07</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">cover auto-reply util</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/6c38ffc" target="_blank" class="sha">6c38ffc</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="commit-item">
+                    <span class="commit-emoji">🧪</span>
+                    <div class="commit-content">
+                        <span class="commit-summary">streamline imessage monitor tests</span>
+                        <span class="commit-meta">
+                            <a href="https://github.com/OpenClaw/OpenClaw/commit/fa8aa84" target="_blank" class="sha">fa8aa84</a>
+                            <span class="author">@steipete</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="footer">
+    由 nanobot 🐈 自动生成 | 每天 09:00 更新
+</div>
+</body>
+</html>
