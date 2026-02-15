@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OpenClaw 每日简报</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
+.container { max-width: 800px; margin: 0 auto; padding: 16px; }
+.header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 24px; border-radius: 12px; margin-bottom: 20px; }
+.header h1 { font-size: 22px; margin-bottom: 8px; }
+.header .meta { font-size: 14px; opacity: 0.9; }
+.nav { margin-bottom: 16px; text-align: center; }
+.nav a { display: inline-block; padding: 8px 20px; margin: 4px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-size: 14px; }
+.nav a.active { background: #764ba2; }
+.day-section { background: white; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.day-header { font-size: 16px; font-weight: 600; color: #667eea; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; margin-bottom: 12px; }
+.entry { padding: 6px 0; border-bottom: 1px solid #f8f8f8; display: flex; align-items: flex-start; gap: 8px; font-size: 14px; }
+.entry:last-child { border-bottom: none; }
+.emoji { flex-shrink: 0; font-size: 16px; }
+.cat-tag { flex-shrink: 0; font-size: 11px; padding: 1px 6px; border-radius: 4px; color: white; }
+.tag-修复 { background: #e74c3c; } .tag-新功能 { background: #2ecc71; } .tag-重构 { background: #3498db; }
+.tag-文档 { background: #f39c12; } .tag-测试 { background: #9b59b6; } .tag-发布 { background: #1abc9c; }
+.tag-配置 { background: #95a5a6; } .tag-安全 { background: #e67e22; } .tag-性能 { background: #e91e63; }
+.tag-合并PR { background: #607d8b; } .tag-合并 { background: #607d8b; } .tag-其他 { background: #bdc3c7; }
+.summary { flex: 1; word-break: break-word; }
+.footer { text-align: center; color: #999; font-size: 12px; padding: 20px 0; }
+@media (prefers-color-scheme: dark) {
+  body { background: #1a1a2e; color: #e0e0e0; }
+  .day-section { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  .day-header { color: #a29bfe; border-bottom-color: #2d3436; }
+  .entry { border-bottom-color: #2d3436; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📋 OpenClaw/OpenClaw 简报</h1>
+    <div class="meta">更新于 2026-02-15 · 最近1天 · 共100条提交</div>
+  </div>
+  <div class="nav">
+    <a href="index.html" >nanobot</a>
+    <a href="openclaw.html" class=active>OpenClaw</a>
+  </div>
+  <div class="day-section">
+  <div class="day-header">2026-02-15 周日 · 100条提交</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复在 getFile 网络错误时丢弃语音消息的问题 (#16136) (#16154)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">应用 telegram 语音转录正文替换 (#16789) (感谢 @Limitle...</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在正文文本中包含语音转录而不是原始音频 (#16789)</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">稳定重生 + 子代理使用断言</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">不强制为 codex 响应设置 store=true</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">重新生成 swift 协议模型</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享令牌使用格式化</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重角色快照解析</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享模型别名行构建器</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重反应监听器参数</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重 WhatsApp 群组 + 确认类型</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重内联操作命令处理</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">共享频道访问令牌解析器</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重 OpenAI 默认模型应用</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重命令参数格式化</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重出站钩子处理</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">去重会话使用补丁更新</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重 web 登录提供商检查</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重模型扫描排序</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享批量创建重试</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重 moonshot 非交互式认证</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重探测认证解析</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享 IPv4 输入验证器</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重 exec/fs zod 模式</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重提供商配置 + 默认模型助手</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重组件上下文 + 反应时机</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重浏览器下载命令</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享 toolResult 详情剥离</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重工作区配置提示</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重子代理公告流程</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享格式化助手</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重会话使用文件解析</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重 allow-from 存储更新</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重模型回退候选逻辑</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重 moonshot API 密钥提示</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Agents: 添加嵌套子代理编排控制并减少子代理令牌...</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重配置原始验证</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重允许列表匹配选择</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享轮次验证骨架</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重 firecrawl 负载构建器</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重子代理公告清理</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">避免不安全的参数字符串化</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重代理文件请求解析</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重路由解析</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重门户 CLI 凭据解析</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享 allowFrom 规范化</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享传递负载参数</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享反应发送助手</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重执行生成回退连接</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重 ws 日志元数据格式化</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重组门控历史捕获</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重浏览器标签列表输出</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">覆盖传递回复媒体类型</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重心跳 ok 发送器</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">扩展发送 API 覆盖范围</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重插件安装配置连接</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">整合心跳运行器测试</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重更新状态格式化</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重插件 SDK 别名查找</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">扩展加密错误工具覆盖范围</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">共享允许列表用户解析助手</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">覆盖心跳运行器分支</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享指令处理参数</span></div>
+    <div class="entry"><span class="emoji">⚙️</span><span class="cat-tag tag-配置">配置</span><span class="summary">隔离配置文件热重载配置刷新</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享提供者配置合并助手</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">加强非管理员状态编辑强化</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为非管理员范围编辑敏感状态详情</span></div>
+    <div class="entry"><span class="emoji">⚡</span><span class="cat-tag tag-性能">性能</span><span class="summary">拆分诊断会话状态模块</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享参数B推理</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享工具调用ID提取</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加强chat.send输入强化修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">强化chat.send消息输入清理</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享浏览器调整大小请求</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">为CI vitest提升node堆内存</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享指令参数解析</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加强#7010 NO_REPLY回退修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当消息工具已发送文本时抑制NO_REPLY最终文本</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">整合交付回复重试覆盖</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享守护进程操作报告</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">覆盖web回复交付</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">注意tui外部空最终占位符修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">抑制外部空最终的虚假无输出占位符</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享响应大小限制器</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">注意windows git-bash多行粘贴回退</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将快速git-bash提交突发合并为多行粘贴</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除重复的daemon-cli条目</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">覆盖提交和渲染路径中的换行符保留</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为传统垫片添加daemon-cli包</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">注意daemon-cli兼容垫片强化</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为最小包导出强化守护进程兼容垫片</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">覆盖 anthropic 在提供商切换时的孤立 toolResult 丢弃</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">恢复 daemon-cli 遗留 shim</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享 git 安装标签格式化</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">将 imessage 监控测试从 vmForks 中隔离</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重用 lan ip 选择器</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享通用服务器中间件</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">对直接 openai 响应强制 store=true</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">注释 openai 响应存储加固</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">覆盖自动回复工具</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">简化 imessage 监控测试</span></div>
+  </div>
+</div>
+
+  <div class="footer">由 nanobot 自动生成 · 每日9点更新</div>
+</div>
+</body>
+</html>
