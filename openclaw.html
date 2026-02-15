@@ -16,6 +16,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 .nav a.active { background: #764ba2; }
 .day-section { background: white; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .day-header { font-size: 16px; font-weight: 600; color: #667eea; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; margin-bottom: 12px; }
+.day-summary { background: linear-gradient(135deg, #f0f4ff 0%, #fef9f0 100%); border-left: 3px solid #667eea; padding: 10px 14px; margin-bottom: 12px; border-radius: 0 6px 6px 0; font-size: 13.5px; color: #555; line-height: 1.7; }
 .entry { padding: 6px 0; border-bottom: 1px solid #f8f8f8; display: flex; align-items: flex-start; gap: 8px; font-size: 14px; }
 .entry:last-child { border-bottom: none; }
 .emoji { flex-shrink: 0; font-size: 16px; }
@@ -30,6 +31,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   body { background: #1a1a2e; color: #e0e0e0; }
   .day-section { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
   .day-header { color: #a29bfe; border-bottom-color: #2d3436; }
+  .day-summary { background: linear-gradient(135deg, #1a1a3e 0%, #2d2a1e 100%); border-left-color: #a29bfe; color: #ccc; }
   .entry { border-bottom-color: #2d3436; }
 }
 </style>
@@ -46,6 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-15 周日 · 26条提交</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于代理系统优化和消息处理稳定性提升，新增了嵌套子代理编排控制功能并优化了令牌使用效率。修复工作集中在语音转录处理、共享频道访问控制、消息输入验证等核心功能的稳定性问题上。同时完成了诊断会话状态模块的性能优化重构，并更新了 Swift 协议模型以保持接口一致性。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Agents: 添加嵌套子代理编排控制并减少子代理令牌...</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">覆盖提交和渲染路径中的换行符保留</span></div>
