@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-15 周日 · 5条提交</div>
-  <div class="day-summary">💡 今天主要完成了 MCP（Model Context Protocol）支持的集成工作，包括工具名称存储优化和公开接口调整。同时加强了 LLM 响应解析的稳健性，通过引入 json_repair 库提升系统容错能力。此外新增了自定义提供商配置指南，为用户提供更好的扩展性支持。</div>
+  <div class="day-summary">💡 今天主要完成了 MCP（Model Context Protocol）支持的集成工作，包括工具名称存储优化和公开接口调整。同时加强了 LLM 响应解析的稳健性，通过引入 json_repair 库提升系统容错能力。此外新增了自定义提供商配置指南，为用户扩展功能提供了更好的文档支持。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加自定义提供商指南</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 json_repair 进行稳健的 LLM 响应解析</span></div>
@@ -77,7 +77,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-13 周五 · 6条提交</div>
-  <div class="day-summary">💡 今天主要围绕入门体验优化和系统稳定性提升展开工作。重点实现了自定义提供商功能并优化了入门流程，移除了覆盖工作区的询问逻辑，提升了用户体验的流畅性。同时修复了 LiteLLM 调用中的 max_tokens 参数限制问题，并临时调整 max_messages 上限至 500 以解决消息处理瓶颈。通过代码重构进一步清理了入门相关逻辑，整体提升了系统的健壮性和易用性。</div>
+  <div class="day-summary">💡 今天主要围绕入门体验优化和系统稳定性提升展开工作。重点实现了自定义提供商功能并优化了入门流程，移除了覆盖工作区的询问逻辑，提升了用户体验的流畅性。同时修复了 LiteLLM 调用中的 token 限制问题，并临时调整消息数量上限至 500 以确保系统稳定运行。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加自定义提供商和非破坏性入门</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新入门函数逻辑，不再询问是否覆盖工作区，因为...</span></div>
