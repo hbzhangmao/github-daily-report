@@ -58,11 +58,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">🦀 OpenClaw 是一个开源的 AI 编程助手，支持终端交互式编码、多模型切换、MCP 工具集成等，致力于打造开放的 AI 编程生态。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/OpenClaw/OpenClaw" target="_blank">github.com/OpenClaw/OpenClaw</a> · ⭐ 197,699 stars · 🍴 34,531 forks</div>
+    <div class="intro-link">🔗 <a href="https://github.com/OpenClaw/OpenClaw" target="_blank">github.com/OpenClaw/OpenClaw</a> · ⭐ 197,704 stars · 🍴 34,532 forks</div>
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-16 周一 · 26条提交</div>
-  <div class="day-summary">💡 今天 OpenClaw 项目主要围绕功能增强和稳定性修复展开工作。新功能方面重点加强了 Discord 组件 UI 支持、配对命令的账户管理以及插件发布流程优化。修复工作集中在账户隔离、FTS 搜索的 Unicode 支持、配对存储作用域管理等核心功能的稳定性提升，确保系统在多账户环境下的安全性和可靠性。</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要围绕 Discord 组件 v2 UI 工具和配对功能进行了重要更新，新增了账户选择器、技能过滤器等核心功能模块。同时集中修复了内存刷新、FTS 分词、沙盒提示路径等多个关键问题，特别是在账户隔离和配对存储作用域方面进行了重要的安全性修复。整体工作重点在于功能扩展和系统稳定性提升，为平台的多账户管理和组件化架构奠定了基础。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Discord: 添加组件 v2 UI 工具支持 (#17419)</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为配对命令添加账户选择器</span></div>
@@ -70,25 +70,25 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加插件发布快速路径说明</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加访问和解析助手覆盖</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加更新摘要 + 时间戳的覆盖</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复内存刷新运行时日期问题</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">覆盖已解析的内存刷新提示语义</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将运行时日期时间注入内存刷新提示</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将无操作 editMessage 视为成功</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">归功于 unicode FTS 分词修复</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 FTS 查询构建器中支持 unicode 令牌</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">归功于沙盒提示路径指导修复</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在提示中澄清容器与主机工作区路径</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">归功于 control-ui 作用域绕过修复</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在绕过模式下保留 control-ui 作用域</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">归功于配对账户隔离修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 unicode FTS 分词问题</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 FTS 查询构建器中支持 unicode 标记</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复沙盒提示路径指导问题</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在提示中澄清容器与主机工作空间路径</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复控制 UI 作用域绕过问题</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在绕过模式下保留控制 UI 作用域</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复配对账户隔离问题</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用账户作用域的配对允许列表</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按账户划分配对存储作用域</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修正 cron isolated-agent run.ts 中的缩进</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将代理级技能过滤器传递给隔离的 cron 会话</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">归功于 qmd 会话集合重绑定修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 qmd 会话集合重绑定问题</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">重绑定漂移的托管集合路径</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">归功于入站元数据 id 修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复入站元数据 id 问题</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在受信任元数据中公开入站消息标识符</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当浏览器控制服务不可用时停止 LLM 重试循环 (#17673)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">始终在提示中包含长等待轮询指导</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">限制技能下载目标路径</span></div>
     <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 75 条较次要的提交未展示</span></div>
   </div>
 </div>
