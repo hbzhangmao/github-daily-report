@@ -27,11 +27,19 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 .tag-合并PR { background: #607d8b; } .tag-合并 { background: #607d8b; } .tag-其他 { background: #bdc3c7; }
 .summary { flex: 1; word-break: break-word; }
 .footer { text-align: center; color: #999; font-size: 12px; padding: 20px 0; }
+.project-intro { background: white; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #667eea; }
+.intro-text { font-size: 14px; color: #555; margin-bottom: 8px; line-height: 1.7; }
+.intro-link { font-size: 13px; }
+.intro-link a { color: #667eea; text-decoration: none; }
+.intro-link a:hover { text-decoration: underline; }
 @media (prefers-color-scheme: dark) {
   body { background: #1a1a2e; color: #e0e0e0; }
   .day-section { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
   .day-header { color: #a29bfe; border-bottom-color: #2d3436; }
   .day-summary { background: linear-gradient(135deg, #1a1a3e 0%, #2d2a1e 100%); border-left-color: #a29bfe; color: #ccc; }
+  .project-intro { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-left-color: #a29bfe; }
+  .intro-text { color: #ccc; }
+  .intro-link a { color: #a29bfe; }
   .entry { border-bottom-color: #2d3436; }
 }
 </style>
@@ -40,15 +48,21 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 HKUDS/nanobot 简报</h1>
-    <div class="meta">更新于 2026-02-16 · 最近3天 · 共18条提交</div>
+    <div class="meta">更新于 2026-02-16 · 最近3天 · 共17条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" class=active>nanobot</a>
     <a href="openclaw.html" >OpenClaw</a>
+    <a href="aionui.html" >AionUi</a>
+    <a href="moltis.html" >moltis</a>
+  </div>
+  <div class="project-intro">
+    <div class="intro-text">🤖 NanoBot 是一个轻量级 AI 助手框架，支持多渠道接入（飞书、钉钉等）、技能扩展、定时任务等功能。由 HKUDS 开发维护。</div>
+    <div class="intro-link">🔗 <a href="https://github.com/HKUDS/nanobot" target="_blank">github.com/HKUDS/nanobot</a></div>
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-15 周日 · 7条提交</div>
-  <div class="day-summary">💡 今天主要围绕 MCP（Model Context Protocol）支持进行了重要功能迭代，完成了 MCP 工具集成的核心开发并修复了相关稳定性问题。同时通过引入 json_repair 机制增强了 LLM 响应解析的鲁棒性，并更新了项目文档结构和自定义提供商使用指南。这些改进显著提升了系统的扩展性和用户体验。</div>
+  <div class="day-summary">💡 今天主要围绕 MCP（Model Context Protocol）支持功能的完善和稳定性提升展开工作。重点完成了 MCP 工具集成的核心功能开发，同时通过引入 json_repair 机制显著增强了 LLM 响应解析的鲁棒性。此外还更新了项目文档结构和自定义提供商使用指南，为用户提供更好的接入体验。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新新闻部分</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加自定义提供商指南</span></div>
@@ -60,14 +74,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
 </div>
 <div class="day-section">
-  <div class="day-header">2026-02-14 周六 · 5条提交</div>
-  <div class="day-summary">💡 今天主要围绕消息内容处理能力进行了重点优化，新增了本地化帖子内容格式支持和富文本消息提取功能，特别是完善了飞书富文本内容的接收处理。同时修复了 LiteLLM 调用时的 max_tokens 参数限制问题，并对时区处理逻辑进行了重构简化。整体工作聚焦在提升多平台消息格式兼容性和系统稳定性上。</div>
+  <div class="day-header">2026-02-14 周六 · 4条提交</div>
+  <div class="day-summary">💡 今天主要围绕消息内容处理能力进行了增强，新增了本地化帖子内容格式支持和富文本消息提取功能。同时完成了飞书富文本内容接收的集成工作，并修复了 LiteLLM 调用时的 max_tokens 参数限制问题。整体聚焦在提升多平台内容兼容性和消息处理的稳定性上。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持直接和本地化帖子内容格式</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加富文本消息内容提取功能</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(providers): 在调用 LiteLLM 前将 max_tokens 限制为 &gt;= 1 (#617)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">增加支持飞书富文本内容接收。Add support for receiving Feishu rich text content. (#629)</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">简化时区逻辑并合并条件分支</span></div>
   </div>
 </div>
 <div class="day-section">
