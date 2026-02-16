@@ -58,37 +58,37 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">🦀 OpenClaw 是一个开源的 AI 编程助手，支持终端交互式编码、多模型切换、MCP 工具集成等，致力于打造开放的 AI 编程生态。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/OpenClaw/OpenClaw" target="_blank">github.com/OpenClaw/OpenClaw</a> · ⭐ 197.8K · 🍴 34.6K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/OpenClaw/OpenClaw" target="_blank">github.com/OpenClaw/OpenClaw</a> · ⭐ 199.3K · 🍴 35.2K</div>
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-16 周一 · 26条提交</div>
-  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于系统稳定性和跨平台兼容性提升，新增了数组顺序哈希、跨平台安装回退机制以及 Discord 组件 v2 UI 工具支持等核心功能。修复工作集中在配置哈希优化、内存刷新机制完善和 FTS 查询的 Unicode 支持等关键问题上。同时加强了沙盒环境的安全性配置，并完善了插件发布流程的相关文档和工具链。</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要进行了大规模的代码清理和优化工作，集中移除了测试用例和断言中的重复代码，提升了代码质量和维护性。同时修复了多个关键问题，包括 WhatsApp 功能重复启用、斜杠命令与聊天回复的竞争条件，以及 CI/CD 流水线中的并发控制和 Docker 发布优化。此外还完善了 Android SDK 的 JDK 配置，并对消息处理逻辑进行了重构简化。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加数组顺序哈希并重新创建回归测试</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 status-to-install apt 回退覆盖</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为非 brew 环境添加跨平台安装回退 (#17687)</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Discord: 添加组件 v2 UI 工具支持 (#17419)</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为配对命令添加账户选择器</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为技能过滤器覆盖添加空技能边界情况</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加插件发布快速路径说明</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加访问和解析助手覆盖</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加更新摘要 + 时间戳的覆盖</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 docker 入门同步 pnpm 锁文件</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在配置哈希中保持数组顺序</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固上下文窗口缓存冲突</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在沙盒配置哈希中替换已弃用的 SHA-1</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">规范化技能过滤器快照并拆分隔离运行助手</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">支持传统 telegram allowFrom 迁移</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当 webhook 认证缺失时故障关闭</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复信用内存刷新运行时日期</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">覆盖已解析的内存刷新提示语义</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将运行时日期时间注入内存刷新提示</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将无操作 editMessage 视为成功</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复信用 unicode FTS 分词</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 FTS 查询构建器中支持 unicode 令牌</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复信用沙盒提示路径指导</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在提示中澄清容器与主机工作空间路径</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复信用控制 UI 范围绕过</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">移除重复的直接启用 whatsapp 确认变体</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">防止非中止斜杠命令与聊天回复竞争 (#17899)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除重复的 provider-prefix 断言变体</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除重复的 date-suffix 断言变体</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">精简重复的 latest-suffix 断言变体</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">精简 short-model 测试中重复的 provider-prefix 断言</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除冗余的身份 emoji response-prefix 用例</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 blacksmith runners 上运行范围检测</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除低价值的 resolveStorePath 波浪号展开单元用例</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在合并新推送时保持主运行存活</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按 ref 去重 docker 发布运行</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">跨工作流使用基于 ref 的并发</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按 ref 而非 sha 键入并发</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 Android SDK 设置使用 JDK 17</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除冗余的绝对 topic-suffix session-file 用例</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">简化 send/dispatch/target 处理 (#17819)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">移除低价值的锁队列清理记录用例</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">移除重复的锁队列清理成功用例</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">移除 split-tag 用例中重复的 replyToTag 断言</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">移除重复的 existing-id all-mode 规划器用例</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">精简重复的 first-mode hasReplied 断言变体</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">删除冗余的 off-mode hasReplied 断言</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">移除冗余的多变量模板解析用例</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">移除重复的 off-mode existing-id 规划器用例</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">移除重复的非日期负面用例断言</span></div>
     <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 75 条较次要的提交未展示</span></div>
   </div>
 </div>
