@@ -62,18 +62,19 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-16 周一 · 26条提交</div>
-  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于系统安全加固和稳定性提升，完成了多项关键安全修复包括 XSS 防护、路径清理、沙箱配置验证等。同时针对技能管理、会话处理、进程管理等核心模块进行了大量 bug 修复，并优化了异步定时器和 Telegram 机器人的性能表现。此外还完善了文档体系，特别是 Docker 构建和沙箱配置相关的指导文档。</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于系统稳定性和安全性提升，集中修复了多个关键 bug，包括会话管理、沙箱配置、Control UI 的 XSS 防护等安全加固工作。同时进行了性能优化，改进了异步定时器和 Telegram 机器人的处理效率。此外还完善了文档体系，更新了 Docker 构建和工具策略相关的使用指导。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加更新摘要 + 时间戳的覆盖率测试</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">始终在提示中包含长等待轮询指导</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">限制技能下载目标路径</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">限定会话工具和 webhook 密钥回退范围</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">保留沙箱 allow-all 语义</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将控制台前缀测试合并到日志记录器套件中</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">通过 skillName 去重原生技能命令 (#17365)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按 skillName 去重原生技能命令 (#17365)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在错误中隐藏 Telegram 机器人令牌</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">通过 channel_id 回退保留频道会话密钥 (#17622)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使 fast-tool 存根类型可移植</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固 pre-commit 钩子防止选项注入</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使快速工具存根类型可移植</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固预提交钩子防止选项注入</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复冲突标记</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">注明 Control UI XSS 修复</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">通过 JSON 端点加载 Control UI 引导配置</span></div>
@@ -81,7 +82,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固沙箱 docker 配置验证</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固提示路径清理</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">codex 和类似进程在 pty 上持续死亡，通过重构进程解决...</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">满足 server-method 代码检查</span></div>
     <div class="entry"><span class="emoji">⚡</span><span class="cat-tag tag-性能">性能</span><span class="summary">避免异步 cron 定时器回调</span></div>
     <div class="entry"><span class="emoji">⚡</span><span class="cat-tag tag-性能">性能</span><span class="summary">加速 telegram 机器人套件设置</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">移除意外的 a2ui 打包产物</span></div>
