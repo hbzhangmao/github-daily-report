@@ -62,7 +62,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-16 周一 · 26条提交</div>
-  <div class="day-summary">💡 OpenClaw 项目今天主要进行了代码质量优化工作，重点清理了测试用例和断言中的重复代码，移除了大量冗余的测试变体和低价值用例。同时修复了多个关键问题，包括 WhatsApp 功能重复启用、斜杠命令与聊天回复的竞争条件，以及 CI/CD 流水线中的并发控制和 Docker 发布优化。此外还完成了部分重构工作，简化了消息处理逻辑，并更新了 Android SDK 的 JDK 配置。</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要进行了大规模的代码清理和测试优化工作，集中移除了重复的测试用例、断言变体和冗余代码。同时修复了多个关键问题，包括 WhatsApp 功能重复启用、斜杠命令与聊天回复的竞争条件，以及 CI/CD 流水线中的并发控制和 Docker 发布优化。此外还完成了 Android SDK 的 JDK 17 升级和消息处理逻辑的简化重构。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">移除重复的直接启用 whatsapp 确认变体</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">防止非中止斜杠命令与聊天回复竞争 (#17899)</span></div>
@@ -71,12 +71,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">精简重复的 latest-suffix 断言变体</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">精简 short-model 测试中重复的 provider-prefix 断言</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除冗余的身份 emoji response-prefix 用例</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 blacksmith runners 上运行范围检测</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 blacksmith runners 上运行作用域检测</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除低价值的 resolveStorePath 波浪号展开单元用例</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在合并新推送时保持主运行存活</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按 ref 去重 docker 发布运行</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">跨工作流使用基于 ref 的并发</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按 ref 而非 sha 键入并发</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">跨工作流使用基于 ref 的并发控制</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 ref 而非 sha 作为并发键</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 Android SDK 设置使用 JDK 17</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除冗余的绝对 topic-suffix session-file 用例</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">简化 send/dispatch/target 处理 (#17819)</span></div>
