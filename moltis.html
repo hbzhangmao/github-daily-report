@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>moltis 每日简报</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
+.container { max-width: 800px; margin: 0 auto; padding: 16px; }
+.header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 24px; border-radius: 12px; margin-bottom: 20px; }
+.header h1 { font-size: 22px; margin-bottom: 8px; }
+.header .meta { font-size: 14px; opacity: 0.9; }
+.nav { margin-bottom: 16px; text-align: center; }
+.nav a { display: inline-block; padding: 8px 20px; margin: 4px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-size: 14px; }
+.nav a.active { background: #764ba2; }
+.day-section { background: white; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.day-header { font-size: 16px; font-weight: 600; color: #667eea; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; margin-bottom: 12px; }
+.day-summary { background: linear-gradient(135deg, #f0f4ff 0%, #fef9f0 100%); border-left: 3px solid #667eea; padding: 10px 14px; margin-bottom: 12px; border-radius: 0 6px 6px 0; font-size: 13.5px; color: #555; line-height: 1.7; }
+.entry { padding: 6px 0; border-bottom: 1px solid #f8f8f8; display: flex; align-items: flex-start; gap: 8px; font-size: 14px; }
+.entry:last-child { border-bottom: none; }
+.emoji { flex-shrink: 0; font-size: 16px; }
+.cat-tag { flex-shrink: 0; font-size: 11px; padding: 1px 6px; border-radius: 4px; color: white; }
+.tag-修复 { background: #e74c3c; } .tag-新功能 { background: #2ecc71; } .tag-重构 { background: #3498db; }
+.tag-文档 { background: #f39c12; } .tag-测试 { background: #9b59b6; } .tag-发布 { background: #1abc9c; }
+.tag-配置 { background: #95a5a6; } .tag-安全 { background: #e67e22; } .tag-性能 { background: #e91e63; }
+.tag-合并PR { background: #607d8b; } .tag-合并 { background: #607d8b; } .tag-其他 { background: #bdc3c7; }
+.summary { flex: 1; word-break: break-word; }
+.footer { text-align: center; color: #999; font-size: 12px; padding: 20px 0; }
+.project-intro { background: white; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #667eea; }
+.intro-text { font-size: 14px; color: #555; margin-bottom: 8px; line-height: 1.7; }
+.intro-link { font-size: 13px; }
+.intro-link a { color: #667eea; text-decoration: none; }
+.intro-link a:hover { text-decoration: underline; }
+@media (prefers-color-scheme: dark) {
+  body { background: #1a1a2e; color: #e0e0e0; }
+  .day-section { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  .day-header { color: #a29bfe; border-bottom-color: #2d3436; }
+  .day-summary { background: linear-gradient(135deg, #1a1a3e 0%, #2d2a1e 100%); border-left-color: #a29bfe; color: #ccc; }
+  .project-intro { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-left-color: #a29bfe; }
+  .intro-text { color: #ccc; }
+  .intro-link a { color: #a29bfe; }
+  .entry { border-bottom-color: #2d3436; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📋 moltis-org/moltis 简报</h1>
+    <div class="meta">更新于 2026-02-16 · 最近3天 · 共54条提交</div>
+  </div>
+  <div class="nav">
+    <a href="index.html" >nanobot</a>
+    <a href="openclaw.html" >OpenClaw</a>
+    <a href="aionui.html" >AionUi</a>
+    <a href="moltis.html" class=active>moltis</a>
+  </div>
+  <div class="project-intro">
+    <div class="intro-text">⚙️ Moltis 是一个用 Rust 构建的个人 AI 助手，单二进制文件部署，支持多 LLM 提供商、长期记忆、沙箱执行、语音交互、MCP 工具和多渠道接入（Web、Telegram、API）。</div>
+    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a></div>
+  </div>
+  <div class="day-section">
+  <div class="day-header">2026-02-16 周一 · 9条提交</div>
+  <div class="day-summary">💡 今天主要围绕系统稳定性和用户体验优化展开工作，重点解决了内存受限环境下的 Chromium 性能问题和多个界面交互缺陷。完成了 embeddings 配置规范化、沙盒检测逻辑修复、语音状态恢复等关键 bug 修复，同时新增了服务器启动时间显示功能提升运维可见性。发布了 0.8.35 版本并更新了相关文档链接，整体提升了系统的健壮性和可维护性。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在受限系统上自动注入低内存 Chromium 标志</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在引导页面底部显示服务器启动时间</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">规范化 embeddings base_url 并添加 disable_rag 模式 (#147)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将沙盒警告限制为 max-w-form 宽度</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当不存在容器运行时时 is_sandboxed() 返回 false</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在会话重新加载时恢复 voicePending 状态</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复禁用按钮渲染并添加验证进度提示</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.35</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 QMD 仓库链接至 github.com/tobi/qmd (#144)</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-15 周日 · 26条提交</div>
+  <div class="day-summary">💡 今天 moltis 项目主要围绕 AI 提供商集成和浏览器工具优化展开工作，新增了 Z.AI 和 MiniMax 等 OpenAI 兼容提供商支持，并实现了浏览器工具的自动安装和容器回退机制。同时完善了会话管理功能，包括工具卡片状态保持、内存管理优化和会话类型重构规划。此外修复了多个跨平台兼容性问题和 UI 交互细节，并完成了从 0.8.30 到 0.8.35 的多个版本迭代发布。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持 docker-compose 风格的健康检查 (#124)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 Z.AI (智谱) 作为 OpenAI 兼容提供商</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在页面重新加载时保留工具卡片中的推理文本</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">从 OpenAI 兼容提供商中移除 &lt;think&gt; 标签并添加 MiniMax</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">自动选择并安装浏览器工具后端 (#130)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加会话类型重构计划</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">引导 memory_save 指向主题文件以保持上下文精简</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在系统提示中添加 memory_save 和 memory-anchor 提示</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">浏览器工具在没有容器运行时时回退到主机</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除 clippy 标记的不必要路径限定</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 cfg 限制 macOS 专用沙盒助手以修复 Linux CI 上的死代码错误</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">环境注入、沙盒恢复、UI 修复、提供商改进 (#108)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 sessions.patch 驼峰命名、流式工件和主机工作目录</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除匹配分支中不必要的返回</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在入门测试中处理预配置的提供商</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 patch 和 voice_generate 添加类型化参数 (#131)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复跨运行时路径的 UTF-8 安全截断</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板到 0.8.34</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.35</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.34</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板到 0.8.33</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.33</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.32</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.31</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.30 发布</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 2 条较次要的提交未展示</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-14 周六 · 19条提交</div>
+  <div class="day-summary">💡 今天 moltis 项目主要围绕语音功能和引导体验进行了重点优化，新增了持久语音回退机制和引导提供商模型的计时日志功能。同时修复了多个关键问题，包括文件监视器、浏览器沙盒模式解析和密钥验证相关的 bug。项目还进行了密集的版本发布工作，连续推出了 0.8.26 到 0.8.29 四个版本，并优化了移动端用户体验和代码结构重构。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加持久语音回退和启动密钥/绑定横幅日志</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加引导提供商模型计时日志</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 MEMORY.md 注入系统提示并修复文件监视器</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">直接从 SandboxRouter 解析浏览器沙盒模式</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 provider-validation 中包含 saveProviderKey 提取</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将过期密钥测试与环境覆盖隔离</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.29</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.29 发布</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.28</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.28</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.27</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.26</span></div>
+    <div class="entry"><span class="emoji">⚙️</span><span class="cat-tag tag-配置">配置</span><span class="summary">在合并主分支基础上优化移动端引导/聊天 UX (#126)</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 README</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">清除星标历史图表缓存</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重新排序引导屏幕</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">提取共享语音、身份和频道工具</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">优化启动日志中设置代码横幅的强调</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">使提供商模型保存注册表刷新异步化</span></div>
+  </div>
+</div>
+
+  <div class="footer">由 nanobot 自动生成 · 每日9点更新</div>
+</div>
+</body>
+</html>
