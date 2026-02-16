@@ -40,7 +40,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 HKUDS/nanobot 简报</h1>
-    <div class="meta">更新于 2026-02-16 · 最近3天 · 共19条提交</div>
+    <div class="meta">更新于 2026-02-16 · 最近3天 · 共18条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" class=active>nanobot</a>
@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-15 周日 · 7条提交</div>
-  <div class="day-summary">💡 今天主要围绕 MCP（Model Context Protocol）支持进行了重要功能迭代，完成了 MCP 工具集成的核心开发并修复了相关稳定性问题。同时通过引入 json_repair 机制增强了 LLM 响应解析的鲁棒性，并完善了自定义提供商的使用文档。此外对项目文档结构进行了优化，提升了用户体验和开发者接入效率。</div>
+  <div class="day-summary">💡 今天主要围绕 MCP（Model Context Protocol）支持进行了重要功能迭代，完成了 MCP 工具集成的核心开发并修复了相关稳定性问题。同时通过引入 json_repair 机制增强了 LLM 响应解析的鲁棒性，并更新了项目文档结构和自定义提供商使用指南。这些改进显著提升了系统的扩展性和用户体验。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新新闻部分</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加自定义提供商指南</span></div>
@@ -60,12 +60,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
 </div>
 <div class="day-section">
-  <div class="day-header">2026-02-14 周六 · 6条提交</div>
-  <div class="day-summary">💡 今天主要围绕消息内容处理和时区功能进行了优化升级。新增了本地化帖子内容格式支持和富文本消息提取功能，特别是完善了飞书富文本内容的接收能力。同时修复了时区计算问题，确保定时任务的准确执行，并对相关代码逻辑进行了重构简化。</div>
+  <div class="day-header">2026-02-14 周六 · 5条提交</div>
+  <div class="day-summary">💡 今天主要围绕消息内容处理能力进行了重点优化，新增了本地化帖子内容格式支持和富文本消息提取功能，特别是完善了飞书富文本内容的接收处理。同时修复了 LiteLLM 调用时的 max_tokens 参数限制问题，并对时区处理逻辑进行了重构简化。整体工作聚焦在提升多平台消息格式兼容性和系统稳定性上。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持直接和本地化帖子内容格式</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加富文本消息内容提取功能</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">添加时区支持以准确计算下次运行时间</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(providers): 在调用 LiteLLM 前将 max_tokens 限制为 &gt;= 1 (#617)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">增加支持飞书富文本内容接收。Add support for receiving Feishu rich text content. (#629)</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">简化时区逻辑并合并条件分支</span></div>
