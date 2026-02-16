@@ -58,16 +58,24 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">⚙️ Moltis 是一个用 Rust 构建的个人 AI 助手，单二进制文件部署，支持多 LLM 提供商、长期记忆、沙箱执行、语音交互、MCP 工具和多渠道接入（Web、Telegram、API）。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 0.9K · 🍴 0.1K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 1.0K · 🍴 0.1K</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-16 周一 · 15条提交</div>
-  <div class="day-summary">💡 今天主要围绕系统兼容性和用户体验优化展开工作，新增了通用 OpenAI 兼容提供商支持，并针对受限环境优化了 Chromium 内存使用。修复了多个路径解析、数据存储和界面状态管理相关的问题，同时进行了路由结构重构，将独立的 crons 路由整合到设置页面中。整体提升了系统的稳定性和配置管理的一致性。</div>
+  <div class="day-header">2026-02-16 周一 · 23条提交</div>
+  <div class="day-summary">💡 今天 moltis 项目主要围绕安全性和兼容性增强展开工作，新增了 OAuth 2.1 支持、SSRF 防护和通用 OpenAI 兼容供应商等核心功能。同时进行了大量稳定性修复，重点解决了模型选择恢复、供应商错误重试、路径解析等关键问题。此外还优化了系统架构，移除了独立路由并改进了配置管理流程，整体提升了系统的健壮性和用户体验。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加通用 OpenAI 兼容提供商支持</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为远程 MCP 服务器添加 OAuth 2.1 支持 (#148)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在默认提供的供应商中启用 openrouter</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Docker 容器间网络的 SSRF 允许列表 (#146)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加通用 OpenAI 兼容供应商支持</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在受限系统上自动注入低内存 Chromium 标志</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在引导页面底部显示服务器启动时间</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 shell 钩子上设置 working_dir 以便相对路径正确解析</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">恢复已保存的模型选择并稳定 Anthropic e2e</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按消息排队频道回复，默认启用后续回复 (#150)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 web 和频道流程中重试供应商 429 错误 (#149)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">允许 openrouter 模型发现而无需模型 id</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">改进引导和供应商验证流程</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 shell 钩子上设置 working_dir 以正确解析相对路径</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 data_dir 进行作业存储而不是硬编码的 ~/.clawdbot/cron</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在设置中嵌入时隐藏 crons/heartbeat 子菜单</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">规范化嵌入 base_url 并添加 disable_rag 模式 (#147)</span></div>
@@ -75,9 +83,9 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当不存在容器运行时时 is_sandboxed() 返回 false</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在会话重新加载时恢复 voicePending 状态</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复禁用按钮渲染并添加验证进度提示</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板到 0.8.35</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">将部署模板更新到 0.8.35</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">在文档注释中用 data_dir 替换过时的 ~/.clawdbot 路径</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 QMD 仓库链接到 github.com/tobi/qmd (#144)</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">将 QMD 仓库链接更新为 github.com/tobi/qmd (#144)</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">移除独立的 /crons 路由，使用 /settings/crons</span></div>
   </div>
 </div>
@@ -114,26 +122,18 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
 </div>
 <div class="day-section">
-  <div class="day-header">2026-02-14 周六 · 18条提交</div>
-  <div class="day-summary">💡 今天主要完成了 moltis 项目的三个版本发布（0.8.27-0.8.29），重点优化了移动端用户体验和引导流程。新增了语音回退功能和多项日志记录能力，同时修复了文件监视器、沙盒模式解析等关键问题。此外还进行了代码重构，提取了共享工具模块，提升了系统的可维护性。</div>
+  <div class="day-header">2026-02-14 周六 · 10条提交</div>
+  <div class="day-summary">💡 今天主要完成了 moltis 项目 0.8.29 版本的发布准备工作，重点优化了语音功能的持久化回退机制和启动流程的日志记录。同时对移动端的引导和聊天用户体验进行了优化，修复了文件监视器相关问题并完善了系统提示注入功能。此外还对提供商模型的异步处理和启动界面的视觉效果进行了细节改进。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加持久语音回退和启动密钥/绑定横幅日志</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加引导提供商模型计时日志</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 MEMORY.md 注入系统提示并修复文件监视器</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">直接从 SandboxRouter 解析浏览器沙盒模式</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 provider-validation 中包含 saveProviderKey 提取</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将过期密钥测试与环境覆盖隔离</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.29</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.29 发布</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.28</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.28</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.27</span></div>
-    <div class="entry"><span class="emoji">⚙️</span><span class="cat-tag tag-配置">配置</span><span class="summary">在合并主分支基础上优化移动端引导/聊天 UX (#126)</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板到 0.8.29</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.29 版本发布</span></div>
+    <div class="entry"><span class="emoji">⚙️</span><span class="cat-tag tag-配置">配置</span><span class="summary">移动端引导/聊天 UX 优化基于合并的主分支 (#126)</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 README</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">清除星标历史图表缓存</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重新排序引导屏幕</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">提取共享语音、身份和频道工具</span></div>
-    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">优化启动日志中设置代码横幅的强调</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">优化启动日志中设置代码横幅的强调显示</span></div>
     <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">使提供商模型保存注册表刷新异步化</span></div>
   </div>
 </div>
