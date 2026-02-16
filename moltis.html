@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 moltis-org/moltis 简报</h1>
-    <div class="meta">更新于 2026-02-16 · 最近3天 · 共57条提交</div>
+    <div class="meta">更新于 2026-02-16 · 最近3天 · 共59条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -58,30 +58,31 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">⚙️ Moltis 是一个用 Rust 构建的个人 AI 助手，单二进制文件部署，支持多 LLM 提供商、长期记忆、沙箱执行、语音交互、MCP 工具和多渠道接入（Web、Telegram、API）。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 925 stars · 🍴 85 forks</div>
+    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 0.9K · 🍴 0.1K</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-16 周一 · 13条提交</div>
-  <div class="day-summary">💡 今天主要围绕系统稳定性和用户体验优化展开工作，重点解决了内存受限环境下的 Chromium 性能问题和数据存储路径规范化。修复了多个关键 bug，包括作业存储路径、嵌入设置、沙盒检测等核心功能问题，同时优化了 UI 交互体验。此外完成了路由重构和文档更新，发布了 0.8.35 版本。</div>
+  <div class="day-header">2026-02-16 周一 · 15条提交</div>
+  <div class="day-summary">💡 今天主要围绕系统兼容性和用户体验优化展开工作，新增了通用 OpenAI 兼容提供商支持，并针对受限环境优化了 Chromium 内存使用。修复了多个路径解析、数据存储和界面状态管理相关的问题，同时进行了路由结构重构，将独立的 crons 路由整合到设置页面中。整体提升了系统的稳定性和配置管理的一致性。</div>
   <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加通用 OpenAI 兼容提供商支持</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在受限系统上自动注入低内存 Chromium 标志</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在引导页面底部显示服务器启动时间</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 shell 钩子上设置 working_dir 以便相对路径正确解析</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 data_dir 进行作业存储而不是硬编码的 ~/.clawdbot/cron</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在设置中嵌入时隐藏 crons/heartbeat 子菜单</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">规范化 embeddings base_url 并添加 disable_rag 模式 (#147)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">规范化嵌入 base_url 并添加 disable_rag 模式 (#147)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将沙盒警告限制为 max-w-form 宽度</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当不存在容器运行时时 is_sandboxed() 返回 false</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在会话重新加载时恢复 voicePending 状态</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复禁用按钮渲染并添加验证进度提示</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.35</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">在文档注释中将过时的 ~/.clawdbot 路径替换为 data_dir</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 QMD 仓库链接至 github.com/tobi/qmd (#144)</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板到 0.8.35</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">在文档注释中用 data_dir 替换过时的 ~/.clawdbot 路径</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 QMD 仓库链接到 github.com/tobi/qmd (#144)</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">移除独立的 /crons 路由，使用 /settings/crons</span></div>
   </div>
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-15 周日 · 26条提交</div>
-  <div class="day-summary">💡 今天 moltis 项目主要围绕 AI 提供商集成和浏览器工具优化展开工作，新增了 Z.AI 和 MiniMax 等 OpenAI 兼容提供商支持，并实现了浏览器工具的自动安装和容器回退机制。同时完善了会话管理功能，包括工具卡片状态保持、内存管理优化和会话类型重构规划。此外修复了多个跨平台兼容性问题和 UI 交互细节，并完成了从 0.8.30 到 0.8.35 的多个版本迭代发布。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持 docker-compose 风格的健康检查 (#124)</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 Z.AI (智谱) 作为 OpenAI 兼容提供商</span></div>
