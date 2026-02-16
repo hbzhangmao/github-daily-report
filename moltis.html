@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 moltis-org/moltis 简报</h1>
-    <div class="meta">更新于 2026-02-16 · 最近3天 · 共53条提交</div>
+    <div class="meta">更新于 2026-02-16 · 最近3天 · 共57条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -61,18 +61,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 925 stars · 🍴 85 forks</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-16 周一 · 9条提交</div>
-  <div class="day-summary">💡 今天主要围绕系统稳定性和用户体验优化展开工作，重点解决了内存受限环境下的 Chromium 性能问题和多个界面交互缺陷。完成了 embeddings 配置规范化、沙盒检测逻辑修复、语音状态恢复等关键 bug 修复，同时新增了服务器启动时间显示功能提升运维可见性。发布了 0.8.35 版本并更新了相关文档链接，整体提升了系统的健壮性和可维护性。</div>
+  <div class="day-header">2026-02-16 周一 · 13条提交</div>
+  <div class="day-summary">💡 今天主要围绕系统稳定性和用户体验优化展开工作，重点解决了内存受限环境下的 Chromium 性能问题和数据存储路径规范化。修复了多个关键 bug，包括作业存储路径、嵌入设置、沙盒检测等核心功能问题，同时优化了 UI 交互体验。此外完成了路由重构和文档更新，发布了 0.8.35 版本。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在受限系统上自动注入低内存 Chromium 标志</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在引导页面底部显示服务器启动时间</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 data_dir 进行作业存储而不是硬编码的 ~/.clawdbot/cron</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在设置中嵌入时隐藏 crons/heartbeat 子菜单</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">规范化 embeddings base_url 并添加 disable_rag 模式 (#147)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将沙盒警告限制为 max-w-form 宽度</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当不存在容器运行时时 is_sandboxed() 返回 false</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在会话重新加载时恢复 voicePending 状态</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复禁用按钮渲染并添加验证进度提示</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.35</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">在文档注释中将过时的 ~/.clawdbot 路径替换为 data_dir</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 QMD 仓库链接至 github.com/tobi/qmd (#144)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">移除独立的 /crons 路由，使用 /settings/crons</span></div>
   </div>
 </div>
 <div class="day-section">
@@ -109,26 +113,26 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-14 周六 · 18条提交</div>
-  <div class="day-summary">💡 今天 moltis 项目主要围绕语音功能和引导体验进行了重点优化，新增了持久语音回退机制和引导提供商模型的性能监控日志。同时修复了多个关键问题，包括文件监视器、沙盒模式解析和密钥验证等核心功能的稳定性问题。项目还完成了 0.8.27-0.8.29 三个版本的连续发布，并对移动端用户体验和代码架构进行了优化重构。</div>
+  <div class="day-summary">💡 今天 moltis 项目主要围绕用户体验优化和系统稳定性提升展开工作。新增了持久语音回退功能和入门引导相关的日志记录能力，同时修复了文件监视器、沙盒模式解析等多个核心功能问题。项目完成了三个版本的迭代发布（0.8.27-0.8.29），并对移动端入门引导和聊天交互进行了重点优化。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加持久语音回退和启动密钥/绑定横幅日志</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加引导提供商模型计时日志</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加入门引导 provider 模型计时日志</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 MEMORY.md 注入系统提示并修复文件监视器</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">直接从 SandboxRouter 解析浏览器沙盒模式</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 provider-validation 中包含 saveProviderKey 提取</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将过期密钥测试与环境覆盖隔离</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.29</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.29 版本发布</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.29 发布</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.28</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.28 版本</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.27 版本</span></div>
-    <div class="entry"><span class="emoji">⚙️</span><span class="cat-tag tag-配置">配置</span><span class="summary">在合并主分支基础上优化移动端引导/聊天 UX (#126)</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.28</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.27</span></div>
+    <div class="entry"><span class="emoji">⚙️</span><span class="cat-tag tag-配置">配置</span><span class="summary">在合并主分支基础上优化移动端入门引导/聊天 UX (#126)</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 README</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">清除星标历史图表缓存</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重新排序引导界面</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重新排序入门引导屏幕</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">提取共享语音、身份和频道工具</span></div>
     <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">优化启动日志中设置代码横幅的强调显示</span></div>
-    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">使提供商模型保存注册表刷新异步化</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">使 provider 模型保存注册表刷新异步化</span></div>
   </div>
 </div>
 
