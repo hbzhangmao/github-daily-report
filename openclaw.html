@@ -58,37 +58,37 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">🦀 OpenClaw 是一个开源的 AI 编程助手，支持终端交互式编码、多模型切换、MCP 工具集成等，致力于打造开放的 AI 编程生态。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/OpenClaw/OpenClaw" target="_blank">github.com/OpenClaw/OpenClaw</a></div>
+    <div class="intro-link">🔗 <a href="https://github.com/OpenClaw/OpenClaw" target="_blank">github.com/OpenClaw/OpenClaw</a> · ⭐ 197,699 stars · 🍴 34,531 forks</div>
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-16 周一 · 26条提交</div>
-  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于系统稳定性和安全性提升，集中修复了多个关键 bug，包括会话管理、沙箱配置、Control UI 的 XSS 防护等安全加固工作。同时进行了性能优化，改进了异步定时器和 Telegram 机器人的处理效率。此外完善了项目文档和构建配置，为后续开发奠定了更稳固的基础。</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要围绕功能增强和稳定性修复展开工作。新功能方面重点加强了 Discord 组件 UI 支持、配对命令的账户管理以及插件发布流程优化。修复工作集中在账户隔离、FTS 搜索的 Unicode 支持、配对存储作用域管理等核心功能的稳定性提升，确保系统在多账户环境下的安全性和可靠性。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加更新摘要 + 时间戳的覆盖率测试</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Discord: 添加组件 v2 UI 工具支持 (#17419)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为配对命令添加账户选择器</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为技能过滤器覆盖添加空技能边界情况</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加插件发布快速路径说明</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加访问和解析助手覆盖</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加更新摘要 + 时间戳的覆盖</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将无操作 editMessage 视为成功</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">归功于 unicode FTS 分词修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 FTS 查询构建器中支持 unicode 令牌</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">归功于沙盒提示路径指导修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在提示中澄清容器与主机工作区路径</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">归功于 control-ui 作用域绕过修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在绕过模式下保留 control-ui 作用域</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">归功于配对账户隔离修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用账户作用域的配对允许列表</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按账户划分配对存储作用域</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修正 cron isolated-agent run.ts 中的缩进</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将代理级技能过滤器传递给隔离的 cron 会话</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">归功于 qmd 会话集合重绑定修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">重绑定漂移的托管集合路径</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">归功于入站元数据 id 修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在受信任元数据中公开入站消息标识符</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当浏览器控制服务不可用时停止 LLM 重试循环 (#17673)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">始终在提示中包含长等待轮询指导</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">限制技能下载目标路径</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">限定会话工具和 webhook 密钥回退范围</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">保留沙箱 allow-all 语义</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将控制台前缀测试合并到日志记录器套件中</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按 skillName 去重原生技能命令 (#17365)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在错误中隐藏 Telegram 机器人令牌</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">通过 channel_id 回退保留频道会话密钥 (#17622)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使快速工具存根类型可移植</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固预提交钩子防止选项注入</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复冲突标记</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">注明 Control UI XSS 修复</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">通过 JSON 端点加载 Control UI 引导配置</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">提供 Control UI 引导配置并锁定 CSP</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固沙箱 docker 配置验证</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固提示路径清理</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">codex 和类似进程在 pty 上持续死亡，通过重构进程解决...</span></div>
-    <div class="entry"><span class="emoji">⚡</span><span class="cat-tag tag-性能">性能</span><span class="summary">避免异步 cron 定时器回调</span></div>
-    <div class="entry"><span class="emoji">⚡</span><span class="cat-tag tag-性能">性能</span><span class="summary">加速 telegram 机器人套件设置</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">移除意外的 a2ui 打包产物</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">在入门 docker 构建中包含 a2ui 源码</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">合并 doctor 遗留迁移工具案例</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">合并 tool-policy + doctor 工作空间入口点</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新沙箱绑定挂载指导</span></div>
     <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 75 条较次要的提交未展示</span></div>
   </div>
 </div>
