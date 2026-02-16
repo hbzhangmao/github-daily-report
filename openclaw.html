@@ -40,42 +40,55 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 OpenClaw/OpenClaw 简报</h1>
-    <div class="meta">更新于 2026-02-15 · 最近1天 · 共26条提交</div>
+    <div class="meta">更新于 2026-02-16 · 最近2天 · 共33条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
     <a href="openclaw.html" class=active>OpenClaw</a>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-15 周日 · 26条提交</div>
-  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于代理系统优化和消息处理稳定性提升，新增了嵌套子代理编排控制功能并优化了令牌使用效率。修复工作集中在语音转录处理、共享频道访问控制、消息输入验证等核心功能的稳定性问题上。同时完成了诊断会话状态模块的性能优化重构，并更新了 Swift 协议模型以保持接口一致性。</div>
+  <div class="day-header">2026-02-16 周一 · 26条提交</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要围绕系统稳定性和代码质量进行了大量优化工作。新增了账户门控分享功能和 gateway cron webhook 机制，同时重点修复了沙箱配置、进程管理、会话映射等多个核心模块的稳定性问题。团队还进行了大量代码重构来提升模块间的代码复用，并加强了安全防护措施如提示路径清理和响应体大小限制。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Agents: 添加嵌套子代理编排控制并减少子代理令牌...</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">覆盖提交和渲染路径中的换行符保留</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">停止在 getFile 网络错误时丢弃语音消息 (#16136) (#16154)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">应用 telegram 语音转录正文替换 (#16789) (感谢 @Limitle...</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在正文文本中包含语音转录而不是原始音频 (#16789)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">不强制为 codex 响应设置 store=true</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">共享频道访问令牌解析器</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">去重会话使用补丁更新</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">避免不安全的参数字符串化</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">共享白名单用户解析助手</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为非管理员范围编辑敏感状态详情</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 chat.send 输入加固问题</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固 chat.send 消息输入清理</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 #7010 NO_REPLY 回退问题</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当消息工具已发送文本时抑制 NO_REPLY 最终文本</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">注意 tui 外部空最终占位符修复</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">抑制外部空最终的虚假无输出占位符</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将快速 git-bash 提交突发合并为多行粘贴</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除重复的 daemon-cli 条目</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为传统垫片添加 daemon-cli 包</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为最小包导出加固守护进程兼容垫片</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">恢复 daemon-cli 传统垫片</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为直接 openai 响应强制 store=true</span></div>
-    <div class="entry"><span class="emoji">⚡</span><span class="cat-tag tag-性能">性能</span><span class="summary">拆分诊断会话状态模块</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">重新生成 swift 协议模型</span></div>
-    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 75 条较次要的提交未展示</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">分享启用/配置的账户门控</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">gateway: 添加 cron 完成运行 webhook (#14535)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固沙箱 docker 配置验证</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固提示路径清理</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">codex 和类似进程在 pty 上持续死亡，通过重构进程解决...</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">满足 server-method lint 要求</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">收紧 threadId 类型以满足 lint 要求</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">去重出站媒体限制解析</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">删除未使用的 formatGatewayServiceDescription 导入</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">分享服务描述解析</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解析前限制响应体大小</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 ui cron 测试模拟签名</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">避免 gateway 锁中的 fake-timers 挂起</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 update-cli 环境恢复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 copilot 环境恢复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">保持启动会话临时性而不重映射主会话</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 gateway 重启间保持会话映射</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">在一个 CI 步骤中使用正确的 pnpm 缓存</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新沙箱绑定挂载指导</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">注明提示路径注入加固</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">分享 node.invoke 参数构建器</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">分享待配对表</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">分享成员访问状态</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">分享 chunkItems 助手</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">分享目录 allowFrom 解析</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 67 条较次要的提交未展示</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-15 周日 · 7条提交</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要围绕环境管理和认证模块进行了大规模重构优化。重点工作集中在简化配置 IO、网关 WebSocket 测试框架以及模型认证等核心组件的环境快照机制，通过去重和重用策略显著提升了环境恢复的效率。整体重构涉及认证选择、网关工具、入门认证等多个模块的环境清理逻辑，为系统的稳定性和可维护性奠定了更好的基础。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重认证选择环境清理</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">简化配置 IO 环境快照</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">在网关 WebSocket 测试框架中重用环境快照</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">清理网关工具环境恢复</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">简化模型认证环境恢复</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重入门认证环境清理</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重用环境快照助手</span></div>
   </div>
 </div>
 
