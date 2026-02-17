@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 moltis-org/moltis 简报</h1>
-    <div class="meta">更新于 2026-02-17 · 最近3天 · 共60条提交</div>
+    <div class="meta">更新于 2026-02-17 · 最近4天 · 共57条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -61,8 +61,22 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 1.0K · 🍴 0.1K</div>
   </div>
   <div class="day-section">
+  <div class="day-header">2026-02-17 周二 · 8条提交</div>
+  <div class="day-summary">💡 今天 moltis 项目主要围绕流式传输功能优化和系统稳定性提升展开工作。新增了带有回退机制的频道流式传输功能，同时修复了地图显示、命令执行和请求压缩等多个关键问题。项目完成了两个版本的迭代发布（0.8.37 和 0.8.38），体现了快速迭代和问题响应的开发节奏。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加带有 stream_mode 回退的频道流式传输 (#165)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">支持 show_map 多点和分组地图链接 (#168)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">要求显式使用 /sh 进行强制执行回退 (#161)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">基于下一请求上下文压力进行压缩 (#166)</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.38</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">0.8.38</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.37</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">0.8.37</span></div>
+  </div>
+</div>
+<div class="day-section">
   <div class="day-header">2026-02-16 周一 · 26条提交</div>
-  <div class="day-summary">💡 今天 moltis 项目主要围绕安全性和兼容性进行了重要升级，新增了 OAuth 2.1 认证、SSRF 防护和通用 OpenAI 兼容提供商支持。同时大量修复了沙箱环境、模型选择、消息队列等核心功能的稳定性问题，并优化了引导流程和错误重试机制。整体工作重点集中在提升系统安全性、扩展第三方集成能力以及增强用户体验的稳定性。</div>
+  <div class="day-summary">💡 今天 moltis 项目主要围绕安全性和兼容性进行了重要升级，新增了 OAuth 2.1 认证、Docker 网络 SSRF 防护和通用 OpenAI 兼容提供商支持。同时完成了大量稳定性修复，重点解决了沙箱环境、模型选择、频道回复和提供商验证等核心功能的可靠性问题。项目发布了 0.8.36 版本，整体朝着更安全、更稳定的方向迈进。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为远程 MCP 服务器添加 OAuth 2.1 支持 (#148)</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在默认提供的服务商中启用 openrouter</span></div>
@@ -80,7 +94,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">允许 openrouter 模型发现而无需模型 id</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">改进引导和提供商验证流程</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 shell 钩子上设置 working_dir 以正确解析相对路径</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 data_dir 进行作业存储而非硬编码的 ~/.clawdbot/cron</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 data_dir 存储作业而非硬编码的 ~/.clawdbot/cron</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在设置中嵌入时隐藏 crons/heartbeat 子菜单</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">规范化嵌入 base_url 并添加 disable_rag 模式 (#147)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将沙箱警告限制为 max-w-form 宽度</span></div>
@@ -93,25 +107,15 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
 </div>
 <div class="day-section">
-  <div class="day-header">2026-02-15 周日 · 24条提交</div>
-  <div class="day-summary">💡 今天 moltis 项目主要围绕 AI 提供商集成和系统稳定性进行了重点优化，新增了 Z.AI 和 MiniMax 等 OpenAI 兼容提供商支持，并完善了 docker-compose 健康检查和浏览器工具自动安装功能。同时修复了多个关键问题，包括内存管理、沙盒环境、UI 交互和跨平台兼容性问题，确保系统在不同运行环境下的稳定性。项目进行了密集的版本发布，从 0.8.31 连续更新至 0.8.35，体现了快速迭代和问题响应能力。</div>
+  <div class="day-header">2026-02-15 周日 · 13条提交</div>
+  <div class="day-summary">💡 今天 moltis 项目主要进行了稳定性修复和版本发布工作，集中解决了内存管理、系统提示、浏览器工具回退机制等核心功能问题。团队修复了跨平台兼容性问题，包括 macOS 沙盒助手的条件编译和 Linux CI 构建错误。同时完成了从 0.8.31 到 0.8.35 的连续版本迭代，表明项目正处于快速迭代优化阶段。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持 docker-compose 风格的健康检查 (#124)</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 Z.AI (智谱) 作为 OpenAI 兼容提供商</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在页面重新加载时保留工具卡片中的推理文本</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">从 OpenAI 兼容提供商中移除 &lt;think&gt; 标签并添加 MiniMax</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">自动选择并安装浏览器工具后端 (#130)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">引导 memory_save 使用主题文件以保持上下文精简</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">引导 memory_save 指向主题文件以保持上下文精简</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在系统提示中添加 memory_save 和 memory-anchor 提示</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当没有容器运行时时，浏览器工具回退到主机</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">browser 工具在没有容器运行时时回退到主机</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除 clippy 标记的不必要路径限定</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 cfg 限制 macOS 专用沙盒助手以修复 Linux CI 上的死代码错误</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 cfg 门控 macOS 专用沙盒助手以修复 Linux CI 上的死代码错误</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">环境注入、沙盒恢复、UI 修复、提供商改进 (#108)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 sessions.patch 驼峰命名、流式工件和主机工作目录</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除匹配分支中不必要的返回</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在入门测试中处理预配置的提供商</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 patch 和 voice_generate 添加类型化参数 (#131)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复跨运行时路径的 UTF-8 安全截断</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板到 0.8.34</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.35</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.34</span></div>
@@ -119,7 +123,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.33</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.32</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.31</span></div>
-    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">更新多个区域 (#94)</span></div>
   </div>
 </div>
 <div class="day-section">
