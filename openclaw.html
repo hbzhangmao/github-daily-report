@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 OpenClaw/OpenClaw 简报</h1>
-    <div class="meta">更新于 2026-02-16 · 最近2天 · 共33条提交</div>
+    <div class="meta">更新于 2026-02-17 · 最近3天 · 共59条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -58,38 +58,70 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">🦀 OpenClaw 是一个开源的 AI 编程助手，支持终端交互式编码、多模型切换、MCP 工具集成等，致力于打造开放的 AI 编程生态。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/OpenClaw/OpenClaw" target="_blank">github.com/OpenClaw/OpenClaw</a> · ⭐ 199.3K · 🍴 35.2K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/OpenClaw/OpenClaw" target="_blank">github.com/OpenClaw/OpenClaw</a> · ⭐ 201.6K · 🍴 36.1K</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-16 周一 · 26条提交</div>
-  <div class="day-summary">💡 今天 OpenClaw 项目主要进行了大规模的代码清理和优化工作，集中移除了测试用例和断言中的重复代码，提升了代码质量和维护性。同时修复了多个关键问题，包括 WhatsApp 功能重复启用、斜杠命令与聊天回复的竞争条件，以及 CI/CD 流水线中的并发控制和 Docker 发布优化。此外还完善了 Android SDK 的 JDK 配置，并对消息处理逻辑进行了重构简化。</div>
+  <div class="day-header">2026-02-17 周二 · 26条提交</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于代码重构和质量提升，通过大量的代码共享和去重工作来优化项目架构。同时修复了多个沙盒、URL 解析、格式化等关键功能的 bug，并新增了 ts-suppression 防护机制来增强系统安全性。整体工作体现了对代码质量和系统稳定性的持续改进，为项目的长期维护奠定了更好的基础。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">移除重复的直接启用 whatsapp 确认变体</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">防止非中止斜杠命令与聊天回复竞争 (#17899)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除重复的 provider-prefix 断言变体</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除重复的 date-suffix 断言变体</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">精简重复的 latest-suffix 断言变体</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">精简 short-model 测试中重复的 provider-prefix 断言</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除冗余的身份 emoji response-prefix 用例</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 blacksmith runners 上运行范围检测</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除低价值的 resolveStorePath 波浪号展开单元用例</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在合并新推送时保持主运行存活</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按 ref 去重 docker 发布运行</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">跨工作流使用基于 ref 的并发</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按 ref 而非 sha 设置并发键</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 Android SDK 设置使用 JDK 17</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除冗余的绝对 topic-suffix session-file 用例</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">简化 send/dispatch/target 处理 (#17819)</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">移除低价值的锁队列清理记录用例</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">移除重复的锁队列清理成功用例</span></div>
-    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">移除 split-tag 用例中重复的 replyToTag 断言</span></div>
-    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">移除重复的 existing-id all-mode 规划器用例</span></div>
-    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">精简重复的 first-mode hasReplied 断言变体</span></div>
-    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">删除冗余的 off-mode hasReplied 断言</span></div>
-    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">移除冗余的多变量模板解析用例</span></div>
-    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">移除重复的 off-mode existing-id 规划器用例</span></div>
-    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">移除重复的非日期负面用例断言</span></div>
-    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 75 条较次要的提交未展示</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 ts-suppression 防护机制</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">共享心跳沙盒固件</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 apply-patch 中重用沙盒路径扩展</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复格式化问题。</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">共享 URL 允许列表解析器</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">共享前缀目标解析</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复更多类型问题。</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 Oxlint/Oxfmt 忽略模式。</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">增加每次运行的过期操作数</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">替换内存管理器原型混合</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享嵌入式运行器溢出模拟</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重用运行时需求评估</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">集中化插件允许列表变更</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">去重进程范围锁映射</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享队列 JSONL 文件写入器</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重用共享运行结果遥测类型</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重用网关选项解析</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">集中化输入文件限制解析</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享更新通道显示 + 单行代码</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重用设备认证范围标准化</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享目标解析助手</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">整合嵌入和批处理助手</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重用嵌入式运行上下文助手</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">共享模型认证标签解析</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">去重命令生成测试工具</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 4 条较次要的提交未展示</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-16 周一 · 26条提交</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要围绕功能增强和系统稳定性优化展开工作。新增了会话导出、工具循环检测、bitable 应用创建等多项核心功能，同时完善了 OpenAI Codex CLI 认证和压缩摘要机制。修复方面重点解决了轮询调度、WhatsApp API 兼容性、Windows 路径映射等关键问题，并优化了错误显示和作业调度逻辑。整体上体现了产品功能迭代与工程质量并重的开发节奏。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">将导出会话别名添加到斜杠命令列表</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加可配置的工具循环检测</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在使用时间图表上双重处理范围选择</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 bitable 创建应用和创建字段工具</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 GOALS.md 和 SOUVENIR.md 模板文件</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在 retryAsync 中包装压缩 generateSummary</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 OpenAI Codex CLI 认证提供程序</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 /export-session 命令</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加压缩后读取审计（第3层）</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">将工作区关键规则附加到压缩摘要</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">提取共享会话目录解析器</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">保留覆盖并强化下次运行计算</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除重复的轮询调度分支</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">保持 whatsapp 发送 API 兼容性</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">批量合并后恢复主检查</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">同步生成的网关 swift 模型</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">保护循环检测整数解析</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">直接合并后恢复主 lint/typecheck</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解析 fs-path 映射中的 Windows 绑定挂载</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将代理应用到 app-id 和白名单 REST 查找</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除 renderContextPanel 中剩余的 timeSeriesCursor 引用</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将客户端日志限制与服务器上限（1000）对齐并移除未使用参数</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">显示所有提供程序错误而不是仅显示最后一个</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">防止作业在触发秒内完成时的自旋循环 (#17821)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">用 --muted 替换未定义的 --text-muted CSS 变量</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 44 条较次要的提交未展示</span></div>
   </div>
 </div>
 <div class="day-section">
