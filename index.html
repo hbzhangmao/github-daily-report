@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 HKUDS/nanobot 简报</h1>
-    <div class="meta">更新于 2026-02-16 · 最近4天 · 共18条提交</div>
+    <div class="meta">更新于 2026-02-17 · 最近4天 · 共33条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" class=active>nanobot</a>
@@ -58,26 +58,41 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">🤖 NanoBot 是一个轻量级 AI 助手框架，支持多渠道接入（飞书、钉钉等）、技能扩展、定时任务等功能。由 HKUDS 开发维护。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/HKUDS/nanobot" target="_blank">github.com/HKUDS/nanobot</a> · ⭐ 19.9K · 🍴 3.0K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/HKUDS/nanobot" target="_blank">github.com/HKUDS/nanobot</a> · ⭐ 20.4K · 🍴 3.1K</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-16 周一 · 1条提交</div>
-  <div class="day-summary">💡 今天主要针对 Codex 提供程序进行了错误修复和代码优化工作。通过简化实现逻辑，解决了现有的程序错误，提升了系统的稳定性和可维护性。这次修复为后续功能开发奠定了更可靠的基础。</div>
+  <div class="day-header">2026-02-16 周一 · 13条提交</div>
+  <div class="day-summary">💡 今天主要围绕消息格式化和平台兼容性进行了集中优化，重点加强了 Slack 和 Telegram 两个平台的消息处理能力。新增了 openclaw/clawhub 技能元数据格式支持，并通过智能分割和正则表达式优化解决了消息长度限制和格式化问题。同时修复了多个关键 bug，包括 Telegram 白名单匹配、Codex 提供程序错误等，整体提升了跨平台消息处理的稳定性和用户体验。</div>
   <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持 openclaw/clawhub 技能元数据格式</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为 Slack 消息添加表格转文本转换功能</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">使用新的正则表达式规则增强 Slack 消息格式化</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">通过智能分割处理 Telegram 消息长度限制</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 Telegram 命令白名单匹配提供一致的 sender_id</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决 Codex 提供程序错误并简化实现</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 Slack 频道中 URL 格式化的正则表达式</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 URL 和图片 URL 格式化的正则表达式</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">_forward_command 现在使用用户名构建 sender_id 以进行白名单匹配</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">slack: 使用 slackify-markdown 进行正确的 mrkdwn 格式化 (#717)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(telegram): 分割长消息以避免消息过长错误 (#694)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(telegram): 由于 sender_id 中缺少用户名导致斜杠命令访问检查失败 (#701)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">简化 Slack markdown 到 mrkdwn 的转换</span></div>
   </div>
 </div>
 <div class="day-section">
-  <div class="day-header">2026-02-15 周日 · 7条提交</div>
-  <div class="day-summary">💡 今天主要围绕 MCP（Model Context Protocol）支持功能的完善和稳定性提升展开工作。重点完成了 MCP 工具集成的核心功能开发，同时通过引入 json_repair 机制显著增强了 LLM 响应解析的鲁棒性。此外还更新了项目文档结构和自定义提供商配置指南，为用户提供更完整的使用体验。</div>
+  <div class="day-header">2026-02-15 周日 · 10条提交</div>
+  <div class="day-summary">💡 今天主要围绕消息处理和集成功能进行了重点优化，实现了 Slack 消息的 markdown 转换功能，并通过消息拆分和 json_repair 机制解决了长消息处理和 LLM 响应解析的稳定性问题。同时完成了 MCP 工具支持的集成工作，提升了系统的扩展性和可靠性。此外还更新了文档结构和自定义提供商指南，为用户提供更好的使用体验。</div>
   <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">实现 Slack 消息的 markdown 转换</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新新闻部分</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加自定义提供商指南</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">拆分长消息以避免消息过长错误</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 json_repair 进行稳健的 LLM 响应解析</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">存储原始 MCP 工具名称，将 close_mcp 设为公开</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 readme 结构</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 使用 json_repair 进行稳健的 LLM 响应解析 (#664)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(tools): 添加 mcp 支持 (#554)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(tools): 添加 MCP 支持 (#554)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将消息拆分提取为辅助函数</span></div>
   </div>
 </div>
 <div class="day-section">
