@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 moltis-org/moltis 简报</h1>
-    <div class="meta">更新于 2026-02-17 · 最近4天 · 共57条提交</div>
+    <div class="meta">更新于 2026-02-18 · 最近4天 · 共75条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -58,52 +58,68 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">⚙️ Moltis 是一个用 Rust 构建的个人 AI 助手，单二进制文件部署，支持多 LLM 提供商、长期记忆、沙箱执行、语音交互、MCP 工具和多渠道接入（Web、Telegram、API）。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 1.0K · 🍴 0.1K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 1.1K · 🍴 0.1K</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-17 周二 · 8条提交</div>
-  <div class="day-summary">💡 今天 moltis 项目主要围绕流式传输功能优化和系统稳定性提升展开工作。新增了带有回退机制的频道流式传输功能，同时修复了地图显示、命令执行和请求压缩等多个关键问题。项目完成了两个版本的迭代发布（0.8.37 和 0.8.38），体现了快速迭代和问题响应的开发节奏。</div>
+  <div class="day-header">2026-02-17 周二 · 26条提交</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加带有 stream_mode 回退的频道流式传输 (#165)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">支持 show_map 多点和分组地图链接 (#168)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">要求显式使用 /sh 进行强制执行回退 (#161)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">基于下一请求上下文压力进行压缩 (#166)</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.38</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">0.8.38</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.37</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">0.8.37</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add coolify docker-compose example (#177)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">render markdown and ansi tables in chat</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add provider-aware show_map links</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">cache session histories and show switch loader</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">compact prompt sections and add server runtime time</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add per-job model and execution target controls (#170)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add calver migration plan</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add calc tool for safe arithmetic evaluation</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add channel streaming with stream_mode fallback (#165)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">preserve datetime tail ordering and add profile plan</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">load runtime env keys and robustify brave parsing</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">append runtime datetime at prompt tail</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">clarify sandbox vs data_dir path semantics</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">align show_map listing ratings to the right</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">make DuckDuckGo fallback opt-in</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">persist browser timezone and expose prompt today</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">support marketplace skills[] repositories</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">make agent loop limit configurable and sync docs</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">support show_map multipoints and grouped map links (#168)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">require explicit /sh for forced exec fallback (#161)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">compact based on next-request context pressure (#166)</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">build CLI before ui e2e runs</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">update deploy templates to 0.9.0</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">0.9.0</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">update deploy templates to 0.8.38</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 5 条较次要的提交未展示</span></div>
   </div>
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-16 周一 · 26条提交</div>
-  <div class="day-summary">💡 今天 moltis 项目主要围绕安全性和兼容性进行了重要升级，新增了 OAuth 2.1 认证、Docker 网络 SSRF 防护和通用 OpenAI 兼容提供商支持。同时完成了大量稳定性修复，重点解决了沙箱环境、模型选择、频道回复和提供商验证等核心功能的可靠性问题。项目发布了 0.8.36 版本，整体朝着更安全、更稳定的方向迈进。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为远程 MCP 服务器添加 OAuth 2.1 支持 (#148)</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在默认提供的服务商中启用 openrouter</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Docker 容器间网络的 SSRF 允许列表 (#146)</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加通用 OpenAI 兼容提供商支持</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在受限系统上自动注入低内存 Chromium 标志</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在引导页面底部显示服务器启动时间</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">避免沙箱测试中的响应监听器竞争</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从 OpenAI 响应的工具模式中移除 oneOf</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">规范化简写 cron 工具输入</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固 apple 容器沙箱工作目录引导</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">恢复保存的模型选择并稳定 Anthropic e2e</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按消息排队频道回复，默认启用后续回复 (#150)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 web 和频道流程中重试提供商 429 错误 (#149)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">允许 openrouter 模型发现而无需模型 id</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">改进引导和提供商验证流程</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 shell 钩子上设置 working_dir 以正确解析相对路径</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 data_dir 存储作业而非硬编码的 ~/.clawdbot/cron</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在设置中嵌入时隐藏 crons/heartbeat 子菜单</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">规范化嵌入 base_url 并添加 disable_rag 模式 (#147)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将沙箱警告限制为 max-w-form 宽度</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当不存在容器运行时时 is_sandboxed() 返回 false</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在会话重新加载时恢复 voicePending 状态</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复禁用按钮渲染并添加验证进度提示</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板至 0.8.36</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.36</span></div>
-    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 4 条较次要的提交未展示</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add OAuth 2.1 support for remote MCP servers (#148)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">enable openrouter in default offered providers</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">SSRF allowlist for Docker inter-container networking (#146)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add generic OpenAI-compatible provider support</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">auto-inject low-memory Chromium flags on constrained systems</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">show server start time at bottom of onboarding</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">avoid response listener race in sandboxes test</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">remove oneOf from tool schema for OpenAI responses</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">normalize shorthand cron tool inputs</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">harden apple container sandbox workdir bootstrap</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">restore saved model selection and stabilize Anthropic e2e</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">queue channel replies per message with followup default (#150)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">retry provider 429s across web and channel flows (#149)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">allow openrouter model discovery without model id</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">improve onboarding and provider validation flows</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">set working_dir on shell hooks so relative paths resolve correctly</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">use data_dir for job storage instead of hardcoded ~/.clawdbot/cron</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">hide crons/heartbeat submenu when embedded in settings</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">normalize embeddings base_url and add disable_rag mode (#147)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">constrain sandbox warnings to max-w-form width</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">is_sandboxed() returns false when no container runtime exists</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">restore voicePending state on session reload</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">fix disabled button rendering and add validation progress hints</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">update deploy templates to 0.8.36</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">release 0.8.36</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 3 条较次要的提交未展示</span></div>
   </div>
 </div>
 <div class="day-section">
