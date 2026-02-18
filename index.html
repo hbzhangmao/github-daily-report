@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 HKUDS/nanobot 简报</h1>
-    <div class="meta">更新于 2026-02-17 · 最近5天 · 共41条提交</div>
+    <div class="meta">更新于 2026-02-18 · 最近5天 · 共54条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" class=active>nanobot</a>
@@ -58,44 +58,55 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">🤖 NanoBot 是一个轻量级 AI 助手框架，支持多渠道接入（飞书、钉钉等）、技能扩展、定时任务等功能。由 HKUDS 开发维护。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/HKUDS/nanobot" target="_blank">github.com/HKUDS/nanobot</a> · ⭐ 20.6K · 🍴 3.1K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/HKUDS/nanobot" target="_blank">github.com/HKUDS/nanobot</a> · ⭐ 21.0K · 🍴 3.2K</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-17 周二 · 12条提交</div>
-  <div class="day-summary">💡 今天主要完成了 ClawHub 技能系统的集成，支持从公共库搜索和安装代理技能，同时新增了 GitHub Copilot 作为服务提供商。修复了多个关键问题，包括助手消息空内容处理、时区调度和显示错误等稳定性问题。此外对认证机制进行了重构优化，使用标志位替代硬编码检查，提升了代码的可维护性。</div>
+  <div class="day-header">2026-02-17 周二 · 24条提交</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新 clawhub 新闻</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新 2月15/16日 新闻</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 ClawHub 技能，用于从公共库搜索和安装代理技能...</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在助手消息中省略空内容</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复时区显示错误，添加时区验证和技能文档</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">避免在助手消息中发送空内容条目</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">改进时区调度和时区传播</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 避免在助手消息中发送空内容条目 (#748)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: 添加 GitHub Copilot 作为提供商 (#720)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(cron): 为 cron 调度保留时区 (#744)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: 添加 ClawHub 技能 (#758)</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">使用 is_oauth 标志而不是硬编码的提供商名称检查</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">🐳 feat: add Docker Compose support for easy deployment</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">update clawhub news</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">update 15/16 Feb news</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add ClawHub skill for searching and installing agent skills from the public...</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Enable Cron management on CLI Agent.</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">Simplify Docker Compose docs and remove fixed CLI container name</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">mcpServers env variables should not be converted to snake case</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">omit empty content in assistant messages</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">fix timezone display bug, add tz validation and skill docs</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">avoid sending empty content entries in assistant messages</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">improve timezone scheduling and tz propagation</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">update security guideline</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">update line count</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: add Docker Compose support for easy deployment (#765)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">Enable Cron Tool on CLI Agent. (#746)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(config): mcpServers env variables should not be converted to snake case (#766)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: Allow Agent to upload media files (voice, pictures, documents) to Telegram Channel (#747)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: avoid sending empty content entries in assistant messages (#748)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: Added GitHub Copilot as Provider (#720)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(cron): preserve timezone for cron schedules (#744)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: add ClawHub skill (#758)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">clean up telegram media sending logic</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">use is_oauth flag instead of hardcoded provider name check</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">restore single-line formatting for readability</span></div>
   </div>
 </div>
 <div class="day-section">
-  <div class="day-header">2026-02-16 周一 · 14条提交</div>
-  <div class="day-summary">💡 今天主要围绕消息平台集成和AI服务提供商扩展进行了重点开发，新增了GitHub Copilot Provider支持和openclaw技能元数据格式兼容。针对Slack和Telegram平台的消息处理进行了大量优化，包括表格转换、消息格式化、长度限制处理等核心功能改进。同时修复了多个关键bug，特别是Telegram白名单匹配和Slack URL格式化问题，整体提升了多平台消息处理的稳定性和用户体验。</div>
+  <div class="day-header">2026-02-16 周一 · 15条提交</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 GitHub Copilot Provider</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持 openclaw/clawhub 技能元数据格式</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为 Slack 消息添加表格转文本转换功能</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">使用新的正则表达式规则增强 Slack 消息格式化</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">通过智能分割处理 Telegram 消息长度限制</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 Telegram 命令白名单匹配提供一致的 sender_id</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决 Codex provider 错误并简化实现</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 Slack 频道中 URL 格式化的正则表达式</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 URL 和图片 URL 格式化的正则表达式</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">_forward_command 现在使用用户名构建 sender_id 以进行白名单匹配</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">slack: 使用 slackify-markdown 进行正确的 mrkdwn 格式化 (#717)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(telegram): 分割长消息以避免消息过长错误 (#694)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(telegram): 由于 sender_id 中缺少用户名导致斜杠命令访问检查失败 (#701)</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">简化 Slack markdown 到 mrkdwn 的转换</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Added Github Copilot Provider</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">support openclaw/clawhub skill metadata format</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Add table-to-text conversion for Slack messages</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Enhance Slack message formatting with new regex rules</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">handle Telegram message length limit with smart splitting</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">consistent sender_id for Telegram command allowlist matching</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">resolve Codex provider bugs and simplify implementation</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">Fix regex for URL formatting in Slack channel</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">Fix regex for URL and image URL formatting</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">_forward_command now builds sender_id with username for allowlist matching</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">Handle media files (voice messages, audio, images, documents) on Telegram C...</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">slack: use slackify-markdown for proper mrkdwn formatting (#717)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(telegram): split long messages to avoid Message is too long error (#694)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(telegram): Slash commands failing access check due to missing username in sender_id (#701)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">simplify Slack markdown-to-mrkdwn conversion</span></div>
   </div>
 </div>
 <div class="day-section">
