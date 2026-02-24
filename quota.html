@@ -23,12 +23,12 @@ body { font-family: -apple-system,BlinkMacSystemFont,sans-serif; background:#0f1
 <body>
 <div class="header">
   <h1>📊 PPCHAT 配额监控</h1>
-  <div class="update">最后更新: 2026-02-24T19:50:20 · 数据点: 2 · 保留近7天</div>
+  <div class="update">最后更新: 2026-02-24T20:19:42 · 数据点: 3 · 保留近7天</div>
 </div>
 <div class="stats">
-  <div class="stat-card"><div class="label">剩余配额</div><div class="value green">70,299</div></div>
-  <div class="stat-card"><div class="label">今日已用</div><div class="value orange">80,551</div></div>
-  <div class="stat-card"><div class="label">今日充入</div><div class="value blue">150,850</div></div>
+  <div class="stat-card"><div class="label">剩余配额</div><div class="value green">63,695</div></div>
+  <div class="stat-card"><div class="label">今日已用</div><div class="value orange">87,190</div></div>
+  <div class="stat-card"><div class="label">今日充入</div><div class="value blue">150,885</div></div>
 </div>
 <div class="chart-container">
   <canvas id="chart"></canvas>
@@ -38,11 +38,11 @@ const ctx = document.getElementById('chart').getContext('2d');
 new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["02-24 19:49", "02-24 19:50"],
+    labels: ["02-24 19:49", "02-24 19:50", "02-24 20:19"],
     datasets: [
-      { label:'剩余配额', data:[70519, 70299], borderColor:'#4ade80', backgroundColor:'rgba(74,222,128,0.1)', fill:true, tension:0.3, pointRadius:2 },
-      { label:'今日已用', data:[80311, 80551], borderColor:'#fb923c', backgroundColor:'rgba(251,146,60,0.1)', fill:false, tension:0.3, pointRadius:2 },
-      { label:'今日充入', data:[150830, 150850], borderColor:'#60a5fa', backgroundColor:'rgba(96,165,250,0.1)', fill:false, tension:0.3, pointRadius:2 }
+      { label:'剩余配额', data:[70519, 70299, 63695], borderColor:'#4ade80', backgroundColor:'rgba(74,222,128,0.1)', fill:true, tension:0.3, pointRadius:2 },
+      { label:'今日已用', data:[80311, 80551, 87190], borderColor:'#fb923c', backgroundColor:'rgba(251,146,60,0.1)', fill:false, tension:0.3, pointRadius:2 },
+      { label:'今日充入', data:[150830, 150850, 150885], borderColor:'#60a5fa', backgroundColor:'rgba(96,165,250,0.1)', fill:false, tension:0.3, pointRadius:2 }
     ]
   },
   options: {
