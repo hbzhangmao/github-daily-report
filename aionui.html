@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 iOfficeAI/AionUi 简报</h1>
-    <div class="meta">更新于 2026-02-24 · 最近7天 · 共57条提交</div>
+    <div class="meta">更新于 2026-02-24 · 最近7天 · 共55条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -98,19 +98,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
 </div>
 <div class="day-section">
-  <div class="day-header">2026-02-22 周日 · 10条提交</div>
-  <div class="day-summary">💡 今天 AionUi 项目主要完成了 1.8.16 版本的发布，集中处理了模型预选择功能和 Codex ACP 迁移相关的开发工作。同时进行了多项 UI/UX 优化，包括对话预览布局、紧凑模型选择器以及首页和侧边栏的体验改进。此外修复了几个关键问题，特别是缓存机制的重试逻辑和进程管理方面的稳定性问题。</div>
+  <div class="day-header">2026-02-22 周日 · 8条提交</div>
+  <div class="day-summary">💡 今天 AionUi 项目主要围绕模型预选择功能和 ACP 缓存优化展开工作。完成了 Codex ACP 迁移相关的页面重构，同时修复了代理技能加载和进程管理方面的稳定性问题。通过多个 PR 合并和版本发布，项目升级至 1.8.16 版本，整体提升了系统的可靠性和用户体验。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">将 origin/main 合并到 feat/acp-cached-models-guid-preselect</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">跳过非预设代理的可选技能加载</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">提取 terminateChild 以防止重试时产生孤儿进程</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">缓存失败时自动重试不带 --prefer-offline 的 npx</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">缓存失败时自动重试 npx 而不使用 --prefer-offline</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">版本升级到 1.8.16</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">chore: 版本升级到 1.8.16 (#941)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(guid+acp): 模型预选择、Codex ACP 迁移、页面重构和骨架屏 (#932)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(acp): 缓存失败时自动重试不带 --prefer-offline 的 npx (#939)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(conversation): 预览布局、紧凑模型选择器、工具栏和侧边栏 UX (#934)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(guid,layout): 首页 UX 和侧边栏调整 (#933)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(guid+acp): 模型预选择、Codex ACP 迁移、页面重构和骨架 (#932)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(acp): 缓存失败时自动重试 npx 而不使用 --prefer-offline (#939)</span></div>
   </div>
 </div>
 <div class="day-section">
