@@ -48,19 +48,64 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 moltis-org/moltis 简报</h1>
-    <div class="meta">更新于 2026-02-18 · 最近4天 · 共75条提交</div>
+    <div class="meta">更新于 2026-02-24 · 最近7天 · 共99条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
     <a href="openclaw.html" >OpenClaw</a>
+    <a href="zeroclaw.html" >ZeroClaw</a>
+    <a href="zeptoclaw.html" >ZeptoClaw</a>
+    <a href="picoclaw.html" >PicoClaw</a>
     <a href="aionui.html" >AionUi</a>
     <a href="moltis.html" class=active>moltis</a>
   </div>
   <div class="project-intro">
     <div class="intro-text">⚙️ Moltis 是一个用 Rust 构建的个人 AI 助手，单二进制文件部署，支持多 LLM 提供商、长期记忆、沙箱执行、语音交互、MCP 工具和多渠道接入（Web、Telegram、API）。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 1.1K · 🍴 0.1K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 1.4K · 🍴 0.1K</div>
   </div>
   <div class="day-section">
+  <div class="day-header">2026-02-24 周二 · 4条提交</div>
+  <div class="day-summary">💡 今天主要围绕用户界面优化和功能完善展开工作，重点增强了仓库卡片的技能展示功能和身份选择器的交互体验。同时修复了功能标志转发的依赖问题，并进行了代码清理工作。整体聚焦在提升产品的用户体验和代码质量维护。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在仓库卡片中显示可浏览的技能列表</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">扩展身份 emoji 选择器选项 (#206)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将功能标志转发到 moltis-web 可选依赖</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">移除 validate.rs 中的尾随空白字符</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-23 周一 · 9条提交</div>
+  <div class="day-summary">💡 今天主要进行了架构重构和功能完善工作，将提供商实现提取到独立的 crate 中以优化代码结构。新增了频道图片传输功能，同时修复了语音配置传递、GraphQL 服务调用、会话管理等多个核心模块的问题。整体工作重点在于提升系统稳定性和模块化程度。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 send_image 工具用于频道图片传输 (#224)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">将提供商实现提取到新的 crate 中</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从配置中传递 speaking_rate、pitch 和 speed 到语音提供商 (#212)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在工具描述和模式中记录传输字段 (#213)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 GraphQL 中用直接服务特征调用替换 RPC 字符串分发 (#216)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复会话 id 类型、缺失的 ok 字段、聊天路由，并添加 session.activ...</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用精确文本匹配进行入门提供商行选择</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复提供商选择器和入门语音步骤测试</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">在提供商提取后重新格式化 Cargo.toml 文件</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-22 周日 · 11条提交</div>
+  <div class="day-summary">💡 今天主要进行了大规模的代码重构工作，将原有的单体架构拆分为多个独立的 crate 模块，包括 moltis-web、moltis-chat、moltis-auth 等核心组件的提取。同时完成了一些功能优化，添加了 Hacker News 集成功能，修复了 Docker 镜像版本标记问题，并对主题字段进行了合并简化。整体工作重点在于提升项目的模块化程度和代码组织结构，为后续开发奠定更好的架构基础。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 Hacker News 提及和问题行动号召</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">仅为最高 semver 版本的 Docker 镜像标记为 latest (#211)</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">在技能行中注明 OpenClaw Store 兼容性</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将 share_render.rs 从 gateway 移动到 moltis-web (阶段 1c)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">提取 moltis-chat crate (阶段 4)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">提取 moltis-provider-setup crate (阶段 3)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">提取 moltis-auth crate (阶段 2)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">提取 moltis-tls 和 moltis-tailscale crates (阶段 1)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">提取 moltis-service-traits crate (阶段 0)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将 creature+vibe 合并为单个主题字段</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将 web UI 提取到专用的 moltis-web crate</span></div>
+  </div>
+</div>
+<div class="day-section">
   <div class="day-header">2026-02-17 周二 · 26条提交</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add coolify docker-compose example (#177)</span></div>
