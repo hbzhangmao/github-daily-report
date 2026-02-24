@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZeroClaw 每日简报</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
+.container { max-width: 800px; margin: 0 auto; padding: 16px; }
+.header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 24px; border-radius: 12px; margin-bottom: 20px; }
+.header h1 { font-size: 22px; margin-bottom: 8px; }
+.header .meta { font-size: 14px; opacity: 0.9; }
+.nav { margin-bottom: 16px; text-align: center; }
+.nav a { display: inline-block; padding: 8px 20px; margin: 4px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-size: 14px; }
+.nav a.active { background: #764ba2; }
+.day-section { background: white; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.day-header { font-size: 16px; font-weight: 600; color: #667eea; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; margin-bottom: 12px; }
+.day-summary { background: linear-gradient(135deg, #f0f4ff 0%, #fef9f0 100%); border-left: 3px solid #667eea; padding: 10px 14px; margin-bottom: 12px; border-radius: 0 6px 6px 0; font-size: 13.5px; color: #555; line-height: 1.7; }
+.entry { padding: 6px 0; border-bottom: 1px solid #f8f8f8; display: flex; align-items: flex-start; gap: 8px; font-size: 14px; }
+.entry:last-child { border-bottom: none; }
+.emoji { flex-shrink: 0; font-size: 16px; }
+.cat-tag { flex-shrink: 0; font-size: 11px; padding: 1px 6px; border-radius: 4px; color: white; }
+.tag-修复 { background: #e74c3c; } .tag-新功能 { background: #2ecc71; } .tag-重构 { background: #3498db; }
+.tag-文档 { background: #f39c12; } .tag-测试 { background: #9b59b6; } .tag-发布 { background: #1abc9c; }
+.tag-配置 { background: #95a5a6; } .tag-安全 { background: #e67e22; } .tag-性能 { background: #e91e63; }
+.tag-合并PR { background: #607d8b; } .tag-合并 { background: #607d8b; } .tag-其他 { background: #bdc3c7; }
+.summary { flex: 1; word-break: break-word; }
+.footer { text-align: center; color: #999; font-size: 12px; padding: 20px 0; }
+.project-intro { background: white; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #667eea; }
+.intro-text { font-size: 14px; color: #555; margin-bottom: 8px; line-height: 1.7; }
+.intro-link { font-size: 13px; }
+.intro-link a { color: #667eea; text-decoration: none; }
+.intro-link a:hover { text-decoration: underline; }
+@media (prefers-color-scheme: dark) {
+  body { background: #1a1a2e; color: #e0e0e0; }
+  .day-section { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  .day-header { color: #a29bfe; border-bottom-color: #2d3436; }
+  .day-summary { background: linear-gradient(135deg, #1a1a3e 0%, #2d2a1e 100%); border-left-color: #a29bfe; color: #ccc; }
+  .project-intro { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-left-color: #a29bfe; }
+  .intro-text { color: #ccc; }
+  .intro-link a { color: #a29bfe; }
+  .entry { border-bottom-color: #2d3436; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📋 zeroclaw-labs/zeroclaw 简报</h1>
+    <div class="meta">更新于 2026-02-24 · 最近1天 · 共26条提交</div>
+  </div>
+  <div class="nav">
+    <a href="index.html" >nanobot</a>
+    <a href="openclaw.html" >OpenClaw</a>
+    <a href="zeroclaw.html" class=active>ZeroClaw</a>
+    <a href="zeptoclaw.html" >ZeptoClaw</a>
+    <a href="picoclaw.html" >PicoClaw</a>
+    <a href="aionui.html" >AionUi</a>
+    <a href="moltis.html" >moltis</a>
+  </div>
+  <div class="project-intro">
+    <div class="intro-text">⚡ ZeroClaw 是一个基于 Rust 的高性能 AI 编程助手，采用异步架构设计，支持多模态输入输出，具备强大的代码生成和分析能力。</div>
+    <div class="intro-link">🔗 <a href="https://github.com/zeroclaw-labs/zeroclaw" target="_blank">github.com/zeroclaw-labs/zeroclaw</a> · ⭐ 18.1K · 🍴 2.2K</div>
+  </div>
+  <div class="day-section">
+  <div class="day-header">2026-02-24 周二 · 26条提交</div>
+  <div class="day-summary">💡 今天 ZeroClaw 项目主要聚焦在测试覆盖率提升和核心功能稳定性优化，为多个关键模块（provider parser、telegram、shell 等）补充了回归测试。同时完善了 OAuth 认证流程，稳定了 Codex 和 Gemini 的集成，并新增了视觉支持和自动 token 刷新机制。此外还优化了用户体验，包括添加 /new 命令、改进浏览器调用逻辑、增强配置验证等功能。整体上是一个测试驱动的稳定性提升迭代，为项目的可靠性和易用性打下了更坚实的基础。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为 provider parser cron 和 telegram 添加回归测试覆盖</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">稳定 codex oauth 并添加 provider 模型连接工作流</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 mention_only 群组门控和 bot open_id 自动发现</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">向每条用户消息注入当前日期时间</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">使用系统默认浏览器而非硬编码的 Brave Browser (#1453)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 /new 命令清除对话历史 (#1417)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为硬件模块添加硬件特性条件编译</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在 OpenAI Codex 中将图片路径标准化为 data URI</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为 OpenAI Codex provider 添加视觉支持</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在预热时自动刷新过期的 Gemini OAuth tokens</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 list、set 和 status 子命令</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">记录查询分类路由决策</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加语言部分功能导航映射</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加更新和卸载指南</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">对未知配置键发出警告以防止静默配置错误 (#1410)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">稳定 composio slug 解析并移除 v2 回退</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">移除 TG CN/RU 徽章并添加 Facebook 群组链接</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 shell 一次性回归测试覆盖</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决 strict-delta clippy 阻塞问题</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 /api/config 中屏蔽 feishu/qdrant 和路由 API 密钥</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在网关 API 测试中使用 schema 配置类型</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固重定向/browser_open 并恢复屏蔽的密钥</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复发布工作流中的 shellcheck 引用</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 #1505 后的 loop_ 测试格式</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">改进工具调用解析和 shell 扩展检查</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 74 条较次要的提交未展示</span></div>
+  </div>
+</div>
+
+  <div class="footer">由 nanobot 自动生成 · 每日9点更新</div>
+</div>
+<a href="https://hbzhangmao.github.io/portal/" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(99,102,241,0.9);color:#fff;text-decoration:none;padding:6px 14px;border-radius:20px;font-size:13px;font-family:-apple-system,sans-serif;backdrop-filter:blur(8px);box-shadow:0 2px 8px rgba(0,0,0,0.3);transition:opacity 0.2s;opacity:0.7;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">🏠 导航</a>
+</body>
+</html>
