@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZeptoClaw 每日简报</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
+.container { max-width: 800px; margin: 0 auto; padding: 16px; }
+.header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 24px; border-radius: 12px; margin-bottom: 20px; }
+.header h1 { font-size: 22px; margin-bottom: 8px; }
+.header .meta { font-size: 14px; opacity: 0.9; }
+.nav { margin-bottom: 16px; text-align: center; }
+.nav a { display: inline-block; padding: 8px 20px; margin: 4px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-size: 14px; }
+.nav a.active { background: #764ba2; }
+.day-section { background: white; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.day-header { font-size: 16px; font-weight: 600; color: #667eea; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; margin-bottom: 12px; }
+.day-summary { background: linear-gradient(135deg, #f0f4ff 0%, #fef9f0 100%); border-left: 3px solid #667eea; padding: 10px 14px; margin-bottom: 12px; border-radius: 0 6px 6px 0; font-size: 13.5px; color: #555; line-height: 1.7; }
+.entry { padding: 6px 0; border-bottom: 1px solid #f8f8f8; display: flex; align-items: flex-start; gap: 8px; font-size: 14px; }
+.entry:last-child { border-bottom: none; }
+.emoji { flex-shrink: 0; font-size: 16px; }
+.cat-tag { flex-shrink: 0; font-size: 11px; padding: 1px 6px; border-radius: 4px; color: white; }
+.tag-修复 { background: #e74c3c; } .tag-新功能 { background: #2ecc71; } .tag-重构 { background: #3498db; }
+.tag-文档 { background: #f39c12; } .tag-测试 { background: #9b59b6; } .tag-发布 { background: #1abc9c; }
+.tag-配置 { background: #95a5a6; } .tag-安全 { background: #e67e22; } .tag-性能 { background: #e91e63; }
+.tag-合并PR { background: #607d8b; } .tag-合并 { background: #607d8b; } .tag-其他 { background: #bdc3c7; }
+.summary { flex: 1; word-break: break-word; }
+.footer { text-align: center; color: #999; font-size: 12px; padding: 20px 0; }
+.project-intro { background: white; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #667eea; }
+.intro-text { font-size: 14px; color: #555; margin-bottom: 8px; line-height: 1.7; }
+.intro-link { font-size: 13px; }
+.intro-link a { color: #667eea; text-decoration: none; }
+.intro-link a:hover { text-decoration: underline; }
+@media (prefers-color-scheme: dark) {
+  body { background: #1a1a2e; color: #e0e0e0; }
+  .day-section { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  .day-header { color: #a29bfe; border-bottom-color: #2d3436; }
+  .day-summary { background: linear-gradient(135deg, #1a1a3e 0%, #2d2a1e 100%); border-left-color: #a29bfe; color: #ccc; }
+  .project-intro { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-left-color: #a29bfe; }
+  .intro-text { color: #ccc; }
+  .intro-link a { color: #a29bfe; }
+  .entry { border-bottom-color: #2d3436; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📋 qhkm/zeptoclaw 简报</h1>
+    <div class="meta">更新于 2026-02-24 · 最近3天 · 共35条提交</div>
+  </div>
+  <div class="nav">
+    <a href="index.html" >nanobot</a>
+    <a href="openclaw.html" >OpenClaw</a>
+    <a href="zeroclaw.html" >ZeroClaw</a>
+    <a href="zeptoclaw.html" class=active>ZeptoClaw</a>
+    <a href="picoclaw.html" >PicoClaw</a>
+    <a href="aionui.html" >AionUi</a>
+    <a href="moltis.html" >moltis</a>
+  </div>
+  <div class="project-intro">
+    <div class="intro-text">⚡ ZeptoClaw 是一个轻量级但功能强大的 AI 编程助手，专注于快速响应和高精度代码生成，支持多语言项目智能分析。</div>
+    <div class="intro-link">🔗 <a href="https://github.com/qhkm/zeptoclaw" target="_blank">github.com/qhkm/zeptoclaw</a> · ⭐ 0.3K · 🍴 0.0K</div>
+  </div>
+  <div class="day-section">
+  <div class="day-header">2026-02-24 周二 · 3条提交</div>
+  <div class="day-summary">💡 今天主要围绕 ZeptoClaw 项目的安全加固展开工作，重点解决了内存污染、配置暴露、入站扫描和链式告警等关键安全问题。通过系统性的安全修复和功能文档更新，进一步提升了项目的安全防护能力。这些改进为后续的稳定运行奠定了更坚实的安全基础。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新 CLAUDE.md 添加安全加固功能</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">安全加固 — 内存污染、入站扫描、链式告警 (#124)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">内存污染、配置暴露、入站扫描、链式告警</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-23 周一 · 26条提交</div>
+  <div class="day-summary">💡 今天 ZeptoClaw 项目主要聚焦于系统稳定性和安全性提升，完成了监督器自动重启、自更新机制、Linux 沙箱运行时等核心功能开发。同时推进了技能发现与 CLI 工具链建设，并通过网关限流、内存优化等措施增强了系统的健壮性。修复了大量调度传递、序列化和配置相关的问题，为项目的生产环境部署奠定了坚实基础。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加监督器以自动重启死亡通道 (#117)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">自更新命令 (zeptoclaw update) (#111)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在 CLAUDE.md 快速参考中添加 cargo-release 命令</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Linux 沙箱运行时 (Landlock, Firejail, Bubblewrap) + shell 白名单 (#104)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 Linux 沙箱运行时实现计划</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 Linux 沙箱运行时设计 (Landlock, Firejail, Bubblewrap)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">通过 GitHub 源进行技能发现 + CLI 搜索/安装 (#102)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">内存改进 — 清理调度器 + 快照导出/导入 (#99)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">运维工具 — doctor, daemon, 健康注册表 (#97)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">网关安全 — 滑动窗口限流器 + 幂等性存储 (#95)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从 cargo install 中排除基准测试二进制文件 (#120)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">防止 cron, heartbeat, lark, gateway 中任务退出时的过期状态 (#118)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决 openai token 字段和工具序列化的代码审查问题</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">调度/传递错误 — 系统提示, cron 保留, heartbeat deliver_to...</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当批次包含文件系统写入器时序列化工具执行</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">跳过已知模型系列的 max_tokens→max_completion_tokens 重试</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">改进 deliver_to 文档注释并对无效格式发出警告</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">更新 HeartbeatService::new 调用以传递 channel + chat_id</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将未知通道警告降级为调试级别</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 deliver_to 配置连接到 HeartbeatService</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用清晰的 should_remove 变量重写保留逻辑</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在系统提示中添加 cron/heartbeat 消息处理</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">dptree 类型冲突自 v0.5.0 以来静默破坏了白名单 (#109)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">还原 "还原 "修复: 审查修复 — SSRF 边缘情况, PII 日志泄露, 沙箱强化...</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">还原 "修复: 审查修复 — SSRF 边缘情况, PII 日志泄露, 沙箱强化"</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 12 条较次要的提交未展示</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-22 周日 · 6条提交</div>
+  <div class="day-summary">💡 今天 ZeptoClaw 项目发布了 v0.5.0 版本，主要围绕多平台集成和运行时功能增强展开工作。新增了 Android 设备控制、WhatsApp Cloud 语音转录以及 Telegram 动态模型切换等核心功能，同时对 agent 运行时架构进行了重要改进。整体上项目在跨平台能力和智能交互体验方面取得了显著进展。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 Android 设备控制工具（功能门控）(#93)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">agent 运行时改进和平台功能 (#91)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">语音转录（WhatsApp Cloud）+ 更丰富的技能清单 (#84)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Telegram /model 命令用于运行时 LLM 切换 (#71)</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 v0.5.0</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 v0.5.0 文档</span></div>
+  </div>
+</div>
+
+  <div class="footer">由 nanobot 自动生成 · 每日9点更新</div>
+</div>
+<a href="https://hbzhangmao.github.io/portal/" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(99,102,241,0.9);color:#fff;text-decoration:none;padding:6px 14px;border-radius:20px;font-size:13px;font-family:-apple-system,sans-serif;backdrop-filter:blur(8px);box-shadow:0 2px 8px rgba(0,0,0,0.3);transition:opacity 0.2s;opacity:0.7;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">🏠 导航</a>
+</body>
+</html>
