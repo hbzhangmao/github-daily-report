@@ -23,11 +23,11 @@ body { font-family:-apple-system,BlinkMacSystemFont,sans-serif; background:#0f17
 <body>
 <div class="header">
   <h1>📊 PPCHAT 配额监控 - 剩余配额趋势</h1>
-  <div class="update">最后更新: 2026-02-24T20:26:20 · 数据点: 5 · 保留近7天</div>
+  <div class="update">最后更新: 2026-02-24T20:34:41 · 数据点: 6 · 保留近7天</div>
 </div>
 <div class="stats">
-  <div class="stat-card"><div class="label">剩余配额</div><div class="value green">62,985</div></div>
-  <div class="stat-card"><div class="label">今日已用</div><div class="value orange">87,900</div></div>
+  <div class="stat-card"><div class="label">剩余配额</div><div class="value green">62,290</div></div>
+  <div class="stat-card"><div class="label">今日已用</div><div class="value orange">88,595</div></div>
   <div class="stat-card"><div class="label">今日充入</div><div class="value blue">150,885</div></div>
 </div>
 <div class="chart-container">
@@ -39,21 +39,37 @@ new Chart(ctx, {
   type: 'line',
   data: {
     datasets: [
-      { label:"2026-02-24", data:[{"x": "19:49", "y": 70519}, {"x": "19:50", "y": 70299}, {"x": "20:19", "y": 63695}, {"x": "20:20", "y": 63485}, {"x": "20:26", "y": 62985}], borderColor:"#4ade80", backgroundColor:"transparent", tension:0.3, pointRadius:3, borderWidth:2 }
+      { label:"2026-02-24", data:[{"x": 1189, "y": 70519}, {"x": 1190, "y": 70299}, {"x": 1219, "y": 63695}, {"x": 1220, "y": 63485}, {"x": 1226, "y": 62985}, {"x": 1234, "y": 62290}], borderColor:"#4ade80", backgroundColor:"transparent", tension:0.3, pointRadius:3, borderWidth:2 }
     ]
   },
   options: {
     responsive: true,
-    parsing: { xAxisKey:'x', yAxisKey:'y' },
     plugins: {
       legend: { labels: { color:'#e2e8f0' } },
-      tooltip: { mode:'index', intersect:false }
+      tooltip: {
+        mode:'nearest', intersect:false,
+        callbacks: {
+          title: function(items) {
+            const m = items[0].parsed.x;
+            const hh = String(Math.floor(m/60)).padStart(2,'0');
+            const mm = String(m%60).padStart(2,'0');
+            return items[0].dataset.label + ' ' + hh + ':' + mm;
+          }
+        }
+      }
     },
     scales: {
       x: {
-        type: 'category',
-        labels: ['00:00','01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00'],
-        ticks: { color:'#94a3b8' },
+        type: 'linear',
+        min: 0,
+        max: 1440,
+        ticks: {
+          color:'#94a3b8',
+          stepSize: 60,
+          callback: function(v) {
+            return String(Math.floor(v/60)).padStart(2,'0') + ':00';
+          }
+        },
         grid: { color:'#334155' },
         title: { display:true, text:'时间', color:'#94a3b8' }
       },
