@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PicoClaw 每日简报</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
+.container { max-width: 800px; margin: 0 auto; padding: 16px; }
+.header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 24px; border-radius: 12px; margin-bottom: 20px; }
+.header h1 { font-size: 22px; margin-bottom: 8px; }
+.header .meta { font-size: 14px; opacity: 0.9; }
+.nav { margin-bottom: 16px; text-align: center; }
+.nav a { display: inline-block; padding: 8px 20px; margin: 4px; background: #667eea; color: white; text-decoration: none; border-radius: 8px; font-size: 14px; }
+.nav a.active { background: #764ba2; }
+.day-section { background: white; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.day-header { font-size: 16px; font-weight: 600; color: #667eea; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; margin-bottom: 12px; }
+.day-summary { background: linear-gradient(135deg, #f0f4ff 0%, #fef9f0 100%); border-left: 3px solid #667eea; padding: 10px 14px; margin-bottom: 12px; border-radius: 0 6px 6px 0; font-size: 13.5px; color: #555; line-height: 1.7; }
+.entry { padding: 6px 0; border-bottom: 1px solid #f8f8f8; display: flex; align-items: flex-start; gap: 8px; font-size: 14px; }
+.entry:last-child { border-bottom: none; }
+.emoji { flex-shrink: 0; font-size: 16px; }
+.cat-tag { flex-shrink: 0; font-size: 11px; padding: 1px 6px; border-radius: 4px; color: white; }
+.tag-修复 { background: #e74c3c; } .tag-新功能 { background: #2ecc71; } .tag-重构 { background: #3498db; }
+.tag-文档 { background: #f39c12; } .tag-测试 { background: #9b59b6; } .tag-发布 { background: #1abc9c; }
+.tag-配置 { background: #95a5a6; } .tag-安全 { background: #e67e22; } .tag-性能 { background: #e91e63; }
+.tag-合并PR { background: #607d8b; } .tag-合并 { background: #607d8b; } .tag-其他 { background: #bdc3c7; }
+.summary { flex: 1; word-break: break-word; }
+.footer { text-align: center; color: #999; font-size: 12px; padding: 20px 0; }
+.project-intro { background: white; border-radius: 10px; padding: 16px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #667eea; }
+.intro-text { font-size: 14px; color: #555; margin-bottom: 8px; line-height: 1.7; }
+.intro-link { font-size: 13px; }
+.intro-link a { color: #667eea; text-decoration: none; }
+.intro-link a:hover { text-decoration: underline; }
+@media (prefers-color-scheme: dark) {
+  body { background: #1a1a2e; color: #e0e0e0; }
+  .day-section { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+  .day-header { color: #a29bfe; border-bottom-color: #2d3436; }
+  .day-summary { background: linear-gradient(135deg, #1a1a3e 0%, #2d2a1e 100%); border-left-color: #a29bfe; color: #ccc; }
+  .project-intro { background: #16213e; box-shadow: 0 2px 8px rgba(0,0,0,0.3); border-left-color: #a29bfe; }
+  .intro-text { color: #ccc; }
+  .intro-link a { color: #a29bfe; }
+  .entry { border-bottom-color: #2d3436; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📋 sipeed/picoclaw 简报</h1>
+    <div class="meta">更新于 2026-02-24 · 最近3天 · 共18条提交</div>
+  </div>
+  <div class="nav">
+    <a href="index.html" >nanobot</a>
+    <a href="openclaw.html" >OpenClaw</a>
+    <a href="zeroclaw.html" >ZeroClaw</a>
+    <a href="zeptoclaw.html" >ZeptoClaw</a>
+    <a href="picoclaw.html" class=active>PicoClaw</a>
+    <a href="aionui.html" >AionUi</a>
+    <a href="moltis.html" >moltis</a>
+  </div>
+  <div class="project-intro">
+    <div class="intro-text">⚡ PicoClaw 是一个极简主义设计的 AI 编程助手，采用模块化架构，专注核心功能实现，具备出色的代码理解和生成能力。</div>
+    <div class="intro-link">🔗 <a href="https://github.com/sipeed/picoclaw" target="_blank">github.com/sipeed/picoclaw</a> · ⭐ 19.1K · 🍴 2.3K</div>
+  </div>
+  <div class="day-section">
+  <div class="day-header">2026-02-24 周二 · 4条提交</div>
+  <div class="day-summary">💡 今天主要围绕项目的社区建设和文档完善展开工作，新增了微信和Discord社交平台徽章以提升项目可见度，同时更新了微信二维码便于用户交流。技术层面修复了OpenAI兼容推理模型的reasoning_content保留问题，并推进了代码注释的中文本地化工作。整体聚焦于用户体验优化和项目国际化支持。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加微信和 Discord 徽章 (#707)</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新微信二维码 (#705)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复：为 OpenAI 兼容的推理模型保留 reasoning_content (#604)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">[文档]翻译中文注释 (#697)</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-23 周一 · 9条提交</div>
+  <div class="day-summary">💡 今天 PicoClaw 项目主要聚焦于系统稳定性和安全性优化，修复了多个关键问题包括网关绑定配置、Docker 环境对齐、工作区沙箱的竞争条件等。同时完成了 Mistral AI 提供商的原生支持集成，并对收集技能模块进行了重构优化。此外还进行了中文文档的本地化工作，整体提升了项目的可靠性和国际化支持。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">确保自定义拒绝模式扩展默认值而不是替换它们 (#479)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将网关默认绑定更改为 127.0.0.1 (#393)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 Docker Go 版本与 go.mod 对齐并优化日志记录器 (#596)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">make install 应该注意文本文件忙碌，因为它试图覆盖...</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">工作区沙箱避免检查时间/使用时间 (TOCTOU) 竞争条件 (#464)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">loop.go 中缺少 Tavily 配置，以及 web_searc 中的无效配置参数...</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">翻译中文注释</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: 添加原生 Mistral AI 提供商支持 (#541)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重构收集技能 (#688)</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-22 周日 · 5条提交</div>
+  <div class="day-summary">💡 今天主要完成了 Tavily 搜索功能的集成，为项目增加了新的搜索能力。同时进行了代码质量优化，包括运行 golangci-lint 修复代码规范问题，为 ToolRegistry 补充单元测试并修复了字符串截断时的 panic 问题。此外还清理了项目文档，修正了 README 中的拼写错误和失效链接，并移除了过时的路线图文档。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">集成 Tavily 搜索 (#340)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 master 分支上运行 golangci-lint run --fix (#656)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">添加 ToolRegistry 单元测试并修复负数 maxLen 导致的 Truncate panic (#517)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 README 中的拼写错误、失效链接和不一致问题 (#608)</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">移除旧的路线图 (#632)</span></div>
+  </div>
+</div>
+
+  <div class="footer">由 nanobot 自动生成 · 每日9点更新</div>
+</div>
+<a href="https://hbzhangmao.github.io/portal/" style="position:fixed;top:12px;right:12px;z-index:9999;background:rgba(99,102,241,0.9);color:#fff;text-decoration:none;padding:6px 14px;border-radius:20px;font-size:13px;font-family:-apple-system,sans-serif;backdrop-filter:blur(8px);box-shadow:0 2px 8px rgba(0,0,0,0.3);transition:opacity 0.2s;opacity:0.7;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'">🏠 导航</a>
+</body>
+</html>
