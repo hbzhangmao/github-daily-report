@@ -6,7 +6,7 @@
 <title>PPCHAT 配额监控</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
 <style>
-body { font-family: -apple-system,BlinkMacSystemFont,sans-serif; background:#0f172a; color:#e2e8f0; margin:0; padding:20px; }
+body { font-family:-apple-system,BlinkMacSystemFont,sans-serif; background:#0f172a; color:#e2e8f0; margin:0; padding:20px; }
 .header { text-align:center; margin-bottom:20px; }
 .header h1 { font-size:1.5em; margin:0; color:#60a5fa; }
 .header .update { font-size:0.85em; color:#94a3b8; margin-top:4px; }
@@ -22,12 +22,12 @@ body { font-family: -apple-system,BlinkMacSystemFont,sans-serif; background:#0f1
 </head>
 <body>
 <div class="header">
-  <h1>📊 PPCHAT 配额监控</h1>
-  <div class="update">最后更新: 2026-02-24T20:19:42 · 数据点: 3 · 保留近7天</div>
+  <h1>📊 PPCHAT 配额监控 - 剩余配额趋势</h1>
+  <div class="update">最后更新: 2026-02-24T20:26:20 · 数据点: 5 · 保留近7天</div>
 </div>
 <div class="stats">
-  <div class="stat-card"><div class="label">剩余配额</div><div class="value green">63,695</div></div>
-  <div class="stat-card"><div class="label">今日已用</div><div class="value orange">87,190</div></div>
+  <div class="stat-card"><div class="label">剩余配额</div><div class="value green">62,985</div></div>
+  <div class="stat-card"><div class="label">今日已用</div><div class="value orange">87,900</div></div>
   <div class="stat-card"><div class="label">今日充入</div><div class="value blue">150,885</div></div>
 </div>
 <div class="chart-container">
@@ -38,19 +38,30 @@ const ctx = document.getElementById('chart').getContext('2d');
 new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["02-24 19:49", "02-24 19:50", "02-24 20:19"],
     datasets: [
-      { label:'剩余配额', data:[70519, 70299, 63695], borderColor:'#4ade80', backgroundColor:'rgba(74,222,128,0.1)', fill:true, tension:0.3, pointRadius:2 },
-      { label:'今日已用', data:[80311, 80551, 87190], borderColor:'#fb923c', backgroundColor:'rgba(251,146,60,0.1)', fill:false, tension:0.3, pointRadius:2 },
-      { label:'今日充入', data:[150830, 150850, 150885], borderColor:'#60a5fa', backgroundColor:'rgba(96,165,250,0.1)', fill:false, tension:0.3, pointRadius:2 }
+      { label:"2026-02-24", data:[{"x": "19:49", "y": 70519}, {"x": "19:50", "y": 70299}, {"x": "20:19", "y": 63695}, {"x": "20:20", "y": 63485}, {"x": "20:26", "y": 62985}], borderColor:"#4ade80", backgroundColor:"transparent", tension:0.3, pointRadius:3, borderWidth:2 }
     ]
   },
   options: {
     responsive: true,
-    plugins: { legend: { labels: { color:'#e2e8f0' } } },
+    parsing: { xAxisKey:'x', yAxisKey:'y' },
+    plugins: {
+      legend: { labels: { color:'#e2e8f0' } },
+      tooltip: { mode:'index', intersect:false }
+    },
     scales: {
-      x: { ticks: { color:'#94a3b8', maxRotation:45, maxTicksAllowed:20 }, grid: { color:'#334155' } },
-      y: { ticks: { color:'#94a3b8' }, grid: { color:'#334155' } }
+      x: {
+        type: 'category',
+        labels: ['00:00','01:00','02:00','03:00','04:00','05:00','06:00','07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00'],
+        ticks: { color:'#94a3b8' },
+        grid: { color:'#334155' },
+        title: { display:true, text:'时间', color:'#94a3b8' }
+      },
+      y: {
+        ticks: { color:'#94a3b8' },
+        grid: { color:'#334155' },
+        title: { display:true, text:'剩余配额', color:'#94a3b8' }
+      }
     }
   }
 });
