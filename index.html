@@ -65,7 +65,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-23 周一 · 25条提交</div>
-  <div class="day-summary">💡 今天主要围绕提升 nanobot 系统稳定性和用户体验进行了集中优化。核心工作包括隔离线程会话上下文以提高并发处理能力，重构进度消息传递机制增强用户交互体验，以及修复心跳检测、Discord 输入循环等多个关键稳定性问题。通过降低默认温度参数和收紧工具调用指南，进一步提升了代理响应的准确性和可靠性。</div>
+  <div class="day-summary">💡 今天主要围绕提升 nanobot 系统稳定性和用户体验进行优化，重点完成了会话上下文隔离和进度消息控制机制的重构。修复了多个关键问题，包括心跳机制的幂等性保障、Discord 输入循环的异常处理，以及代理工具调用的可靠性增强。通过降低默认温度参数和收紧工具调用指南，进一步减少了系统幻觉问题，整体提升了多线程环境下的服务质量。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">隔离每个线程的会话上下文</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">将 send_progress 拆分为 send_progress + send_tool_hints</span></div>
@@ -74,29 +74,29 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">收紧 AGENTS.md 工具调用指南以减少幻觉</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">删除多余的空行</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">抑制进度消息并将代理响应传递给用户</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">抑制心跳进度消息到外部通道</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">抑制向外部通道发送的心跳进度消息</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将默认温度从 0.7 降低到 0.1</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使启动幂等并检查确切的 OK 令牌</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">通过未合并计数触发合并，而非总数</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">通过未合并计数而非总数触发合并</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将心跳运行路由到启用的聊天上下文</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在持续 HTTP 失败时中断 Discord 输入循环</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复：在持续 HTTP 失败时中断 Discord 输入循环 (#1029)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复(heartbeat)：使启动幂等并要求确切的 HEARTBEAT_OK (#1039)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复(heartbeat)：将代理响应传递给用户并修复 HEARTBEAT_OK 检测 (#1054)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">功能(slack)：隔离每个线程的会话上下文 (#1048)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 在持续 HTTP 失败时中断 Discord 输入循环 (#1029)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(heartbeat): 使启动幂等并要求确切的 HEARTBEAT_OK (#1039)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(heartbeat): 将代理响应传递给用户并修复 HEARTBEAT_OK 检测 (#1054)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(slack): 隔离每个线程的会话上下文 (#1048)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">提高代理可靠性：行为约束、完整工具历史、错误提示 (#1046)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">重构：将 workspace/ 移动到 nanobot/templates/ 用于打包 (#1043)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复(heartbeat)：将心跳运行路由到启用的聊天上下文 (#1036)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">功能(channels)：添加 send_progress 选项来控制进度消息… (#1000)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">refactor: 将 workspace/ 移动到 nanobot/templates/ 用于打包 (#1043)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(heartbeat): 将心跳运行路由到启用的聊天上下文 (#1036)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(channels): 添加 send_progress 选项来控制进度消息… (#1000)</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">在 TOOLS.md 中用 cron 技能参考替换 cron 使用文档</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将 session_key 作为显式参数传递而非通过元数据</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将 session_key 作为显式参数传递而不是通过元数据</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将 workspace/ 移动到 nanobot/templates/ 用于打包</span></div>
     <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">提高代理可靠性：行为约束、完整工具历史、错误...</span></div>
   </div>
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-22 周日 · 23条提交</div>
-  <div class="day-summary">💡 今天主要围绕系统稳定性和错误处理进行了集中优化，重点修复了多个平台（飞书、QQ、Slack等）的API调用和文件处理问题。新增了工具调用超时配置功能，并通过大量PR合并解决了空内容处理、权限验证、会话管理等关键bug。同时完善了部署文档，特别是Linux服务配置部分，整体提升了系统的健壮性和可维护性。</div>
+  <div class="day-summary">💡 今天 nanobot 项目主要聚焦于系统稳定性和用户体验优化，集中处理了多个关键 bug 修复，包括 API 集成问题、文件权限处理、超时机制和异常处理等。同时完成了大量 PR 合并工作，涉及提供商层面的内容过滤、MCP 工具超时保护、以及各平台（飞书、QQ、Slack 等）的兼容性改进。此外还加强了安全防护机制，修复了路径遍历漏洞，并改进了项目文档中的 Linux 服务部署说明。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">通过配置使 tool_timeout 可按服务器配置</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 MiniMax API key 链接</span></div>
