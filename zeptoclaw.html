@@ -65,16 +65,16 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-24 周二 · 3条提交</div>
-  <div class="day-summary">💡 今天主要围绕 ZeptoClaw 项目的安全加固展开工作，重点解决了内存污染、配置暴露、入站扫描和链式告警等关键安全问题。同时更新了相关文档，为项目增加了完整的安全防护功能模块。这些修复显著提升了系统的安全防护能力和稳定性。</div>
+  <div class="day-summary">💡 今天主要围绕 ZeptoClaw 项目的安全加固展开工作，重点实现了内存污染防护、入站扫描和链式告警等核心安全特性。同时完成了相关安全功能的文档更新，并修复了配置暴露等安全漏洞。整体工作聚焦于提升系统的安全防护能力和监控告警机制。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新 CLAUDE.md 添加安全加固功能</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">安全加固 — 内存污染、入站扫描、链式告警 (#124)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">内存污染、配置暴露、入站扫描、链式告警</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">update CLAUDE.md with security hardening features</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">security hardening — memory poisoning, inbound scanning, chain alerting (#124)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">memory poisoning, config exposure, inbound scanning, chain alerting</span></div>
   </div>
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-23 周一 · 26条提交</div>
-  <div class="day-summary">💡 今天 ZeptoClaw 项目主要聚焦于系统稳定性和安全性提升，完成了监督器自动重启、自更新机制、Linux 沙箱运行时等核心功能开发。同时推进了技能发现与安装、内存优化、网关限流等基础设施建设，并修复了调度交付、工具序列化、heartbeat 服务等多个关键 bug。整体工作围绕提升系统可靠性和运维能力展开，为项目的生产环境部署奠定了更坚实的基础。</div>
+  <div class="day-summary">💡 今天 ZeptoClaw 项目主要聚焦于系统稳定性和安全性提升，完成了监督器自动重启、Linux 沙箱运行时、网关限流等核心基础设施建设。同时推进了技能发现与 CLI 工具链完善，包括自更新命令和 GitHub 源集成功能。修复了大量调度传递、序列化和配置相关的稳定性问题，为系统的可靠运行奠定了基础。整体开发重点从功能扩展转向了系统加固和运维工具完善。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加监督器以自动重启死亡通道 (#117)</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">自更新命令 (zeptoclaw update) (#111)</span></div>
@@ -89,7 +89,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从 cargo install 中排除基准测试二进制文件 (#120)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">防止 cron, heartbeat, lark, gateway 中任务退出时的过期状态 (#118)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决 openai token 字段和工具序列化的代码审查问题</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">调度/交付错误 — 系统提示, cron 保留, heartbeat deliver_to...</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">调度/传递错误 — 系统提示, cron 保留, heartbeat deliver_to...</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当批次包含文件系统写入器时序列化工具执行</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">跳过已知模型系列的 max_tokens→max_completion_tokens 重试</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">改进 deliver_to 文档注释并对无效格式发出警告</span></div>
