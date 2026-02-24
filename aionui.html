@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 iOfficeAI/AionUi 简报</h1>
-    <div class="meta">更新于 2026-02-24 · 最近7天 · 共54条提交</div>
+    <div class="meta">更新于 2026-02-24 · 最近7天 · 共57条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -64,25 +64,28 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="intro-link">🔗 <a href="https://github.com/iOfficeAI/AionUi" target="_blank">github.com/iOfficeAI/AionUi</a> · ⭐ 17.0K · 🍴 1.3K</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-24 周二 · 17条提交</div>
-  <div class="day-summary">💡 今天 AionUi 项目主要聚焦于 CI/CD 构建流程的优化和重构工作。团队完成了构建系统从 Webpack 到 electron-vite 的重大迁移，同时重构了 CI 工作流，提取可重用构建流程并新增了针对特定平台的手动构建功能。此外还进行了多项构建优化，包括合并平台构建摘要、改进工具链安装流程，以及完善了项目的 Node.js 版本约束和依赖管理配置。</div>
+  <div class="day-header">2026-02-24 周二 · 20条提交</div>
+  <div class="day-summary">💡 今天 AionUi 项目主要围绕构建系统优化和技能加载机制改进展开工作。核心变更包括实现技能延迟加载机制以提升性能，完成构建系统从 Webpack 到 electron-vite 的迁移，并大幅优化 CI/CD 流程。同时修复了多个构建相关问题，包括 Node.js 版本约束和测试路径配置，整体提升了项目的构建效率和稳定性。</div>
   <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">通过索引注入延迟加载技能，而非完整内容</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加包含分支、提交和平台信息的步骤摘要</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为手动构建工作流名称添加 emoji</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加针对特定平台构建的手动构建工作流</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从 fix/ci-vitest-test-path 同步错误修复到可重用工作流</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加载 _builtin 技能时对意外错误发出警告</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 fix/ci-vitest-test-path 的错误修复同步到可复用工作流</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 package.json 中添加 Node.js 引擎版本约束</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">将各平台构建摘要合并到单个作业中</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">使 MSVC ARM64 工具链安装非阻塞</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">提取可重用构建工作流以消除重复</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">提取可复用构建工作流以消除重复</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(gemini): 通过索引注入延迟加载技能，而非完整内容 (#952)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">ci: 将各平台构建摘要合并到单个作业中 (#959)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">ci: 提取可重用构建工作流以消除重复 (#957)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">ci: 提取可复用构建工作流以消除重复 (#957)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 添加 Node.js 引擎版本约束 (#956)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">chore(build-manual): 添加包含分支、提交和平台信息的步骤摘要 (#950)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">chore(ci): 为手动构建工作流名称添加 emoji (#949)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">chore(ci): 添加针对特定平台构建的手动构建工作流 (#948)</span></div>
     <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">忽略 package-lock.json 和 yarn.lock</span></div>
-    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">移除 package-lock.json (项目使用 bun.lock)</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">移除 package-lock.json（项目使用 bun.lock）</span></div>
     <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">构建系统迁移 (Webpack → electron-vite) (#947)</span></div>
   </div>
 </div>
