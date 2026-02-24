@@ -48,19 +48,69 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 iOfficeAI/AionUi 简报</h1>
-    <div class="meta">更新于 2026-02-18 · 最近4天 · 共25条提交</div>
+    <div class="meta">更新于 2026-02-24 · 最近7天 · 共54条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
     <a href="openclaw.html" >OpenClaw</a>
+    <a href="zeroclaw.html" >ZeroClaw</a>
+    <a href="zeptoclaw.html" >ZeptoClaw</a>
+    <a href="picoclaw.html" >PicoClaw</a>
     <a href="aionui.html" class=active>AionUi</a>
     <a href="moltis.html" >moltis</a>
   </div>
   <div class="project-intro">
     <div class="intro-text">🖥️ AionUi 是一个免费、本地化、开源的 AI 协作平台，支持 Gemini CLI、Claude Code、Codex、OpenCode 等多种 AI 编程工具的 7×24 小时协同工作。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/iOfficeAI/AionUi" target="_blank">github.com/iOfficeAI/AionUi</a> · ⭐ 16.2K · 🍴 1.2K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/iOfficeAI/AionUi" target="_blank">github.com/iOfficeAI/AionUi</a> · ⭐ 17.0K · 🍴 1.3K</div>
   </div>
   <div class="day-section">
+  <div class="day-header">2026-02-24 周二 · 15条提交</div>
+  <div class="day-summary">💡 今天 AionUi 项目主要聚焦于 CI/CD 流程优化和构建系统升级，完成了从 Webpack 到 electron-vite 的构建系统迁移，并提取了可复用的构建工作流以减少重复配置。同时新增了针对特定平台的手动构建工作流，增强了构建过程的可视化和灵活性，包括添加分支、提交信息摘要和工作流名称的 emoji 标识。此外还修复了测试路径配置问题，规范了 Node.js 版本约束，整体提升了项目的构建效率和开发体验。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加包含分支、提交和平台信息的步骤摘要</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为手动构建工作流名称添加 emoji</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加针对特定平台构建的手动构建工作流</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从 fix/ci-vitest-test-path 同步错误修复到可复用工作流</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 package.json 中添加 Node.js 引擎版本约束</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">使 MSVC ARM64 工具链安装非阻塞</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">提取可复用构建工作流以消除重复</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">ci: 提取可复用构建工作流以消除重复 (#957)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 添加 Node.js 引擎版本约束 (#956)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">chore(build-manual): 添加包含分支、提交和平台信息的步骤摘要 (#950)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">chore(ci): 为手动构建工作流名称添加 emoji (#949)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">chore(ci): 添加针对特定平台构建的手动构建工作流 (#948)</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">忽略 package-lock.json 和 yarn.lock</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">移除 package-lock.json (项目使用 bun.lock)</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">构建系统迁移 (Webpack → electron-vite) (#947)</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-23 周一 · 2条提交</div>
+  <div class="day-summary">💡 今天主要完成了AionUi界面交互优化工作，重点改进了代理栏的弹出选择功能和布局间距调整。同时对助手组件进行了视觉增强，包括添加1px边框和圆形悬停效果，并优化了快速操作区域的安全性设计。这些改进提升了用户界面的交互体验和视觉一致性。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">代理栏弹出 + 间距/最大宽度，助手1px边框，添加助手圆形悬停...</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(guid): 代理栏选择弹出，间距，助手1px边框，添加助手圆形悬停，快速操作安全区域 (#942)</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-22 周日 · 12条提交</div>
+  <div class="day-summary">💡 今天 AionUi 项目主要围绕用户体验优化和系统稳定性提升展开工作。重点完成了首页和侧边栏的 UX 改进、模型预选择功能的实现，以及对话界面的布局重构。同时修复了多个关键问题，包括进程管理、缓存重试机制和移动端视口显示问题，并发布了 1.8.16 版本。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">merge origin/main into feat/acp-cached-models-guid-preselect</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">首页 UX 和侧边栏调整</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">跳过非预设代理的可选技能加载</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">提取 terminateChild 以防止重试时产生孤儿进程</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">缓存失败时自动重试 npx 不使用 --prefer-offline</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">重置移动端视口的负 margin-top</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">版本升级至 1.8.16</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">chore: 版本升级至 1.8.16 (#941)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(guid+acp): 模型预选择、Codex ACP 迁移、页面重构和骨架屏 (#932)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(acp): 缓存失败时自动重试 npx 不使用 --prefer-offline (#939)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(conversation): 预览布局、紧凑模型选择器、工具栏和侧边栏 UX (#934)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(guid,layout): 首页 UX 和侧边栏调整 (#933)</span></div>
+  </div>
+</div>
+<div class="day-section">
   <div class="day-header">2026-02-17 周二 · 2条提交</div>
   <div class="entries">
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">move Twitter link from language row to Community section</span></div>
