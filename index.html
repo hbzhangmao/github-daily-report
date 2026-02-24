@@ -65,7 +65,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-23 周一 · 25条提交</div>
-  <div class="day-summary">💡 今天主要围绕提升 nanobot 系统稳定性和用户体验进行了集中优化。核心工作包括完善会话上下文隔离机制，重构进度消息传递系统，以及大幅加强代理行为约束来减少幻觉问题。同时修复了多个关键 bug，特别是心跳机制、Discord 输入循环异常处理和历史记录游标对齐等问题，整体提升了系统的可靠性和响应准确性。</div>
+  <div class="day-summary">💡 今天主要围绕 nanobot 项目的稳定性和用户体验优化展开工作。核心改进包括实现线程级会话上下文隔离，重构进度消息传递机制以提供更精细的控制，以及大幅降低模型温度参数来减少输出随机性。同时修复了多个心跳机制、Discord 输入循环和历史记录游标相关的关键 bug，整体提升了系统的可靠性和响应准确性。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">隔离每个线程的会话上下文</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">将 send_progress 拆分为 send_progress + send_tool_hints</span></div>
@@ -73,30 +73,30 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">get_history 使用 last_consolidated 游标，与用户轮次对齐</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">收紧 AGENTS.md 工具调用指南以减少幻觉</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除多余的空行</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">抑制进度消息并向用户传递代理响应</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">抑制向外部渠道发送的心跳进度消息</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">抑制进度消息并将代理响应传递给用户</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">抑制心跳进度消息到外部通道</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将默认温度从 0.7 降低到 0.1</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使启动幂等并检查确切的 OK 令牌</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">通过未合并计数而非总数触发合并</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">通过未合并计数触发合并，而非总数</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将心跳运行路由到启用的聊天上下文</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在持续 HTTP 失败时中断 Discord 输入循环</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复：在持续 HTTP 失败时中断 Discord 输入循环 (#1029)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复(heartbeat)：使启动幂等并要求确切的 HEARTBEAT_OK (#1039)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复(heartbeat)：向用户传递代理响应并修复 HEARTBEAT_OK 检测 (#1054)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复(heartbeat)：将代理响应传递给用户并修复 HEARTBEAT_OK 检测 (#1054)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">功能(slack)：隔离每个线程的会话上下文 (#1048)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">提高代理可靠性：行为约束、完整工具历史、错误提示 (#1046)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">改进代理可靠性：行为约束、完整工具历史、错误提示 (#1046)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">重构：将 workspace/ 移动到 nanobot/templates/ 用于打包 (#1043)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复(heartbeat)：将心跳运行路由到启用的聊天上下文 (#1036)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">功能(channels)：添加 send_progress 选项来控制进度消息… (#1000)</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">在 TOOLS.md 中用 cron 技能参考替换 cron 使用文档</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将 session_key 作为显式参数传递而非通过元数据</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将 workspace/ 移动到 nanobot/templates/ 用于打包</span></div>
-    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">提高代理可靠性：行为约束、完整工具历史、错误...</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">改进代理可靠性：行为约束、完整工具历史、错误...</span></div>
   </div>
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-22 周日 · 23条提交</div>
-  <div class="day-summary">💡 今天 nanobot 项目主要聚焦于系统稳定性和用户体验优化，集中处理了多个关键 bug 修复，包括 API 集成问题、文件权限处理和超时机制完善。团队通过合并 22 个 PR 解决了各个模块的异常处理、安全漏洞和会话管理问题，同时改进了文档和部署说明。整体工作重点在于提升系统的健壮性和可靠性，为用户提供更稳定的服务体验。</div>
+  <div class="day-summary">💡 今天 nanobot 项目主要聚焦于系统稳定性和错误处理的优化工作。团队修复了多个关键问题，包括 API 集成问题（MiniMax、空内容过滤）、会话管理和文件权限等核心功能缺陷。同时加强了异常处理机制，为 MCP 工具调用添加了超时保护，并完善了服务部署相关的文档说明。整体上是一个以修复和稳定性提升为主的维护性开发周期。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">通过配置使 tool_timeout 可按服务器配置</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 MiniMax API key 链接</span></div>
@@ -110,17 +110,17 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">用 message_resource.get 替换 file.get 以修复文件下载权限问题</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">改进 README 中的 Linux Service 部分</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(provider): 过滤空文本内容块以避免 API 400 错误 (#949)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(feishu): 用 message_resource.get 替换 file.get 以修复飞书文件下载问题 (#986)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(providers): 在 provider 层面将空的 reasoning_content 标准化为 None (#955)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(mcp): 为 MCP tool 调用添加 30s 超时以防止 agent 挂起 (#950)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">docs: 在 README 中添加 systemd 用户服务说明 (#968)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(qq): 根据基础 channel 契约使 start() 长期运行 (#962)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(loop): 序列化 /new 合并并在归档失败时保留会话 (#881)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(email): 清理最旧的一半去重集合而不是完全清空 (#959)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(session): 处理旧版会话迁移中的错误 (#958)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(slack): 为 socket 监听器添加异常处理 (#957)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(security): 通过 startswith 检查防止路径遍历绕过 (#956)</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将空内容清理移至基类</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(feishu): 用</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(providers): normalize empty reasoning_content to None at provider level (#955)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(mcp): add 30s timeout to MCP tool calls to prevent agent hangs (#950)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">docs: add systemd user service instructions to README (#968)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(qq): make start() long-running per base channel contract (#962)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(loop): serialize /new consolidation and preserve session on archival failure (#881)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(email): evict oldest half of dedup set instead of clearing entirely (#959)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(session): handle errors in legacy session migration (#958)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(slack): add exception handling to socket listener (#957)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(security): prevent path traversal bypass via startswith check (#956)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">move empty content sanitization to base class</span></div>
   </div>
 </div>
 <div class="day-section">
