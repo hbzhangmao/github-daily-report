@@ -65,7 +65,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-24 周二 · 26条提交</div>
-  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于推理系统的优化和稳定性提升，包括推理标签处理、消息过滤和负载管理等核心功能的修复。同时完善了自动回复机制，增加了多语言支持和规范化处理，并为子代理系统添加了多项回归测试以确保功能稳定性。此外还进行了依赖同步、协议模型更新等基础设施维护工作，整体上是一个功能增强与问题修复并重的开发周期。</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于推理系统的优化和稳定性提升，包括推理标签处理、消息过滤机制的完善，以及多项回归测试的补充。同时进行了自动回复功能的多语言支持增强，修复了门控、配置处理、连接管理等多个核心模块的问题。团队还完成了维护者更新和依赖同步工作，整体围绕系统稳定性和功能完善展开。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">将 Val Alexander 添加到维护者列表 (#25197)</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">自动回复：规范化停止匹配并添加多语言触发器 (#25103)</span></div>
@@ -83,8 +83,8 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">同步 diagnostics-otel 依赖的锁文件 (#24991) (感谢 @stakeswky)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 nodeId 重新生成协议 swift 模型 (#24991) (感谢 @stakeswky)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 #24991 对齐推理负载类型 (感谢 @stakeswky)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从通用通道调度路径中抑制推理负载</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">断开连接时保护 sendMessage；关闭时重置 readyPromise</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从通用通道分发路径中抑制推理负载</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在断开连接时保护 sendMessage；在关闭时重置 readyPromise</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为主题会话绑定继承传递 parentPeer</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 sharedAuthOk 检查中包含 trusted-proxy</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 'auto' 路由模型跳过推理努力注入</span></div>
