@@ -48,19 +48,54 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 OpenClaw/OpenClaw 简报</h1>
-    <div class="meta">更新于 2026-02-18 · 最近4天 · 共66条提交</div>
+    <div class="meta">更新于 2026-02-24 · 最近5天 · 共92条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
     <a href="openclaw.html" class=active>OpenClaw</a>
+    <a href="zeroclaw.html" >ZeroClaw</a>
+    <a href="zeptoclaw.html" >ZeptoClaw</a>
+    <a href="picoclaw.html" >PicoClaw</a>
     <a href="aionui.html" >AionUi</a>
     <a href="moltis.html" >moltis</a>
   </div>
   <div class="project-intro">
     <div class="intro-text">🦀 OpenClaw 是一个开源的 AI 编程助手，支持终端交互式编码、多模型切换、MCP 工具集成等，致力于打造开放的 AI 编程生态。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/OpenClaw/OpenClaw" target="_blank">github.com/OpenClaw/OpenClaw</a> · ⭐ 205.4K · 🍴 37.4K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/OpenClaw/OpenClaw" target="_blank">github.com/OpenClaw/OpenClaw</a> · ⭐ 223.0K · 🍴 42.6K</div>
   </div>
   <div class="day-section">
+  <div class="day-header">2026-02-24 周二 · 26条提交</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于推理系统的优化和稳定性提升，包括推理标签处理、消息过滤机制的完善，以及多项流处理相关的回归测试补充。同时进行了自动回复功能的多语言支持增强，修复了门控、配置处理、连接管理等多个核心模块的稳定性问题。团队还完成了维护者列表更新和依赖同步工作，整体开发重点围绕系统可靠性和用户体验改进展开。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">将 Val Alexander 添加到维护者列表 (#25197)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">自动回复：规范化停止匹配并添加多语言触发器 (#25103)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为 cherry-picked 贡献者添加 mailmap 映射</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为流中推理标签剥离添加回归测试</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为仅推理回复过滤添加回归测试</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为子代理生成配置默认 runTimeoutSeconds</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">测试：为子代理完成回退和显式直接...添加回归测试</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">按用户影响重新排序未发布的修复</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复门控回归</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复合并后配置和 tui 命令处理器测试</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从部分流预览中剥离推理标签</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在回复传递中跳过仅推理消息</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将锁文件与 diagnostics-otel proto 依赖对齐 (#24991) (感谢 @stakeswky)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">同步 diagnostics-otel 依赖的锁文件 (#24991) (感谢 @stakeswky)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 nodeId 重新生成协议 swift 模型 (#24991) (感谢 @stakeswky)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 #24991 对齐推理负载类型 (感谢 @stakeswky)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从通用通道分发路径中抑制推理负载</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在断开连接时保护 sendMessage；在关闭时重置 readyPromise</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为主题会话绑定继承传递 parentPeer</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 sharedAuthOk 检查中包含 trusted-proxy</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 'auto' 路由模型跳过推理努力注入</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在历史截断后修复 OpenAI 的孤立工具结果</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 dmPolicy open allowFrom 不匹配添加可操作指导</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将嵌入的错误负载视为运行失败</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在订阅处理器中将会话上下文传递给 before_compaction 钩子</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 75 条较次要的提交未展示</span></div>
+  </div>
+</div>
+<div class="day-section">
   <div class="day-header">2026-02-18 周三 · 7条提交</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add forum topic creation support (#17035)</span></div>
