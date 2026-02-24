@@ -65,12 +65,12 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-24 周二 · 26条提交</div>
-  <div class="day-summary">💡 今天 ZeroClaw 项目主要聚焦在测试覆盖率提升和核心功能稳定性优化，为多个关键模块（provider parser、telegram、shell 等）补充了回归测试。同时在用户体验方面有重要进展，包括稳定 OAuth 认证流程、增强 OpenAI Codex 的视觉支持能力，以及优化群组管理和消息处理机制。此外团队还完善了配置管理系统，增加了配置错误检测和 API 密钥安全防护，整体朝着更稳定可靠的产品方向迭代。</div>
+  <div class="day-summary">💡 今天 ZeroClaw 项目主要聚焦于测试覆盖率提升和核心功能稳定性优化，为多个关键模块（provider parser、telegram、shell 等）补充了回归测试。同时在用户体验方面有重要进展，包括稳定 OAuth 认证流程、增强 OpenAI Codex 的视觉支持能力，以及优化群组管理和浏览器集成等功能。此外团队还修复了多项配置安全和工具调用解析相关的问题，整体朝着更稳定可靠的产品方向推进。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为 provider parser cron 和 telegram 添加回归测试覆盖</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">稳定 codex oauth 并添加 provider 模型连接工作流</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 mention_only 群组门控和 bot open_id 自动发现</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">向每条用户消息注入当前日期时间</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">向每个用户消息注入当前日期时间</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">使用系统默认浏览器而非硬编码的 Brave Browser (#1453)</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 /new 命令清除对话历史 (#1417)</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为硬件模块添加硬件特性条件编译</span></div>
@@ -79,7 +79,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在预热时自动刷新过期的 Gemini OAuth tokens</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 list、set 和 status 子命令</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">记录查询分类路由决策</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加语言部分功能导航映射</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 language-part-function 导航映射</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加更新和卸载指南</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">对未知配置键发出警告以防止静默配置错误 (#1410)</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">稳定 composio slug 解析并移除 v2 回退</span></div>
@@ -88,7 +88,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决 strict-delta clippy 阻塞问题</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 /api/config 中屏蔽 feishu/qdrant 和路由 API 密钥</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在网关 API 测试中使用 schema 配置类型</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固重定向/browser_open 并恢复屏蔽的密钥</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固 redirect/browser_open 并恢复屏蔽的密钥</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复发布工作流中的 shellcheck 引用</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 #1505 后的 loop_ 测试格式</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">改进工具调用解析和 shell 扩展检查</span></div>
