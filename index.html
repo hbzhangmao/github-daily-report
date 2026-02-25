@@ -72,7 +72,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-24 周二 · 23条提交</div>
-  <div class="day-summary">💡 今天主要围绕 v0.1.4.post2 版本发布进行了集中的问题修复和功能完善工作。重点解决了 Slack 和飞书平台的消息格式处理问题，包括 Markdown 转换、图片显示支持等核心交互功能。同时优化了系统稳定性，改进了 API 密钥解析机制、心跳检测逻辑，并提升了缓存重用效率。通过合并多个 PR 和代码重构，为新版本的稳定发布奠定了基础。</div>
+  <div class="day-summary">💡 今天主要围绕 v0.1.4.post2 版本发布进行了集中优化，重点解决了 Slack 和飞书等平台的消息格式处理问题，包括 Markdown 转换、图片显示和富文本支持。同时对系统核心机制进行了多项稳定性改进，优化了 API 密钥解析、心跳机制和缓存重用率。通过大量 bug 修复和代码重构，提升了整体系统的健壮性和用户体验。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新 v0.1.4.post2 版本发布新闻</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持在帖子（富文本）消息中显示图片</span></div>
@@ -83,7 +83,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在启动日志中显示实际心跳间隔</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">用虚拟工具调用决策替换 HEARTBEAT_OK 令牌</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在每次调用时解析 API 密钥 + 改进错误消息</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">版本升级至 0.1.4.post2</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">将版本升级到 0.1.4.post2</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">精简冗长的文档字符串</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(slack): 后处理 slackify_markdown 以修复遗留的粗体格式问题 (#1107)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 稳定提示前缀以提高缓存重用率 (#1115)</span></div>
@@ -101,13 +101,13 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-23 周一 · 26条提交</div>
-  <div class="day-summary">💡 今天主要围绕会话管理和消息传递机制进行了重点优化，实现了线程级会话上下文隔离和进度消息控制功能。修复了多个关键问题，包括API密钥动态生效、心跳消息路由、内存整合逻辑等，显著提升了系统的稳定性和用户体验。同时通过降低默认温度参数和收紧工具调用指南，进一步减少了AI代理的幻觉问题。</div>
+  <div class="day-summary">💡 今天主要围绕会话管理和消息传递机制进行了重点优化，实现了线程级会话上下文隔离和进度消息控制功能。修复了多个关键问题，包括API密钥动态生效、心跳机制稳定性、内存整合逻辑以及工具调用参数处理等。通过降低默认温度参数和收紧工具调用指南，进一步提升了代理响应的准确性和可靠性。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">隔离每个线程的会话上下文</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">将 send_progress 拆分为 send_progress + send_tool_hints</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 send_progress 选项来控制进度消息传递</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当 autoReplyEnabled 为 false 时允许主动发送</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在思考模型的消息清理中保留 reasoning_content</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在消息清理中为思考模型保留 reasoning_content</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在调用时解析 API 密钥，使配置更改无需重启即可生效</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">**fix(mcp): 移除 HTTP 传输的默认超时以避免工具超时...</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在内存整合中处理非字符串工具调用参数</span></div>
