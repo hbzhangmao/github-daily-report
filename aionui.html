@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 iOfficeAI/AionUi 简报</h1>
-    <div class="meta">更新于 2026-02-24 · 最近7天 · 共57条提交</div>
+    <div class="meta">更新于 2026-02-25 · 最近7天 · 共61条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -64,31 +64,35 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="intro-link">🔗 <a href="https://github.com/iOfficeAI/AionUi" target="_blank">github.com/iOfficeAI/AionUi</a> · ⭐ 17.0K · 🍴 1.3K</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-24 周二 · 22条提交</div>
-  <div class="day-summary">💡 今天 AionUi 项目主要围绕功能增强和构建系统优化展开工作。在功能层面，新增了 LaTeX 数学分隔符支持和技能延迟加载机制，提升了 Markdown 渲染能力和性能表现。同时完成了构建系统的重大重构，从 Webpack 迁移到 electron-vite，并优化了 CI/CD 流程，提取可复用工作流、改进多平台构建摘要，整体提升了开发和发布效率。</div>
+  <div class="day-header">2026-02-24 周二 · 26条提交</div>
+  <div class="day-summary">💡 今天 AionUi 项目发布了 1.8.17 版本，主要围绕技能管理优化和 LaTeX 数学公式支持展开工作。核心改进包括实现技能延迟加载机制、新增对 LaTeX 数学分隔符的支持，以及针对 Gemini 和 MiniMax 模型的多项稳定性修复。同时完善了 CI/CD 流程，提取了可复用构建工作流并优化了多平台构建摘要展示。</div>
   <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新版本至 1.8.17</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持 \[...\] 和 \(...\) LaTeX 数学分隔符</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">通过索引注入延迟加载技能，而非完整内容</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加包含分支、提交和平台信息的步骤摘要</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加包含分支、commit 和平台信息的步骤摘要</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为手动构建工作流名称添加 emoji</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加针对特定平台构建的手动构建工作流</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加载内置技能时对意外错误发出警告</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 fix/ci-vitest-test-path 的错误修复同步到可复用工作流</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 package.json 中添加 Node.js 引擎版本约束</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 prettier 格式化并替换测试中的 no-explicit-any</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">防止摘要消息项的水平溢出</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在流中保留孤立的 &lt;/think&gt; 以供前端过滤</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">禁用原生 SkillManager 以防止 XML 注入到系统提示中</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">检测来自 MiniMax M2.5 的孤立 &lt;/think&gt; 结束标签</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">压缩历史记录中的大型工具响应以防止上下文溢出</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加载 _builtin 技能时对意外错误发出警告</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 fix/ci-vitest-test-path 的 bug 修复同步到可复用工作流</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">向 package.json 添加 Node.js 引擎版本约束</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">将各平台构建摘要合并到单个作业中</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">使 MSVC ARM64 工具链安装非阻塞</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">提取可复用构建工作流以消除重复</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(lint): 修复 prettier 格式化并替换测试中的 no-explicit-any (#969)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(ui): 防止摘要消息项的水平溢出 (#968)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">WIP: fix(gemini): 压缩历史记录中的大型工具响应以防止上下文溢出 (#960)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(ui): 检测来自 MiniMax M2.5 的孤立 &lt;/think&gt; 结束标签 (#962)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(gemini): 禁用原生 SkillManager XML 注入 (#966)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(markdown): 支持 \[...\] 和 \(...\) LaTeX 数学分隔符 (#958)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(gemini): 通过索引注入延迟加载技能，而非完整内容 (#952)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">ci: 将各平台构建摘要合并到单个作业中 (#959)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">ci: 提取可复用构建工作流以消除重复 (#957)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 添加 Node.js 引擎版本约束 (#956)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">chore(build-manual): 添加包含分支、提交和平台信息的步骤摘要 (#950)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">chore(ci): 为手动构建工作流名称添加 emoji (#949)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">chore(ci): 添加针对特定平台构建的手动构建工作流 (#948)</span></div>
-    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">忽略 package-lock.json 和 yarn.lock</span></div>
-    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">移除 package-lock.json（项目使用 bun.lock）</span></div>
-    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">构建系统迁移 (Webpack → electron-vite) (#947)</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 9 条较次要的提交未展示</span></div>
   </div>
 </div>
 <div class="day-section">

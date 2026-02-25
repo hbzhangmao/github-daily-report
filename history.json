@@ -319,6 +319,31 @@
         },
         {
           "emoji": "🐛",
+          "summary": "当 autoReplyEnabled 为 false 时允许主动发送",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "在思考模型的消息清理中保留 reasoning_content",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "在调用时解析 API 密钥，使配置更改无需重启即可生效",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "**fix(mcp): 移除 HTTP 传输的默认超时以避免工具超时...",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "在内存整合中处理非字符串工具调用参数",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
           "summary": "get_history 使用 last_consolidated 游标，与用户轮次对齐",
           "cat": "修复"
         },
@@ -329,7 +354,7 @@
         },
         {
           "emoji": "🐛",
-          "summary": "删除多余的空行",
+          "summary": "移除多余的空行",
           "cat": "修复"
         },
         {
@@ -354,7 +379,7 @@
         },
         {
           "emoji": "🐛",
-          "summary": "通过未合并计数而非总数触发合并",
+          "summary": "通过未整合计数而非总数触发整合",
           "cat": "修复"
         },
         {
@@ -369,67 +394,47 @@
         },
         {
           "emoji": "🔀",
-          "summary": "修复：在持续 HTTP 失败时中断 Discord 输入循环 (#1029)",
+          "summary": "fix: 在持续 HTTP 失败时中断 Discord 输入循环 (#1029)",
           "cat": "合并PR"
         },
         {
           "emoji": "🔀",
-          "summary": "修复(heartbeat)：使启动幂等并要求确切的 HEARTBEAT_OK (#1039)",
+          "summary": "fix(heartbeat): 使启动幂等并要求确切的 HEARTBEAT_OK (#1039)",
           "cat": "合并PR"
         },
         {
           "emoji": "🔀",
-          "summary": "修复(heartbeat)：向用户传递代理响应并修复 HEARTBEAT_OK 检测 (#1054)",
+          "summary": "fix(heartbeat): 向用户传递代理响应并修复 HEARTBEAT_OK 检测 (#1054)",
           "cat": "合并PR"
         },
         {
           "emoji": "🔀",
-          "summary": "功能(slack)：隔离每个线程的会话上下文 (#1048)",
+          "summary": "feat(slack): 隔离每个线程的会话上下文 (#1048)",
           "cat": "合并PR"
         },
         {
           "emoji": "🔀",
-          "summary": "提高代理可靠性：行为约束、完整工具历史、错误提示 (#1046)",
+          "summary": "改进代理可靠性：行为约束、完整工具历史、错误提示 (#1046)",
           "cat": "合并PR"
         },
         {
           "emoji": "🔀",
-          "summary": "重构：将 workspace/ 移动到 nanobot/templates/ 用于打包 (#1043)",
+          "summary": "refactor: 将 workspace/ 移动到 nanobot/templates/ 用于打包 (#1043)",
           "cat": "合并PR"
         },
         {
           "emoji": "🔀",
-          "summary": "修复(heartbeat)：将心跳运行路由到启用的聊天上下文 (#1036)",
+          "summary": "fix(heartbeat): 将心跳运行路由到启用的聊天上下文 (#1036)",
           "cat": "合并PR"
         },
         {
-          "emoji": "🔀",
-          "summary": "功能(channels)：添加 send_progress 选项来控制进度消息… (#1000)",
-          "cat": "合并PR"
-        },
-        {
-          "emoji": "♻️",
-          "summary": "在 TOOLS.md 中用 cron 技能参考替换 cron 使用文档",
-          "cat": "重构"
-        },
-        {
-          "emoji": "♻️",
-          "summary": "将 session_key 作为显式参数传递而不是通过元数据",
-          "cat": "重构"
-        },
-        {
-          "emoji": "♻️",
-          "summary": "将 workspace/ 移动到 nanobot/templates/ 用于打包",
-          "cat": "重构"
-        },
-        {
-          "emoji": "📌",
-          "summary": "提高代理可靠性：行为约束、完整工具历史、错误...",
+          "emoji": "📊",
+          "summary": "还有 5 条较次要的提交未展示",
           "cat": "其他"
         }
       ],
-      "count": 25,
-      "summary": "今天主要围绕提升 nanobot 系统稳定性和用户体验进行了集中优化。核心工作包括完善会话上下文隔离机制，重构进度消息传递系统，以及大幅降低模型温度参数来减少AI幻觉问题。同时修复了多个心跳机制和Discord集成的关键bug，通过行为约束和工具历史完整性提升了代理运行的可靠性。"
+      "count": 26,
+      "summary": "今天主要围绕会话管理和系统稳定性进行了重点优化，实现了线程级会话上下文隔离，并重构了进度消息传递机制。修复了大量与心跳机制、API配置热更新、内存整合等相关的稳定性问题，特别是针对Discord和外部渠道的消息处理逻辑进行了多项改进。通过降低默认温度参数和收紧工具调用指南，进一步提升了代理响应的准确性和可靠性。"
     },
     "2026-02-22": {
       "entries": [
@@ -551,6 +556,138 @@
       ],
       "count": 23,
       "summary": "今天主要围绕系统稳定性和错误处理进行了集中优化，重点修复了多个平台（飞书、QQ、Slack等）的API调用和文件处理问题。完成了工具超时配置的灵活化改进，并加强了安全防护机制，包括路径遍历防护和异常处理优化。同时改进了会话管理和资源清理逻辑，提升了系统的整体健壮性。"
+    },
+    "2026-02-25": {
+      "entries": [
+        {
+          "emoji": "🔀",
+          "summary": "fix: 为支持思考功能的模型在消息中保留 reasoning_content (#1074)",
+          "cat": "合并PR"
+        }
+      ],
+      "count": 1,
+      "summary": "今天主要完成了思考功能相关的重要修复工作。通过合并PR #1074，为支持推理思考的模型在消息处理中正确保留了 reasoning_content 字段，确保了模型的思考过程能够被完整记录和传递。这一改进提升了系统对具备推理能力模型的兼容性和功能完整性。"
+    },
+    "2026-02-24": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "更新 v0.1.4.post2 版本发布新闻",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "支持在帖子（富文本）消息中显示图片",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "简化 _fixup_mrkdwn 并精简 SlackChannel 中的文档字符串",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "稳定系统提示以提高缓存重用率",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "后处理 slackify_markdown 输出以捕获遗留的格式问题",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "添加后处理以修复 mrkdwn 转换边缘情况",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "在启动日志中显示实际心跳间隔",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "用虚拟工具调用决策替换 HEARTBEAT_OK 令牌",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "在每次调用时解析 API 密钥 + 改进错误消息",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📦",
+          "summary": "将版本升级到 0.1.4.post2",
+          "cat": "发布"
+        },
+        {
+          "emoji": "📝",
+          "summary": "精简冗长的文档字符串",
+          "cat": "文档"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(slack): 后处理 slackify_markdown 以修复遗留的粗体格式问题 (#1107)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix: 稳定提示前缀以提高缓存重用率 (#1115)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix: 在调用时解析 API 密钥，使配置更改无需重启即可生效 (#1071)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "**fix(mcp): 移除 HTTP 传输的默认超时以避免工具超时冲突 (#1062)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(email): 当 autoReplyEnabled 为 false 时允许主动发送 (#1077)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "feat(feishu): 支持在帖子（富文本）消息中显示图片 (#1090)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "Fix: 修复当 LLM 返回字典参数时的内存整合 TypeError (#1061)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(web): 在每次调用时解析 API 密钥 + 改进错误消息 (#1098)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(heartbeat): 用虚拟工具调用决策替换 HEARTBEAT_OK 令牌 (#1102)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "合并运行时上下文助手并将导入移至顶部",
+          "cat": "重构"
+        },
+        {
+          "emoji": "📌",
+          "summary": "在警告中使用 loguru {} 格式化",
+          "cat": "其他"
+        },
+        {
+          "emoji": "📌",
+          "summary": "内联 API 密钥解析，移除不必要的方法",
+          "cat": "其他"
+        }
+      ],
+      "count": 23,
+      "summary": "今天主要围绕 v0.1.4.post2 版本发布进行了集中优化，重点解决了 Slack 和飞书平台的消息格式处理问题，包括 Markdown 转换、图片显示等功能增强。同时针对系统稳定性进行了多项修复，优化了 API 密钥解析机制、心跳检测逻辑和缓存重用率。通过大量的 bug 修复和代码重构，提升了多平台消息处理的可靠性和用户体验。"
     }
   },
   "openclaw": {
@@ -912,137 +1049,273 @@
       "entries": [
         {
           "emoji": "✨",
-          "summary": "将 Val Alexander 添加到维护者列表 (#25197)",
+          "summary": "Auto-reply: 添加精确停止触发器用于\"不要那样做\"",
           "cat": "新功能"
         },
         {
           "emoji": "✨",
-          "summary": "自动回复：规范化停止匹配并添加多语言触发器 (#25103)",
+          "summary": "Changelog: 添加 exec env 清理条目",
           "cat": "新功能"
         },
         {
           "emoji": "✨",
-          "summary": "为 cherry-picked 贡献者添加 mailmap 映射",
+          "summary": "添加路由/会话隔离边缘情况回归",
           "cat": "新功能"
         },
         {
           "emoji": "✨",
-          "summary": "为流中推理标签剥离添加回归测试",
+          "summary": "默认阻止容器命名空间加入",
           "cat": "新功能"
         },
         {
           "emoji": "✨",
-          "summary": "为仅推理回复过滤添加回归测试",
+          "summary": "添加 synology-chat 允许列表故障关闭说明",
           "cat": "新功能"
         },
         {
           "emoji": "✨",
-          "summary": "为子代理生成配置默认 runTimeoutSeconds",
+          "summary": "记录 alpha 重建状态和功能检查清单",
           "cat": "新功能"
         },
         {
           "emoji": "✨",
-          "summary": "测试：为子代理完成回退和显式直接...添加回归测试",
+          "summary": "添加即将推出的语音和屏幕标签页",
           "cat": "新功能"
         },
         {
           "emoji": "🐛",
-          "summary": "按用户影响重新排序未发布的修复",
+          "summary": "回填已落地的修复 PR 条目",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "修复门控回归",
+          "summary": "将\"bedrock\"提供商 ID 标准化为\"amazon-bedrock\"",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "修复合并后配置和 tui 命令处理器测试",
+          "summary": "避免错误的\"telegram 插件不可用\"阻塞",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "从部分流预览中剥离推理标签",
+          "summary": "修复后续和矩阵队列测试中的 ts 类型收窄回归",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "在回复传递中跳过仅推理消息",
+          "summary": "在不可重试的 440 关闭时停止重试循环",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "将锁文件与 diagnostics-otel proto 依赖对齐 (#24991) (感谢 @stakeswky)",
+          "summary": "加固公告投递 + cron 编码配置文件 (#25813 #25821 #25822)",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "同步 diagnostics-otel 依赖的锁文件 (#24991) (感谢 @stakeswky)",
+          "summary": "不区分大小写地分类钩子会话",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "为 nodeId 重新生成协议 swift 模型 (#24991) (感谢 @stakeswky)",
+          "summary": "阻止未授权的 DM 媒体下载",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "为 #24991 对齐推理负载类型 (感谢 @stakeswky)",
+          "summary": "减少提供商自动检测日志噪音",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "从通用通道分发路径中抑制推理负载",
+          "summary": "在群组中强制执行群组发送者策略",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "在断开连接时保护 sendMessage；在关闭时重置 readyPromise",
+          "summary": "从已审查的 PR 基础落地硬破坏集群",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "为主题会话绑定继承传递 parentPeer",
+          "summary": "加固后续和心跳的路由/会话隔离",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "在 sharedAuthOk 检查中包含 trusted-proxy",
+          "summary": "空允许列表故障关闭",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "为 'auto' 路由模型跳过推理努力注入",
+          "summary": "为附件水合强制执行本地媒体根检查",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "在历史截断后修复 OpenAI 的孤立工具结果",
+          "summary": "限制默认 safe-bin 可信目录",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "为 dmPolicy open allowFrom 不匹配添加可操作指导",
+          "summary": "将沙盒临时媒体路径锁定到 openclaw 根目录",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "将嵌入的错误负载视为运行失败",
+          "summary": "缓解反重力移除后果 (#25538)",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "在订阅处理器中将会话上下文传递给 before_compaction 钩子",
+          "summary": "changelog: 致谢两位聊天图像修复贡献者",
           "cat": "修复"
         },
         {
           "emoji": "📊",
-          "summary": "还有 75 条较次要的提交未展示",
+          "summary": "还有 39 条较次要的提交未展示",
           "cat": "其他"
         }
       ],
       "count": 26,
-      "summary": "今天 OpenClaw 项目主要聚焦于推理系统的优化和稳定性提升，包括推理标签处理、消息过滤机制的完善，以及多项回归测试的补充。同时进行了自动回复功能的多语言支持增强，修复了门控、配置处理、连接管理等多个核心模块的问题。团队还完成了维护者更新和依赖同步工作，整体围绕系统稳定性和功能完善展开。"
+      "summary": "今天 OpenClaw 项目主要聚焦于安全加固和系统稳定性提升，重点完善了容器隔离、媒体访问控制和路由会话管理等核心安全机制。同时推进了多项新功能开发，包括自动回复触发器、语音屏幕标签页等用户体验改进。修复了大量涉及提供商标准化、权限验证和错误处理的关键问题，为系统的可靠性和安全性奠定了更坚实的基础。"
+    },
+    "2026-02-25": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "添加 win32 dev=0 本地媒体回归测试",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "为 exec companion 加固添加报告者致谢",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "加固 iMessage 回声去重和推理抑制 (#25897)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "对齐 windows 安全打开文件身份检查",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "在 fs-safe openVerifiedLocalFile 中跳过不可靠的开发比较",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "清理警告并加固 gateway/talk 配置解析",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "加固语音 DAVE 接收可靠性 (#25861)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "Changelog: 记录允许列表过期目录模型选择修复",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "解决网页聊天面板角落裁剪问题 (#22458)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "阻止环境深度溢出审批绕过",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "为 IME 标记文本提交保留回车键 (#25178)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "默认语音唤醒转发到网页聊天 (#25440)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "优先使用 openclaw 二进制文件同时保留 pnpm 回退 (#25512)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "为无输入设备的语音音频路径添加保护 (#25817)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "修复代理/媒体/反应/模型选择器回归问题",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "加固 system.run companion 命令绑定",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🔒",
+          "summary": "Auth: 为 OpenRouter 绕过冷却跟踪",
+          "cat": "安全"
+        },
+        {
+          "emoji": "📦",
+          "summary": "Agents: 信任超出目录的显式允许列表引用",
+          "cat": "发布"
+        },
+        {
+          "emoji": "📦",
+          "summary": "Auth: 在显式配置文件顺序中使用冷却助手",
+          "cat": "发布"
+        },
+        {
+          "emoji": "📝",
+          "summary": "移除下一版本发布语句",
+          "cat": "文档"
+        },
+        {
+          "emoji": "📝",
+          "summary": "记录 DAVE 默认值和解密恢复",
+          "cat": "文档"
+        },
+        {
+          "emoji": "📝",
+          "summary": "更新 CHANGELOG.md",
+          "cat": "文档"
+        },
+        {
+          "emoji": "📝",
+          "summary": "Changelog: 从 PR 中移除无关的会话条目",
+          "cat": "文档"
+        },
+        {
+          "emoji": "📝",
+          "summary": "Changelog: 记录 OpenRouter 冷却绕过",
+          "cat": "文档"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "提取 iMessage 回声缓存并统一抑制保护",
+          "cat": "重构"
+        },
+        {
+          "emoji": "📊",
+          "summary": "还有 11 条较次要的提交未展示",
+          "cat": "其他"
+        }
+      ],
+      "count": 26,
+      "summary": "今天 OpenClaw 项目主要聚焦在系统稳定性和安全性加固，集中修复了语音处理、文件安全检查、iMessage 回声去重等多个核心模块的可靠性问题。同时完善了 Windows 平台的媒体回归测试和身份验证机制，并对网页聊天界面进行了用户体验优化。此外还加强了 OpenRouter 的认证冷却机制和 companion 命令的安全绑定，整体提升了系统的健壮性和安全防护能力。"
     }
   },
   "aionui": {
@@ -1199,6 +1472,11 @@
       "entries": [
         {
           "emoji": "✨",
+          "summary": "更新版本至 1.8.17",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
           "summary": "支持 \\[...\\] 和 \\(...\\) LaTeX 数学分隔符",
           "cat": "新功能"
         },
@@ -1209,7 +1487,7 @@
         },
         {
           "emoji": "✨",
-          "summary": "添加包含分支、提交和平台信息的步骤摘要",
+          "summary": "添加包含分支、commit 和平台信息的步骤摘要",
           "cat": "新功能"
         },
         {
@@ -1224,17 +1502,47 @@
         },
         {
           "emoji": "🐛",
-          "summary": "加载内置技能时对意外错误发出警告",
+          "summary": "修复 prettier 格式化并替换测试中的 no-explicit-any",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "将 fix/ci-vitest-test-path 的错误修复同步到可复用工作流",
+          "summary": "防止摘要消息项的水平溢出",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "在 package.json 中添加 Node.js 引擎版本约束",
+          "summary": "在流中保留孤立的 </think> 以供前端过滤",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "禁用原生 SkillManager 以防止 XML 注入到系统提示中",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "检测来自 MiniMax M2.5 的孤立 </think> 结束标签",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "压缩历史记录中的大型工具响应以防止上下文溢出",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "加载 _builtin 技能时对意外错误发出警告",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "将 fix/ci-vitest-test-path 的 bug 修复同步到可复用工作流",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "向 package.json 添加 Node.js 引擎版本约束",
           "cat": "修复"
         },
         {
@@ -1254,6 +1562,31 @@
         },
         {
           "emoji": "🔀",
+          "summary": "fix(lint): 修复 prettier 格式化并替换测试中的 no-explicit-any (#969)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(ui): 防止摘要消息项的水平溢出 (#968)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "WIP: fix(gemini): 压缩历史记录中的大型工具响应以防止上下文溢出 (#960)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(ui): 检测来自 MiniMax M2.5 的孤立 </think> 结束标签 (#962)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(gemini): 禁用原生 SkillManager XML 注入 (#966)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
           "summary": "feat(markdown): 支持 \\[...\\] 和 \\(...\\) LaTeX 数学分隔符 (#958)",
           "cat": "合并PR"
         },
@@ -1263,53 +1596,13 @@
           "cat": "合并PR"
         },
         {
-          "emoji": "🔀",
-          "summary": "ci: 将各平台构建摘要合并到单个作业中 (#959)",
-          "cat": "合并PR"
-        },
-        {
-          "emoji": "🔀",
-          "summary": "ci: 提取可复用构建工作流以消除重复 (#957)",
-          "cat": "合并PR"
-        },
-        {
-          "emoji": "🔀",
-          "summary": "fix: 添加 Node.js 引擎版本约束 (#956)",
-          "cat": "合并PR"
-        },
-        {
-          "emoji": "🔀",
-          "summary": "chore(build-manual): 添加包含分支、提交和平台信息的步骤摘要 (#950)",
-          "cat": "合并PR"
-        },
-        {
-          "emoji": "🔀",
-          "summary": "chore(ci): 为手动构建工作流名称添加 emoji (#949)",
-          "cat": "合并PR"
-        },
-        {
-          "emoji": "🔀",
-          "summary": "chore(ci): 添加针对特定平台构建的手动构建工作流 (#948)",
-          "cat": "合并PR"
-        },
-        {
-          "emoji": "📌",
-          "summary": "忽略 package-lock.json 和 yarn.lock",
-          "cat": "其他"
-        },
-        {
-          "emoji": "📌",
-          "summary": "移除 package-lock.json（项目使用 bun.lock）",
-          "cat": "其他"
-        },
-        {
-          "emoji": "📌",
-          "summary": "构建系统迁移 (Webpack → electron-vite) (#947)",
+          "emoji": "📊",
+          "summary": "还有 9 条较次要的提交未展示",
           "cat": "其他"
         }
       ],
-      "count": 22,
-      "summary": "今天 AionUi 项目主要围绕功能增强和构建系统优化展开工作。在功能层面，新增了 LaTeX 数学分隔符支持和技能延迟加载机制，提升了 Markdown 渲染能力和性能表现。同时完成了构建系统的重大重构，从 Webpack 迁移到 electron-vite，并优化了 CI/CD 流程，提取可复用工作流、改进多平台构建摘要，整体提升了开发和发布效率。"
+      "count": 26,
+      "summary": "今天 AionUi 项目发布了 1.8.17 版本，主要围绕技能管理优化和 LaTeX 数学公式支持展开工作。核心改进包括实现技能延迟加载机制、新增对 LaTeX 数学分隔符的支持，以及针对 Gemini 和 MiniMax 模型的多项稳定性修复。同时完善了 CI/CD 流程，提取了可复用构建工作流并优化了多平台构建摘要展示。"
     },
     "2026-02-23": {
       "entries": [
@@ -1778,7 +2071,12 @@
       "entries": [
         {
           "emoji": "✨",
-          "summary": "在仓库卡片中显示可浏览的技能列表",
+          "summary": "为环境变量添加静态加密保险库 (#219)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "在仓库卡片中添加可浏览的技能列表",
           "cat": "新功能"
         },
         {
@@ -1788,17 +2086,37 @@
         },
         {
           "emoji": "🐛",
+          "summary": "规范化服务错误映射和导航预期",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "在 linux/aarch64 上跳过 jemalloc (#229)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "加固反向代理 TLS 和 websocket 处理 (#230)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
           "summary": "将功能标志转发到 moltis-web 可选依赖",
           "cat": "修复"
         },
         {
+          "emoji": "♻️",
+          "summary": "将 crates 迁移到类型化的 thiserror 枚举 (#226)",
+          "cat": "重构"
+        },
+        {
           "emoji": "📌",
-          "summary": "移除 validate.rs 中的尾随空白字符",
+          "summary": "移除 validate.rs 中的尾随空白",
           "cat": "其他"
         }
       ],
-      "count": 4,
-      "summary": "今天主要围绕用户界面优化和功能完善展开工作，重点增强了仓库卡片的技能展示功能和身份选择器的交互体验。同时修复了功能标志转发的依赖问题，并进行了代码清理工作。整体聚焦在提升产品的用户体验和代码质量维护上。"
+      "count": 9,
+      "summary": "今天 moltis 项目主要围绕安全性和用户体验优化展开工作，新增了环境变量静态加密保险库功能，并完善了仓库技能展示和身份选择器。同时进行了大量稳定性修复，包括服务错误处理规范化、反向代理 TLS 加固以及跨平台兼容性问题解决。此外还推进了代码重构，将错误处理迁移到更规范的 thiserror 枚举体系。"
     },
     "2026-02-23": {
       "entries": [
@@ -1849,7 +2167,7 @@
         }
       ],
       "count": 9,
-      "summary": "今天主要进行了架构重构和功能完善工作，将提供商实现提取到独立的 crate 中以优化代码结构。新增了频道图片传输功能，同时修复了语音配置传递、GraphQL 服务调用、会话管理等多个核心模块的问题。整体工作重点在于提升系统稳定性和模块化程度。"
+      "summary": "今天主要完成了提供商架构重构，将实现提取到独立的 crate 中以提升模块化程度。同时新增了频道图片传输功能，并修复了语音配置传递、GraphQL 服务调用、会话管理等多个核心问题。整体工作重点集中在架构优化和稳定性提升上。"
     },
     "2026-02-22": {
       "entries": [
@@ -1911,6 +2229,22 @@
       ],
       "count": 11,
       "summary": "今天主要进行了大规模的代码重构工作，将原有的单体架构拆分为多个独立的 crate 模块，包括 moltis-web、moltis-chat、moltis-auth 等核心组件的提取。同时完成了一些功能优化，添加了 Hacker News 集成功能，修复了 Docker 镜像版本标记问题，并对主题字段进行了合并简化。整体工作重点在于提升项目的模块化程度和代码组织结构，为后续开发奠定更好的架构基础。"
+    },
+    "2026-02-25": {
+      "entries": [
+        {
+          "emoji": "🐛",
+          "summary": "加强会话创建等待和 anthro cargo 环境",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "当启动二进制文件过时时重建网关",
+          "cat": "修复"
+        }
+      ],
+      "count": 2,
+      "summary": "今天主要针对系统稳定性进行了两项关键修复：优化了会话创建机制的等待逻辑并改进了 Anthropic Cargo 运行环境配置，同时实现了网关的智能重建机制以确保启动二进制文件始终保持最新状态。这些改进将有效提升系统的可靠性和自动化运维能力。"
     }
   },
   "zeroclaw": {
@@ -1938,12 +2272,12 @@
         },
         {
           "emoji": "✨",
-          "summary": "使用系统默认浏览器而非硬编码的 Brave Browser (#1453)",
+          "summary": "使用系统默认浏览器而非硬编码的 Brave 浏览器 (#1453)",
           "cat": "新功能"
         },
         {
           "emoji": "✨",
-          "summary": "添加 /new 命令清除对话历史 (#1417)",
+          "summary": "添加 /new 命令以清除对话历史 (#1417)",
           "cat": "新功能"
         },
         {
@@ -1978,7 +2312,7 @@
         },
         {
           "emoji": "✨",
-          "summary": "添加语言部分功能导航映射",
+          "summary": "添加 language-part-function 导航映射",
           "cat": "新功能"
         },
         {
@@ -2008,6 +2342,11 @@
         },
         {
           "emoji": "🐛",
+          "summary": "修复 pub-release 中的 armv7 Android 编译器检测 (#1602)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
           "summary": "解决 strict-delta clippy 阻塞问题",
           "cat": "修复"
         },
@@ -2018,12 +2357,12 @@
         },
         {
           "emoji": "🐛",
-          "summary": "在网关 API 测试中使用 schema 配置类型",
+          "summary": "在 gateway API 测试中使用 schema 配置类型",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "加固重定向/browser_open 并恢复屏蔽的密钥",
+          "summary": "加固 redirect/browser_open 并恢复屏蔽的密钥",
           "cat": "修复"
         },
         {
@@ -2037,18 +2376,13 @@
           "cat": "修复"
         },
         {
-          "emoji": "🐛",
-          "summary": "改进工具调用解析和 shell 扩展检查",
-          "cat": "修复"
-        },
-        {
           "emoji": "📊",
           "summary": "还有 74 条较次要的提交未展示",
           "cat": "其他"
         }
       ],
       "count": 26,
-      "summary": "今天 ZeroClaw 项目主要聚焦于测试覆盖率提升和核心功能稳定性优化，为多个关键模块（provider parser、telegram、shell 等）补充了回归测试。同时在用户体验方面有重要进展，包括稳定 OAuth 认证流程、增强群组管控机制、优化浏览器调用逻辑等。此外还完成了 OpenAI Codex 的视觉支持集成和多项配置安全性改进，整体开发重心从功能扩展转向质量保障和用户友好性提升。"
+      "summary": "今天 ZeroClaw 项目主要聚焦于功能完善和测试覆盖提升，新增了多项核心功能包括 OAuth 稳定化、群组门控机制、对话管理命令等。同时大幅扩展了回归测试覆盖范围，涵盖 provider parser、telegram、shell 等关键模块。此外完成了多个重要 bug 修复，特别是编译器检测、API 密钥安全和配置错误处理方面的问题。整体上项目在功能迭代和质量保障两个维度都有显著进展。"
     }
   },
   "zeptoclaw": {
@@ -2251,8 +2585,38 @@
       "entries": [
         {
           "emoji": "✨",
-          "summary": "添加微信和 Discord 徽章 (#707)",
+          "summary": "改进 web 代理处理和覆盖率",
           "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加微信和 discord 徽章 (#707)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "在 spawn 工具中拒绝空任务 (#740)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "实现代码审查建议",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "对齐映射值以实现正确格式化",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "防止 DefaultConfig 模板值泄漏到用户 model_list 条目中",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "添加 CGO_ENABLED=0 进行静态构建以修复跨平台 GLIBC 错误",
+          "cat": "修复"
         },
         {
           "emoji": "📝",
@@ -2261,17 +2625,57 @@
         },
         {
           "emoji": "🔀",
-          "summary": "修复：为 OpenAI 兼容的推理模型保留 reasoning_content (#604)",
+          "summary": "feat: 为 web 工具添加 HTTP 代理支持 (#587)",
           "cat": "合并PR"
         },
         {
           "emoji": "🔀",
-          "summary": "[文档]翻译中文注释 (#697)",
+          "summary": "fix: 改进 `github_copilot_provider` 的会话管理 (#642)",
           "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix: 添加 CGO_ENABLED=0 进行静态构建以修复跨平台 GLIBC 错误 (#722)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "DevX: Makefile 中的小改进 (#726)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix: 防止 DefaultConfig 模板值泄漏到用户 model_list 条目中 (#724)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "refactor(config): 将 model 字段重命名为 model_name (#677)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix: 为 OpenAI 兼容的推理模型保留 reasoning_content (#604)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "[doc]翻译中文注释 (#697)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "清理死代码并在 CI 中启用死代码检测 (#515)",
+          "cat": "重构"
+        },
+        {
+          "emoji": "📌",
+          "summary": "Makefile 中的小改进",
+          "cat": "其他"
         }
       ],
-      "count": 4,
-      "summary": "今天主要围绕项目的社区建设和文档完善展开工作，新增了微信和Discord社交平台徽章以提升项目可见度，同时更新了微信二维码便于用户交流。技术层面修复了OpenAI兼容推理模型中reasoning_content的保留问题，并推进了代码注释的中文本地化工作。整体聚焦于用户体验优化和项目国际化支持。"
+      "count": 18,
+      "summary": "今天 PicoClaw 项目主要聚焦于系统稳定性和用户体验优化，完成了 web 代理功能增强、GitHub Copilot 会话管理改进等核心功能迭代。同时修复了多个关键问题，包括跨平台构建的 GLIBC 错误、配置模板值泄漏等问题，并进行了代码重构和死代码清理。此外还完善了项目文档和社区建设，更新了微信群二维码并添加了 Discord 徽章。"
     },
     "2026-02-23": {
       "entries": [
@@ -2292,7 +2696,7 @@
         },
         {
           "emoji": "🐛",
-          "summary": "make install 应该注意文本文件忙碌，因为它试图覆盖...",
+          "summary": "make install 应该注意文本文件忙碌，因为它试图覆写...",
           "cat": "修复"
         },
         {
@@ -2319,10 +2723,15 @@
           "emoji": "♻️",
           "summary": "重构收集技能 (#688)",
           "cat": "重构"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "将 model 字段重命名为 model_name",
+          "cat": "重构"
         }
       ],
-      "count": 9,
-      "summary": "今天 PicoClaw 项目主要聚焦于系统稳定性优化和功能完善，修复了多个关键问题包括网关绑定配置、Docker 环境对齐、工作区沙箱安全性以及配置参数错误等。同时完成了收集技能模块的重构工作，并新增了 Mistral AI 提供商的原生支持，提升了项目的扩展性和可用性。"
+      "count": 10,
+      "summary": "今天 PicoClaw 项目主要聚焦于系统稳定性优化和功能完善，修复了多个关键问题包括网关绑定、Docker 配置对齐、沙箱竞争条件等核心组件缺陷。同时完成了 Mistral AI 提供商的原生支持集成，并对收集技能模块进行了重构优化。此外还进行了代码规范化工作，包括中文注释翻译和模型字段命名统一，整体提升了项目的可维护性和国际化支持。"
     },
     "2026-02-22": {
       "entries": [

@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 sipeed/picoclaw 简报</h1>
-    <div class="meta">更新于 2026-02-24 · 最近3天 · 共18条提交</div>
+    <div class="meta">更新于 2026-02-25 · 最近3天 · 共33条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -61,31 +61,46 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">⚡ PicoClaw 是一个极简主义设计的 AI 编程助手，采用模块化架构，专注核心功能实现，具备出色的代码理解和生成能力。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/sipeed/picoclaw" target="_blank">github.com/sipeed/picoclaw</a> · ⭐ 19.1K · 🍴 2.3K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/sipeed/picoclaw" target="_blank">github.com/sipeed/picoclaw</a> · ⭐ 19.4K · 🍴 2.4K</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-24 周二 · 4条提交</div>
-  <div class="day-summary">💡 今天主要围绕项目的社区建设和文档完善展开工作，新增了微信和Discord社交平台徽章以提升项目可见度，同时更新了微信二维码便于用户交流。技术层面修复了OpenAI兼容推理模型中reasoning_content的保留问题，并推进了代码注释的中文本地化工作。整体聚焦于用户体验优化和项目国际化支持。</div>
+  <div class="day-header">2026-02-24 周二 · 18条提交</div>
+  <div class="day-summary">💡 今天 PicoClaw 项目主要聚焦于系统稳定性和用户体验优化，完成了 web 代理功能增强、GitHub Copilot 会话管理改进等核心功能迭代。同时修复了多个关键问题，包括跨平台构建的 GLIBC 错误、配置模板值泄漏等问题，并进行了代码重构和死代码清理。此外还完善了项目文档和社区建设，更新了微信群二维码并添加了 Discord 徽章。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加微信和 Discord 徽章 (#707)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">改进 web 代理处理和覆盖率</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加微信和 discord 徽章 (#707)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 spawn 工具中拒绝空任务 (#740)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">实现代码审查建议</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">对齐映射值以实现正确格式化</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">防止 DefaultConfig 模板值泄漏到用户 model_list 条目中</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">添加 CGO_ENABLED=0 进行静态构建以修复跨平台 GLIBC 错误</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新微信二维码 (#705)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复：为 OpenAI 兼容的推理模型保留 reasoning_content (#604)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">[文档]翻译中文注释 (#697)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: 为 web 工具添加 HTTP 代理支持 (#587)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 改进 `github_copilot_provider` 的会话管理 (#642)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 添加 CGO_ENABLED=0 进行静态构建以修复跨平台 GLIBC 错误 (#722)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">DevX: Makefile 中的小改进 (#726)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 防止 DefaultConfig 模板值泄漏到用户 model_list 条目中 (#724)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">refactor(config): 将 model 字段重命名为 model_name (#677)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 为 OpenAI 兼容的推理模型保留 reasoning_content (#604)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">[doc]翻译中文注释 (#697)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">清理死代码并在 CI 中启用死代码检测 (#515)</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">Makefile 中的小改进</span></div>
   </div>
 </div>
 <div class="day-section">
-  <div class="day-header">2026-02-23 周一 · 9条提交</div>
-  <div class="day-summary">💡 今天 PicoClaw 项目主要聚焦于系统稳定性优化和功能完善，修复了多个关键问题包括网关绑定配置、Docker 环境对齐、工作区沙箱安全性以及配置参数错误等。同时完成了收集技能模块的重构工作，并新增了 Mistral AI 提供商的原生支持，提升了项目的扩展性和可用性。</div>
+  <div class="day-header">2026-02-23 周一 · 10条提交</div>
+  <div class="day-summary">💡 今天 PicoClaw 项目主要聚焦于系统稳定性优化和功能完善，修复了多个关键问题包括网关绑定、Docker 配置对齐、沙箱竞争条件等核心组件缺陷。同时完成了 Mistral AI 提供商的原生支持集成，并对收集技能模块进行了重构优化。此外还进行了代码规范化工作，包括中文注释翻译和模型字段命名统一，整体提升了项目的可维护性和国际化支持。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">确保自定义拒绝模式扩展默认值而不是替换它们 (#479)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将网关默认绑定更改为 127.0.0.1 (#393)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 Docker Go 版本与 go.mod 对齐并优化日志记录器 (#596)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">make install 应该注意文本文件忙碌，因为它试图覆盖...</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">make install 应该注意文本文件忙碌，因为它试图覆写...</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">工作区沙箱避免检查时间/使用时间 (TOCTOU) 竞争条件 (#464)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">loop.go 中缺少 Tavily 配置，以及 web_searc 中的无效配置参数...</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">翻译中文注释</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: 添加原生 Mistral AI 提供商支持 (#541)</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重构收集技能 (#688)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将 model 字段重命名为 model_name</span></div>
   </div>
 </div>
 <div class="day-section">
