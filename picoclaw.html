@@ -65,7 +65,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-25 周三 · 22条提交</div>
-  <div class="day-summary">💡 今天主要进行了代码质量优化工作，启用了多个 golangci-lint 检查器（包括 whitespace、wastedassign、predeclared 等）来提升代码规范性。同时完成了重要的架构重构，将命令结构迁移到基于 Cobra 的实现，并修复了系统提示缓存和多工具调用的关键问题。此外还增强了发布流程，在 goreleaser 中新增了 rpm/deb 包支持和 loongarch64 架构适配。</div>
+  <div class="day-summary">💡 今天主要进行了代码质量优化工作，启用了多个 golangci-lint 检查器（包括 whitespace、wastedassign、predeclared 等）来提升代码规范性。同时完成了重要的架构重构，将命令结构迁移到基于 Cobra 的实现，并修复了系统提示缓存和多工具调用等关键问题。此外还增强了发布流程，在 goreleaser 中新增了 rpm/deb 包支持和 loongarch64 架构支持。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">启用 whitespace</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">启用 wastedassign</span></div>
@@ -85,7 +85,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">为 TavilySearchProvider 添加代理支持 (#779)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复：实现系统提示缓存以避免重复上下文重处理 (修复 #607) (#617)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">(ci) golangci 清理 (#770)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复：多工具调用结果被错误丢弃导致 LLM API 400 (#730)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复：多工具调用结果错误丢弃导致 LLM API 400 (#730)</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">迁移到基于 Cobra 的命令结构 (#429)</span></div>
     <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">更新 pkg/tools/web.go</span></div>
     <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">一个移动的 nakedret 案例</span></div>
