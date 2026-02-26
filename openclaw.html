@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 OpenClaw/OpenClaw 简报</h1>
-    <div class="meta">更新于 2026-02-25 · 最近6天 · 共118条提交</div>
+    <div class="meta">更新于 2026-02-26 · 最近7天 · 共137条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -61,38 +61,63 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">🦀 OpenClaw 是一个开源的 AI 编程助手，支持终端交互式编码、多模型切换、MCP 工具集成等，致力于打造开放的 AI 编程生态。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/OpenClaw/OpenClaw" target="_blank">github.com/OpenClaw/OpenClaw</a> · ⭐ 225.1K · 🍴 43.1K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/OpenClaw/OpenClaw" target="_blank">github.com/OpenClaw/OpenClaw</a> · ⭐ 228.9K · 🍴 43.9K</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-25 周三 · 26条提交</div>
-  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦在系统稳定性和安全性提升，集中修复了语音通话、iMessage 消息处理、文件安全验证等核心功能的多个关键问题。团队完成了 Windows 平台的本地媒体回归测试功能开发，并加强了身份验证和权限控制机制。同时对语音 DAVE 接收、网页聊天界面、以及各类配置解析逻辑进行了可靠性加固，为产品的整体稳定运行奠定了基础。</div>
+  <div class="day-header">2026-02-26 周四 · 19条提交</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要围绕安全强化和架构优化展开工作，重点修复了多个认证和授权相关的安全漏洞，包括 trusted-proxy、hooks URL 解析、以及各通信渠道的反应入口授权问题。同时进行了大量代码重构，统一了跨渠道的认证流程和路由模块，提升了系统的安全性和代码可维护性。此外还补充了缺失的回归测试用例，并完成了依赖项更新。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 win32 dev=0 本地媒体回归测试</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为 exec companion 加固添加报告者致谢</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固 iMessage 回声去重和推理抑制 (#25897)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">对齐 windows 安全打开文件身份检查</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 fs-safe openVerifiedLocalFile 中跳过不可靠的开发比较</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">清理警告并加固网关/通话配置解析</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固语音 DAVE 接收可靠性 (#25861)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">Changelog: 记录允许列表过期目录模型选择修复</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决网页聊天面板角落裁剪问题 (#22458)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">阻止环境深度溢出审批绕过</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 IME 标记文本提交保留回车键 (#25178)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">默认语音唤醒转发到网页聊天 (#25440)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">优先使用 openclaw 二进制文件同时保留 pnpm 回退 (#25512)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为无输入设备的语音音频路径添加保护 (#25817)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复代理/媒体/反应/模型选择器回归问题</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固 system.run companion 命令绑定</span></div>
-    <div class="entry"><span class="emoji">🔒</span><span class="cat-tag tag-安全">安全</span><span class="summary">Auth: 为 OpenRouter 绕过冷却跟踪</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">Agents: 信任超出目录的显式允许列表引用</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">Auth: 在显式配置文件顺序中使用冷却助手</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">移除下一版本发布语句</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">记录 DAVE 默认值和解密恢复</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 CHANGELOG.md</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">Changelog: 从 PR 中移除无关的会话条目</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">Changelog: 记录 OpenRouter 冷却绕过</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">提取 iMessage 回声缓存并统一抑制保护</span></div>
-    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 11 条较次要的提交未展示</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 hooks bind-host 强化覆盖</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加缺失的 announce 投递回归测试</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">阻止 trusted-proxy control-ui 节点绕过</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在后续运行器中调用 markDispatchIdle 以防止指示器卡住 (#26881)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">强化 hooks URL 解析 (#26864)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">区分已撤销的 API 密钥和临时认证错误 (#25754)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">强化 discord 和 slack 反应入口授权</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">强化浏览器 websocket 认证链</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">强化浏览器 trace/download 临时路径处理</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">强制执行 telegram 反应授权</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新依赖项和锁定文件</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">注意 trusted-proxy control-ui 强化</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">拆分浏览器认证强化路径</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">统一跨渠道的反应入口策略守卫</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">统一子代理 announce 投递管道</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">拆分 act 路由模块并去重路径守卫</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">简化 telegram 事件授权流程</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">统一反应认证流程和表驱动测试</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">在代理处理器模拟中保留配置导出</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-02-25 周三 · 26条提交</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于语音交互功能的完善，包括重新设计语音模式布局、实现麦克风管理器和转录 UI 等核心组件。同时进行了大量安全加固工作，修复了多个身份验证、文件上传和权限控制相关的安全漏洞。此外还优化了用户体验，新增二维码扫描入门流程和窄屏布局适配，并完成了 Android Gradle Plugin 9 的技术栈升级。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加溢出空载荷回归测试覆盖 (#26905)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">feature/OPENCLAW_IMAGE</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">重新设计语音模式布局以支持全高度对话</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">从麦克风管理器事件流式传输语音轮次</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">用麦克风转录 UI 替换语音占位符</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加单路径麦克风捕获运行时管理器</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加花括号以满足 eslint(curly) 规则</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">将二维码扫描作为一流的入门体验</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加窄屏 A2UI 布局覆盖</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加屏幕标签画布恢复流程</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加缺失的安全 PR 条目 (#26118 #26116 #26112 #26111 #26095)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为 #26079 添加更新日志条目 (感谢 @obviyus)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">迁移到 AGP 9 新的 DSL kotlin 设置</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在回退文本中包含嵌入标题 (#26907)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">澄清 denyCommands 精确匹配指导</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">防止父线程分叉时的静默溢出 (#26912)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">要求未配对操作设备进行身份验证配对</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在反应通知入队前强制身份验证</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在使用时重新验证上传路径</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当 payload.model 失败时，cron 模型回退到代理默认值 (#26717)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">通过网关发送路径保留 agentId</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">阻止 agents.files 符号链接逃逸</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">澄清 macOS beta 版本的 oauth 修复范围</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为 setup-token 路径添加 macOS 身份验证修复说明</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固 nextcloud-talk webhook 重放处理</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 54 条较次要的提交未展示</span></div>
   </div>
 </div>
 <div class="day-section">

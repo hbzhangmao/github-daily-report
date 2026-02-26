@@ -560,13 +560,68 @@
     "2026-02-25": {
       "entries": [
         {
+          "emoji": "✨",
+          "summary": "/stop 通过会话跟踪取消生成的子代理",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "在 exec 配置文档中添加 pathAppend 选项",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "简化 /stop 调度，内联命令，精简冗长的文档字符串",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "并行子代理取消 + 在锁定前注册任务",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "可扩展命令系统 + 基于任务的调度与 /stop",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "澄清平台特定的路径分隔符",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📝",
+          "summary": "在配置表中缩短 pathAppend 描述",
+          "cat": "文档"
+        },
+        {
           "emoji": "🔀",
-          "summary": "fix: 为支持思考功能的模型在消息中保留 reasoning_content (#1074)",
+          "summary": "feat: /stop 通过会话跟踪取消生成的子代理 (#1180)",
           "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "feat: 添加稳定系统层 + 不受信任的运行时上下文层 (#1126)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "feat/fix(exec): 添加 path_append 配置以扩展子进程的 PATH (#1083)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix: 为启用思考的模型在消息中保留 reasoning_content (#1074)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "简化运行时上下文注入 — 删除 JSON/去重，保留不受信任标签",
+          "cat": "重构"
         }
       ],
-      "count": 1,
-      "summary": "今天主要完成了思考功能相关的重要修复工作。通过合并PR #1074，为支持推理思考的模型在消息处理中正确保留了 reasoning_content 字段，确保了模型的思考过程能够被完整记录和传递。这一改进提升了系统对具备推理能力模型的兼容性和功能完整性。"
+      "count": 12,
+      "summary": "今天主要围绕子代理管理和系统稳定性进行了重点优化，新增了 /stop 命令支持通过会话跟踪取消正在运行的子代理，并完善了并行任务的取消机制。同时在执行配置方面增加了 pathAppend 选项来扩展子进程的 PATH 环境变量，提升了系统的可配置性。此外还引入了稳定系统层和不受信任运行时上下文层的架构改进，为项目的安全性和可扩展性奠定了基础。"
     },
     "2026-02-24": {
       "entries": [
@@ -579,6 +634,16 @@
           "emoji": "✨",
           "summary": "支持在帖子（富文本）消息中显示图片",
           "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加 path_append 配置以扩展子进程的 PATH",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "添加不受信任的运行时上下文层以稳定提示前缀",
+          "cat": "修复"
         },
         {
           "emoji": "🐛",
@@ -602,6 +667,16 @@
         },
         {
           "emoji": "🐛",
+          "summary": "将配置中的 path_append 传递给 ExecTool",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "使用空默认值和 os.pathsep 实现跨平台兼容",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
           "summary": "在启动日志中显示实际心跳间隔",
           "cat": "修复"
         },
@@ -617,7 +692,7 @@
         },
         {
           "emoji": "📦",
-          "summary": "将版本升级到 0.1.4.post2",
+          "summary": "将版本升级到 v0.1.4.post2",
           "cat": "发布"
         },
         {
@@ -657,7 +732,7 @@
         },
         {
           "emoji": "🔀",
-          "summary": "Fix: 修复当 LLM 返回字典参数时的内存整合 TypeError (#1061)",
+          "summary": "Fix: 修复 LLM 返回字典参数时的内存整合 TypeError (#1061)",
           "cat": "合并PR"
         },
         {
@@ -676,18 +751,13 @@
           "cat": "重构"
         },
         {
-          "emoji": "📌",
-          "summary": "在警告中使用 loguru {} 格式化",
-          "cat": "其他"
-        },
-        {
-          "emoji": "📌",
-          "summary": "内联 API 密钥解析，移除不必要的方法",
+          "emoji": "📊",
+          "summary": "还有 2 条较次要的提交未展示",
           "cat": "其他"
         }
       ],
-      "count": 23,
-      "summary": "今天主要围绕 v0.1.4.post2 版本发布进行了集中优化，重点解决了 Slack 和飞书等平台的消息格式处理问题，包括 Markdown 转换、图片显示和富文本支持。同时对系统核心机制进行了多项稳定性改进，优化了 API 密钥解析、心跳机制和缓存重用率。通过大量 bug 修复和代码重构，提升了整体系统的健壮性和用户体验。"
+      "count": 26,
+      "summary": "今天主要完成了 v0.1.4.post2 版本的发布工作，重点优化了系统稳定性和用户体验。核心改进包括稳定系统提示以提高缓存重用率、优化 Slack 消息格式处理，以及支持飞书富文本消息中的图片显示功能。同时修复了多个关键问题，如 API 密钥动态解析、心跳机制优化和跨平台 PATH 配置支持，整体提升了系统的可靠性和易用性。"
     }
   },
   "openclaw": {
@@ -1185,137 +1255,238 @@
       "entries": [
         {
           "emoji": "✨",
-          "summary": "添加 win32 dev=0 本地媒体回归测试",
+          "summary": "添加溢出空载荷回归测试覆盖 (#26905)",
           "cat": "新功能"
         },
         {
           "emoji": "✨",
-          "summary": "为 exec companion 加固添加报告者致谢",
+          "summary": "feature/OPENCLAW_IMAGE",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "重新设计语音模式布局以支持全高度对话",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "从麦克风管理器事件流式传输语音轮次",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "用麦克风转录 UI 替换语音占位符",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加单路径麦克风捕获运行时管理器",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加花括号以满足 eslint(curly) 规则",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "将二维码扫描作为一流的入门体验",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加窄屏 A2UI 布局覆盖",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加屏幕标签画布恢复流程",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加缺失的安全 PR 条目 (#26118 #26116 #26112 #26111 #26095)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "为 #26079 添加更新日志条目 (感谢 @obviyus)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "迁移到 AGP 9 新的 DSL kotlin 设置",
           "cat": "新功能"
         },
         {
           "emoji": "🐛",
-          "summary": "加固 iMessage 回声去重和推理抑制 (#25897)",
+          "summary": "在回退文本中包含嵌入标题 (#26907)",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "对齐 windows 安全打开文件身份检查",
+          "summary": "澄清 denyCommands 精确匹配指导",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "在 fs-safe openVerifiedLocalFile 中跳过不可靠的开发比较",
+          "summary": "防止父线程分叉时的静默溢出 (#26912)",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "清理警告并加固网关/通话配置解析",
+          "summary": "要求未配对操作设备进行身份验证配对",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "加固语音 DAVE 接收可靠性 (#25861)",
+          "summary": "在反应通知入队前强制身份验证",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "Changelog: 记录允许列表过期目录模型选择修复",
+          "summary": "在使用时重新验证上传路径",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "解决网页聊天面板角落裁剪问题 (#22458)",
+          "summary": "当 payload.model 失败时，cron 模型回退到代理默认值 (#26717)",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "阻止环境深度溢出审批绕过",
+          "summary": "通过网关发送路径保留 agentId",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "为 IME 标记文本提交保留回车键 (#25178)",
+          "summary": "阻止 agents.files 符号链接逃逸",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "默认语音唤醒转发到网页聊天 (#25440)",
+          "summary": "澄清 macOS beta 版本的 oauth 修复范围",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "优先使用 openclaw 二进制文件同时保留 pnpm 回退 (#25512)",
+          "summary": "为 setup-token 路径添加 macOS 身份验证修复说明",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "为无输入设备的语音音频路径添加保护 (#25817)",
+          "summary": "加固 nextcloud-talk webhook 重放处理",
           "cat": "修复"
-        },
-        {
-          "emoji": "🐛",
-          "summary": "修复代理/媒体/反应/模型选择器回归问题",
-          "cat": "修复"
-        },
-        {
-          "emoji": "🐛",
-          "summary": "加固 system.run companion 命令绑定",
-          "cat": "修复"
-        },
-        {
-          "emoji": "🔒",
-          "summary": "Auth: 为 OpenRouter 绕过冷却跟踪",
-          "cat": "安全"
-        },
-        {
-          "emoji": "📦",
-          "summary": "Agents: 信任超出目录的显式允许列表引用",
-          "cat": "发布"
-        },
-        {
-          "emoji": "📦",
-          "summary": "Auth: 在显式配置文件顺序中使用冷却助手",
-          "cat": "发布"
-        },
-        {
-          "emoji": "📝",
-          "summary": "移除下一版本发布语句",
-          "cat": "文档"
-        },
-        {
-          "emoji": "📝",
-          "summary": "记录 DAVE 默认值和解密恢复",
-          "cat": "文档"
-        },
-        {
-          "emoji": "📝",
-          "summary": "更新 CHANGELOG.md",
-          "cat": "文档"
-        },
-        {
-          "emoji": "📝",
-          "summary": "Changelog: 从 PR 中移除无关的会话条目",
-          "cat": "文档"
-        },
-        {
-          "emoji": "📝",
-          "summary": "Changelog: 记录 OpenRouter 冷却绕过",
-          "cat": "文档"
-        },
-        {
-          "emoji": "♻️",
-          "summary": "提取 iMessage 回声缓存并统一抑制保护",
-          "cat": "重构"
         },
         {
           "emoji": "📊",
-          "summary": "还有 11 条较次要的提交未展示",
+          "summary": "还有 54 条较次要的提交未展示",
           "cat": "其他"
         }
       ],
       "count": 26,
-      "summary": "今天 OpenClaw 项目主要聚焦在系统稳定性和安全性提升，集中修复了语音通话、iMessage 消息处理、文件安全验证等核心功能的多个关键问题。团队完成了 Windows 平台的本地媒体回归测试功能开发，并加强了身份验证和权限控制机制。同时对语音 DAVE 接收、网页聊天界面、以及各类配置解析逻辑进行了可靠性加固，为产品的整体稳定运行奠定了基础。"
+      "summary": "今天 OpenClaw 项目主要聚焦于语音交互功能的完善，包括重新设计语音模式布局、实现麦克风管理器和转录 UI 等核心组件。同时进行了大量安全加固工作，修复了多个身份验证、文件上传和权限控制相关的安全漏洞。此外还优化了用户体验，新增二维码扫描入门流程和窄屏布局适配，并完成了 Android Gradle Plugin 9 的技术栈升级。"
+    },
+    "2026-02-26": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "添加 hooks bind-host 强化覆盖",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加缺失的 announce 投递回归测试",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "阻止 trusted-proxy control-ui 节点绕过",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "在后续运行器中调用 markDispatchIdle 以防止指示器卡住 (#26881)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "强化 hooks URL 解析 (#26864)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "区分已撤销的 API 密钥和临时认证错误 (#25754)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "强化 discord 和 slack 反应入口授权",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "强化浏览器 websocket 认证链",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "强化浏览器 trace/download 临时路径处理",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "强制执行 telegram 反应授权",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📦",
+          "summary": "更新依赖项和锁定文件",
+          "cat": "发布"
+        },
+        {
+          "emoji": "📝",
+          "summary": "注意 trusted-proxy control-ui 强化",
+          "cat": "文档"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "拆分浏览器认证强化路径",
+          "cat": "重构"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "统一跨渠道的反应入口策略守卫",
+          "cat": "重构"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "统一子代理 announce 投递管道",
+          "cat": "重构"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "拆分 act 路由模块并去重路径守卫",
+          "cat": "重构"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "简化 telegram 事件授权流程",
+          "cat": "重构"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "统一反应认证流程和表驱动测试",
+          "cat": "重构"
+        },
+        {
+          "emoji": "🧪",
+          "summary": "在代理处理器模拟中保留配置导出",
+          "cat": "测试"
+        }
+      ],
+      "count": 19,
+      "summary": "今天 OpenClaw 项目主要围绕安全强化和架构优化展开工作，重点修复了多个认证和授权相关的安全漏洞，包括 trusted-proxy、hooks URL 解析、以及各通信渠道的反应入口授权问题。同时进行了大量代码重构，统一了跨渠道的认证流程和路由模块，提升了系统的安全性和代码可维护性。此外还补充了缺失的回归测试用例，并完成了依赖项更新。"
     }
   },
   "aionui": {
@@ -1487,7 +1658,7 @@
         },
         {
           "emoji": "✨",
-          "summary": "添加包含分支、commit 和平台信息的步骤摘要",
+          "summary": "添加包含分支、提交和平台信息的步骤摘要",
           "cat": "新功能"
         },
         {
@@ -1537,7 +1708,7 @@
         },
         {
           "emoji": "🐛",
-          "summary": "将 fix/ci-vitest-test-path 的 bug 修复同步到可复用工作流",
+          "summary": "将 fix/ci-vitest-test-path 的错误修复同步到可重用工作流",
           "cat": "修复"
         },
         {
@@ -1557,7 +1728,7 @@
         },
         {
           "emoji": "📦",
-          "summary": "提取可复用构建工作流以消除重复",
+          "summary": "提取可重用构建工作流以消除重复",
           "cat": "发布"
         },
         {
@@ -1602,7 +1773,7 @@
         }
       ],
       "count": 26,
-      "summary": "今天 AionUi 项目发布了 1.8.17 版本，主要围绕技能管理优化和 LaTeX 数学公式支持展开工作。核心改进包括实现技能延迟加载机制、新增对 LaTeX 数学分隔符的支持，以及针对 Gemini 和 MiniMax 模型的多项稳定性修复。同时完善了 CI/CD 流程，提取了可复用构建工作流并优化了多平台构建摘要展示。"
+      "summary": ""
     },
     "2026-02-23": {
       "entries": [
@@ -1665,6 +1836,142 @@
       ],
       "count": 8,
       "summary": "今天 AionUi 项目主要围绕模型预选择功能和 ACP 缓存优化展开工作，完成了 Codex ACP 迁移和相关页面重构。同时修复了多个关键问题，包括代理技能加载逻辑、进程管理和缓存重试机制的优化。项目发布了 1.8.16 版本，整合了近期的功能增强和稳定性改进。"
+    },
+    "2026-02-25": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "添加测试并优化 CI 缓存",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "实现 electron-builder 自动更新功能",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "从 vitest 运行命令中移除显式的 tests 文件夹",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "使用 markdown 发布说明而非原始 HTML",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "修复更新检查 404、缺失 yml 构件和预发布检测问题",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "在 Windows 原生模块重建中添加 exit 0 以重置退出码",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "从缓存键中移除架构以避免 Linux 多架构构建中的逗号",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "修复 quitAndInstall 返回类型以匹配 IPC 定义",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "修复 Switch 切换 bug、null 崩溃、缺失发布资源",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "prettier 格式化并添加 electron-builder 二进制文件缓存",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "增加 waitForPidFile 超时时间并完成 i18n 更新翻译",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "解决 pre-commit 钩子失败问题",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "解决自动更新相关文件的 CI 失败问题",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "移除 mainWindow 参数，添加 triggerEventForTest，修复测试",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "为自动更新服务添加 electron-log 依赖",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "为确认对话框中的长标题添加省略号截断",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "防止标题/描述过长时按钮被隐藏 (#979)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "移除 Windows 7zip monkey-patch 并修复压缩级别 (#971)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "移除 Windows 7zip monkey-patch 以修复 NSIS 安装程序 (#971)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "跳过 7z 格式的 7zip monkey-patch 以修复 Windows NSIS 安装程序",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📦",
+          "summary": "在 _build-reusable.yml 中恢复非自动更新的 CI 更改",
+          "cat": "发布"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(confirm): 防止内容过长时按钮被隐藏 (#981)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "更新微信群 (#975)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(build): 修复 Windows NSIS 安装程序缺失 AionUi.exe (#973)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🧪",
+          "summary": "从 vitest 命令中移除硬编码的测试路径",
+          "cat": "测试"
+        },
+        {
+          "emoji": "📊",
+          "summary": "还有 5 条较次要的提交未展示",
+          "cat": "其他"
+        }
+      ],
+      "count": 26,
+      "summary": "今天主要围绕 AionUi 项目的自动更新功能和构建系统进行了集中优化，实现了 electron-builder 自动更新机制并解决了相关的 CI/CD 流程问题。修复了多个平台构建中的关键问题，包括 Windows NSIS 安装程序、7zip 压缩处理、以及跨架构构建的缓存策略。同时完善了 UI 组件的用户体验，解决了确认对话框中长文本导致的布局问题，并优化了测试配置和代码格式化流程。"
     }
   },
   "moltis": {
@@ -2233,18 +2540,93 @@
     "2026-02-25": {
       "entries": [
         {
+          "emoji": "✨",
+          "summary": "国际化 (i18n) 支持英语和法语本地化 (#237)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "在加密设置页面添加保险库算法描述",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加 OpenClaw 导入包、CLI、网关 RPC 和 UI (#217)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加 Microsoft Teams 频道集成 (#231)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加 CalDAV 集成用于日历 CRUD 操作 (#84)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加多智能体角色及 CRUD UI (#97)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "在默认沙盒镜像中安装最新的 gogcli (#232)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "添加可配置的 OpenAI websocket 流传输 (#227)",
+          "cat": "新功能"
+        },
+        {
           "emoji": "🐛",
-          "summary": "加强会话创建等待和 anthro cargo 环境",
+          "summary": "折叠嵌套的 if 链以满足 clippy 要求",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "当启动二进制文件过时时重建网关",
+          "summary": "修复 detect.rs 中的 nightly rustfmt 格式化",
           "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "从配置和跨机器路径解析 OpenClaw 工作空间",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "在 openai 流程引导中跳过 openclaw 步骤",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "在智能体规范中处理无提供商的聊天状态",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "移除 binstall 元数据并修复功能缩进",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "加固会话创建等待和 anthro cargo 环境",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "当启动二进制文件过期时重建网关",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📌",
+          "summary": "将保险库描述包装在带边框的卡片中以实现视觉分离",
+          "cat": "其他"
         }
       ],
-      "count": 2,
-      "summary": "今天主要针对系统稳定性进行了两项关键修复：优化了会话创建机制的等待逻辑并改进了 Anthropic Cargo 运行环境配置，同时实现了网关的智能重建机制以确保启动二进制文件始终保持最新状态。这些改进将有效提升系统的可靠性和自动化运维能力。"
+      "count": 17,
+      "summary": "今天 moltis 项目主要聚焦在功能扩展和集成能力建设，新增了国际化支持、Microsoft Teams 和 CalDAV 集成、多智能体角色管理等核心功能模块。同时完善了 OpenClaw 导入工具链和 OpenAI websocket 流传输的可配置性，提升了系统的灵活性和可扩展性。此外团队还修复了多个 Rust 代码规范问题和智能体流程中的边界情况处理，确保了代码质量和系统稳定性。"
     }
   },
   "zeroclaw": {
@@ -2605,6 +2987,11 @@
         },
         {
           "emoji": "🐛",
+          "summary": "在 sanitizeHistoryForProvider 中处理多工具调用孤立检测",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
           "summary": "对齐映射值以实现正确格式化",
           "cat": "修复"
         },
@@ -2615,7 +3002,7 @@
         },
         {
           "emoji": "🐛",
-          "summary": "添加 CGO_ENABLED=0 进行静态构建以修复跨平台 GLIBC 错误",
+          "summary": "添加 CGO_ENABLED=0 用于静态构建以修复跨平台 GLIBC 错误",
           "cat": "修复"
         },
         {
@@ -2635,7 +3022,7 @@
         },
         {
           "emoji": "🔀",
-          "summary": "fix: 添加 CGO_ENABLED=0 进行静态构建以修复跨平台 GLIBC 错误 (#722)",
+          "summary": "fix: 添加 CGO_ENABLED=0 用于静态构建以修复跨平台 GLIBC 错误 (#722)",
           "cat": "合并PR"
         },
         {
@@ -2659,11 +3046,6 @@
           "cat": "合并PR"
         },
         {
-          "emoji": "🔀",
-          "summary": "[doc]翻译中文注释 (#697)",
-          "cat": "合并PR"
-        },
-        {
           "emoji": "♻️",
           "summary": "清理死代码并在 CI 中启用死代码检测 (#515)",
           "cat": "重构"
@@ -2675,7 +3057,7 @@
         }
       ],
       "count": 18,
-      "summary": "今天 PicoClaw 项目主要聚焦于 Web 代理功能的完善和系统稳定性提升，新增了 HTTP 代理支持并改进了覆盖率处理。同时进行了多项 bug 修复，包括解决跨平台 GLIBC 兼容性问题、优化配置管理防止模板值泄漏，以及改进 GitHub Copilot 和 OpenAI 推理模型的会话处理。此外还完成了代码重构清理、文档更新和项目徽章添加等维护工作。"
+      "summary": "今天 PicoClaw 项目主要聚焦于稳定性提升和基础设施优化，完成了多项关键修复包括跨平台构建问题、配置管理和会话处理等核心功能。同时推进了 web 代理支持的重要特性开发，并通过代码重构和死代码清理进一步提升了项目质量。此外还完善了项目文档和社区建设，添加了微信、Discord 等社交平台的集成支持。"
     },
     "2026-02-23": {
       "entries": [
@@ -2763,6 +3145,122 @@
       ],
       "count": 5,
       "summary": "今天主要完成了 Tavily 搜索功能的集成，为项目增加了新的搜索能力。同时进行了代码质量优化，包括运行 golangci-lint 修复代码规范问题，为 ToolRegistry 补充单元测试并修复了字符串截断时的 panic 问题。此外还清理了项目文档，修正了 README 中的拼写错误和失效链接，并移除了过时的路线图文档。"
+    },
+    "2026-02-25": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "启用 whitespace",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "启用 wastedassign",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "启用 predeclared",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "启用 prealloc",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "启用 nakedret",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "启用 misspell",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "启用 goprintffuncname",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "启用 dogsled",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "启用 bodyclose",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "在 goreleaser 中添加 rpm 和 deb 支持",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "在 goreleaser 中添加 loongarch64，移除 s390x 和 mips64 支持",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "从系统提示中移除冗余工具定义 (#771)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "修复 protocoltypes/types.go 中的 gci 格式化",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "使用基于 mtime 的自动失效缓存系统提示 (#607)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📝",
+          "summary": "更新微信二维码 (#767)",
+          "cat": "文档"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "为 TavilySearchProvider 添加代理支持 (#779)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "修复：实现系统提示缓存以避免重复上下文重处理 (修复 #607) (#617)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "(ci) golangci 清理 (#770)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "修复：多工具调用结果被错误丢弃导致 LLM API 400 (#730)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "迁移到基于 Cobra 的命令结构 (#429)",
+          "cat": "重构"
+        },
+        {
+          "emoji": "📌",
+          "summary": "更新 pkg/tools/web.go",
+          "cat": "其他"
+        },
+        {
+          "emoji": "📌",
+          "summary": "一个移动的 nakedret 案例",
+          "cat": "其他"
+        }
+      ],
+      "count": 22,
+      "summary": "今天主要进行了代码质量优化工作，启用了多个 golangci-lint 检查器（包括 whitespace、wastedassign、predeclared 等）来提升代码规范性。同时完成了重要的架构重构，将命令结构迁移到基于 Cobra 的实现，并修复了系统提示缓存和多工具调用的关键问题。此外还增强了发布流程，在 goreleaser 中新增了 rpm/deb 包支持和 loongarch64 架构适配。"
     }
   }
 }

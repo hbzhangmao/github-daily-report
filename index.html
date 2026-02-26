@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 HKUDS/nanobot 简报</h1>
-    <div class="meta">更新于 2026-02-25 · 最近9天 · 共127条提交</div>
+    <div class="meta">更新于 2026-02-26 · 最近9天 · 共141条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" class=active>nanobot</a>
@@ -61,29 +61,44 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">🤖 NanoBot 是一个轻量级 AI 助手框架，支持多渠道接入（飞书、钉钉等）、技能扩展、定时任务等功能。由 HKUDS 开发维护。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/HKUDS/nanobot" target="_blank">github.com/HKUDS/nanobot</a> · ⭐ 24.5K · 🍴 3.9K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/HKUDS/nanobot" target="_blank">github.com/HKUDS/nanobot</a> · ⭐ 25.1K · 🍴 4.0K</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-25 周三 · 1条提交</div>
-  <div class="day-summary">💡 今天主要完成了思考功能相关的重要修复工作。通过合并PR #1074，为支持推理思考的模型在消息处理中正确保留了 reasoning_content 字段，确保了模型的思考过程能够被完整记录和传递。这一改进提升了系统对具备推理能力模型的兼容性和功能完整性。</div>
+  <div class="day-header">2026-02-25 周三 · 12条提交</div>
+  <div class="day-summary">💡 今天主要围绕子代理管理和系统稳定性进行了重点优化，新增了 /stop 命令支持通过会话跟踪取消正在运行的子代理，并完善了并行任务的取消机制。同时在执行配置方面增加了 pathAppend 选项来扩展子进程的 PATH 环境变量，提升了系统的可配置性。此外还引入了稳定系统层和不受信任运行时上下文层的架构改进，为项目的安全性和可扩展性奠定了基础。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 为支持思考功能的模型在消息中保留 reasoning_content (#1074)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">/stop 通过会话跟踪取消生成的子代理</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在 exec 配置文档中添加 pathAppend 选项</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">简化 /stop 调度，内联命令，精简冗长的文档字符串</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">并行子代理取消 + 在锁定前注册任务</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">可扩展命令系统 + 基于任务的调度与 /stop</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">澄清平台特定的路径分隔符</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">在配置表中缩短 pathAppend 描述</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: /stop 通过会话跟踪取消生成的子代理 (#1180)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: 添加稳定系统层 + 不受信任的运行时上下文层 (#1126)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat/fix(exec): 添加 path_append 配置以扩展子进程的 PATH (#1083)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 为启用思考的模型在消息中保留 reasoning_content (#1074)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">简化运行时上下文注入 — 删除 JSON/去重，保留不受信任标签</span></div>
   </div>
 </div>
 <div class="day-section">
-  <div class="day-header">2026-02-24 周二 · 23条提交</div>
-  <div class="day-summary">💡 今天主要围绕 v0.1.4.post2 版本发布进行了集中优化，重点解决了 Slack 和飞书等平台的消息格式处理问题，包括 Markdown 转换、图片显示和富文本支持。同时对系统核心机制进行了多项稳定性改进，优化了 API 密钥解析、心跳机制和缓存重用率。通过大量 bug 修复和代码重构，提升了整体系统的健壮性和用户体验。</div>
+  <div class="day-header">2026-02-24 周二 · 26条提交</div>
+  <div class="day-summary">💡 今天主要完成了 v0.1.4.post2 版本的发布工作，重点优化了系统稳定性和用户体验。核心改进包括稳定系统提示以提高缓存重用率、优化 Slack 消息格式处理，以及支持飞书富文本消息中的图片显示功能。同时修复了多个关键问题，如 API 密钥动态解析、心跳机制优化和跨平台 PATH 配置支持，整体提升了系统的可靠性和易用性。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新 v0.1.4.post2 版本发布新闻</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持在帖子（富文本）消息中显示图片</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 path_append 配置以扩展子进程的 PATH</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">添加不受信任的运行时上下文层以稳定提示前缀</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">简化 _fixup_mrkdwn 并精简 SlackChannel 中的文档字符串</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">稳定系统提示以提高缓存重用率</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">后处理 slackify_markdown 输出以捕获遗留的格式问题</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">添加后处理以修复 mrkdwn 转换边缘情况</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将配置中的 path_append 传递给 ExecTool</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用空默认值和 os.pathsep 实现跨平台兼容</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在启动日志中显示实际心跳间隔</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">用虚拟工具调用决策替换 HEARTBEAT_OK 令牌</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在每次调用时解析 API 密钥 + 改进错误消息</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">将版本升级到 0.1.4.post2</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">将版本升级到 v0.1.4.post2</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">精简冗长的文档字符串</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(slack): 后处理 slackify_markdown 以修复遗留的粗体格式问题 (#1107)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 稳定提示前缀以提高缓存重用率 (#1115)</span></div>
@@ -91,12 +106,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">**fix(mcp): 移除 HTTP 传输的默认超时以避免工具超时冲突 (#1062)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(email): 当 autoReplyEnabled 为 false 时允许主动发送 (#1077)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(feishu): 支持在帖子（富文本）消息中显示图片 (#1090)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">Fix: 修复当 LLM 返回字典参数时的内存整合 TypeError (#1061)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">Fix: 修复 LLM 返回字典参数时的内存整合 TypeError (#1061)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(web): 在每次调用时解析 API 密钥 + 改进错误消息 (#1098)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(heartbeat): 用虚拟工具调用决策替换 HEARTBEAT_OK 令牌 (#1102)</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">合并运行时上下文助手并将导入移至顶部</span></div>
-    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">在警告中使用 loguru {} 格式化</span></div>
-    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">内联 API 密钥解析，移除不必要的方法</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 2 条较次要的提交未展示</span></div>
   </div>
 </div>
 <div class="day-section">

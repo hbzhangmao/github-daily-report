@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 sipeed/picoclaw 简报</h1>
-    <div class="meta">更新于 2026-02-25 · 最近3天 · 共33条提交</div>
+    <div class="meta">更新于 2026-02-26 · 最近4天 · 共55条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -61,28 +61,56 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">⚡ PicoClaw 是一个极简主义设计的 AI 编程助手，采用模块化架构，专注核心功能实现，具备出色的代码理解和生成能力。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/sipeed/picoclaw" target="_blank">github.com/sipeed/picoclaw</a> · ⭐ 19.4K · 🍴 2.4K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/sipeed/picoclaw" target="_blank">github.com/sipeed/picoclaw</a> · ⭐ 19.9K · 🍴 2.4K</div>
   </div>
   <div class="day-section">
+  <div class="day-header">2026-02-25 周三 · 22条提交</div>
+  <div class="day-summary">💡 今天主要进行了代码质量优化工作，启用了多个 golangci-lint 检查器（包括 whitespace、wastedassign、predeclared 等）来提升代码规范性。同时完成了重要的架构重构，将命令结构迁移到基于 Cobra 的实现，并修复了系统提示缓存和多工具调用的关键问题。此外还增强了发布流程，在 goreleaser 中新增了 rpm/deb 包支持和 loongarch64 架构适配。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">启用 whitespace</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">启用 wastedassign</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">启用 predeclared</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">启用 prealloc</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">启用 nakedret</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">启用 misspell</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">启用 goprintffuncname</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">启用 dogsled</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">启用 bodyclose</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在 goreleaser 中添加 rpm 和 deb 支持</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在 goreleaser 中添加 loongarch64，移除 s390x 和 mips64 支持</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从系统提示中移除冗余工具定义 (#771)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 protocoltypes/types.go 中的 gci 格式化</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用基于 mtime 的自动失效缓存系统提示 (#607)</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新微信二维码 (#767)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">为 TavilySearchProvider 添加代理支持 (#779)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复：实现系统提示缓存以避免重复上下文重处理 (修复 #607) (#617)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">(ci) golangci 清理 (#770)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">修复：多工具调用结果被错误丢弃导致 LLM API 400 (#730)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">迁移到基于 Cobra 的命令结构 (#429)</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">更新 pkg/tools/web.go</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">一个移动的 nakedret 案例</span></div>
+  </div>
+</div>
+<div class="day-section">
   <div class="day-header">2026-02-24 周二 · 18条提交</div>
-  <div class="day-summary">💡 今天 PicoClaw 项目主要聚焦于 Web 代理功能的完善和系统稳定性提升，新增了 HTTP 代理支持并改进了覆盖率处理。同时进行了多项 bug 修复，包括解决跨平台 GLIBC 兼容性问题、优化配置管理防止模板值泄漏，以及改进 GitHub Copilot 和 OpenAI 推理模型的会话处理。此外还完成了代码重构清理、文档更新和项目徽章添加等维护工作。</div>
+  <div class="day-summary">💡 今天 PicoClaw 项目主要聚焦于稳定性提升和基础设施优化，完成了多项关键修复包括跨平台构建问题、配置管理和会话处理等核心功能。同时推进了 web 代理支持的重要特性开发，并通过代码重构和死代码清理进一步提升了项目质量。此外还完善了项目文档和社区建设，添加了微信、Discord 等社交平台的集成支持。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">改进 web 代理处理和覆盖率</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加微信和 discord 徽章 (#707)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 spawn 工具中拒绝空任务 (#740)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">实现代码审查建议</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 sanitizeHistoryForProvider 中处理多工具调用孤立检测</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">对齐映射值以实现正确格式化</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">防止 DefaultConfig 模板值泄漏到用户 model_list 条目中</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">添加 CGO_ENABLED=0 进行静态构建以修复跨平台 GLIBC 错误</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">添加 CGO_ENABLED=0 用于静态构建以修复跨平台 GLIBC 错误</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新微信二维码 (#705)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: 为 web 工具添加 HTTP 代理支持 (#587)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 改进 `github_copilot_provider` 的会话管理 (#642)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 添加 CGO_ENABLED=0 进行静态构建以修复跨平台 GLIBC 错误 (#722)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 添加 CGO_ENABLED=0 用于静态构建以修复跨平台 GLIBC 错误 (#722)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">DevX: Makefile 中的小改进 (#726)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 防止 DefaultConfig 模板值泄漏到用户 model_list 条目中 (#724)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">refactor(config): 将 model 字段重命名为 model_name (#677)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 为 OpenAI 兼容的推理模型保留 reasoning_content (#604)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">[doc]翻译中文注释 (#697)</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">清理死代码并在 CI 中启用死代码检测 (#515)</span></div>
     <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">Makefile 中的小改进</span></div>
   </div>

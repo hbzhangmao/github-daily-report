@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 iOfficeAI/AionUi 简报</h1>
-    <div class="meta">更新于 2026-02-25 · 最近7天 · 共61条提交</div>
+    <div class="meta">更新于 2026-02-26 · 最近8天 · 共87条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -61,16 +61,47 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">🖥️ AionUi 是一个免费、本地化、开源的 AI 协作平台，支持 Gemini CLI、Claude Code、Codex、OpenCode 等多种 AI 编程工具的 7×24 小时协同工作。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/iOfficeAI/AionUi" target="_blank">github.com/iOfficeAI/AionUi</a> · ⭐ 17.0K · 🍴 1.3K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/iOfficeAI/AionUi" target="_blank">github.com/iOfficeAI/AionUi</a> · ⭐ 17.1K · 🍴 1.3K</div>
   </div>
   <div class="day-section">
+  <div class="day-header">2026-02-25 周三 · 26条提交</div>
+  <div class="day-summary">💡 今天主要围绕 AionUi 项目的自动更新功能和构建系统进行了集中优化，实现了 electron-builder 自动更新机制并解决了相关的 CI/CD 流程问题。修复了多个平台构建中的关键问题，包括 Windows NSIS 安装程序、7zip 压缩处理、以及跨架构构建的缓存策略。同时完善了 UI 组件的用户体验，解决了确认对话框中长文本导致的布局问题，并优化了测试配置和代码格式化流程。</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加测试并优化 CI 缓存</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">实现 electron-builder 自动更新功能</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从 vitest 运行命令中移除显式的 tests 文件夹</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 markdown 发布说明而非原始 HTML</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复更新检查 404、缺失 yml 构件和预发布检测问题</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 Windows 原生模块重建中添加 exit 0 以重置退出码</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从缓存键中移除架构以避免 Linux 多架构构建中的逗号</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 quitAndInstall 返回类型以匹配 IPC 定义</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 Switch 切换 bug、null 崩溃、缺失发布资源</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">prettier 格式化并添加 electron-builder 二进制文件缓存</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">增加 waitForPidFile 超时时间并完成 i18n 更新翻译</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决 pre-commit 钩子失败问题</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决自动更新相关文件的 CI 失败问题</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除 mainWindow 参数，添加 triggerEventForTest，修复测试</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为自动更新服务添加 electron-log 依赖</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为确认对话框中的长标题添加省略号截断</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">防止标题/描述过长时按钮被隐藏 (#979)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除 Windows 7zip monkey-patch 并修复压缩级别 (#971)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除 Windows 7zip monkey-patch 以修复 NSIS 安装程序 (#971)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">跳过 7z 格式的 7zip monkey-patch 以修复 Windows NSIS 安装程序</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">在 _build-reusable.yml 中恢复非自动更新的 CI 更改</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(confirm): 防止内容过长时按钮被隐藏 (#981)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">更新微信群 (#975)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(build): 修复 Windows NSIS 安装程序缺失 AionUi.exe (#973)</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">从 vitest 命令中移除硬编码的测试路径</span></div>
+    <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 5 条较次要的提交未展示</span></div>
+  </div>
+</div>
+<div class="day-section">
   <div class="day-header">2026-02-24 周二 · 26条提交</div>
-  <div class="day-summary">💡 今天 AionUi 项目发布了 1.8.17 版本，主要围绕技能管理优化和 LaTeX 数学公式支持展开工作。核心改进包括实现技能延迟加载机制、新增对 LaTeX 数学分隔符的支持，以及针对 Gemini 和 MiniMax 模型的多项稳定性修复。同时完善了 CI/CD 流程，提取了可复用构建工作流并优化了多平台构建摘要展示。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新版本至 1.8.17</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持 \[...\] 和 \(...\) LaTeX 数学分隔符</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">通过索引注入延迟加载技能，而非完整内容</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加包含分支、commit 和平台信息的步骤摘要</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加包含分支、提交和平台信息的步骤摘要</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为手动构建工作流名称添加 emoji</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加针对特定平台构建的手动构建工作流</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 prettier 格式化并替换测试中的 no-explicit-any</span></div>
@@ -80,11 +111,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">检测来自 MiniMax M2.5 的孤立 &lt;/think&gt; 结束标签</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">压缩历史记录中的大型工具响应以防止上下文溢出</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加载 _builtin 技能时对意外错误发出警告</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 fix/ci-vitest-test-path 的 bug 修复同步到可复用工作流</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 fix/ci-vitest-test-path 的错误修复同步到可重用工作流</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">向 package.json 添加 Node.js 引擎版本约束</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">将各平台构建摘要合并到单个作业中</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">使 MSVC ARM64 工具链安装非阻塞</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">提取可复用构建工作流以消除重复</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">提取可重用构建工作流以消除重复</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(lint): 修复 prettier 格式化并替换测试中的 no-explicit-any (#969)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(ui): 防止摘要消息项的水平溢出 (#968)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">WIP: fix(gemini): 压缩历史记录中的大型工具响应以防止上下文溢出 (#960)</span></div>

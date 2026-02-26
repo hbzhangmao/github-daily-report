@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 moltis-org/moltis 简报</h1>
-    <div class="meta">更新于 2026-02-25 · 最近8天 · 共106条提交</div>
+    <div class="meta">更新于 2026-02-26 · 最近8天 · 共121条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -61,14 +61,29 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">⚙️ Moltis 是一个用 Rust 构建的个人 AI 助手，单二进制文件部署，支持多 LLM 提供商、长期记忆、沙箱执行、语音交互、MCP 工具和多渠道接入（Web、Telegram、API）。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 1.4K · 🍴 0.1K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 1.5K · 🍴 0.1K</div>
   </div>
   <div class="day-section">
-  <div class="day-header">2026-02-25 周三 · 2条提交</div>
-  <div class="day-summary">💡 今天主要针对系统稳定性进行了两项关键修复：优化了会话创建机制的等待逻辑并改进了 Anthropic Cargo 运行环境配置，同时实现了网关的智能重建机制以确保启动二进制文件始终保持最新状态。这些改进将有效提升系统的可靠性和自动化运维能力。</div>
+  <div class="day-header">2026-02-25 周三 · 17条提交</div>
+  <div class="day-summary">💡 今天 moltis 项目主要聚焦在功能扩展和集成能力建设，新增了国际化支持、Microsoft Teams 和 CalDAV 集成、多智能体角色管理等核心功能模块。同时完善了 OpenClaw 导入工具链和 OpenAI websocket 流传输的可配置性，提升了系统的灵活性和可扩展性。此外团队还修复了多个 Rust 代码规范问题和智能体流程中的边界情况处理，确保了代码质量和系统稳定性。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加强会话创建等待和 anthro cargo 环境</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当启动二进制文件过时时重建网关</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">国际化 (i18n) 支持英语和法语本地化 (#237)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在加密设置页面添加保险库算法描述</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 OpenClaw 导入包、CLI、网关 RPC 和 UI (#217)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 Microsoft Teams 频道集成 (#231)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 CalDAV 集成用于日历 CRUD 操作 (#84)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加多智能体角色及 CRUD UI (#97)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在默认沙盒镜像中安装最新的 gogcli (#232)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加可配置的 OpenAI websocket 流传输 (#227)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">折叠嵌套的 if 链以满足 clippy 要求</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 detect.rs 中的 nightly rustfmt 格式化</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从配置和跨机器路径解析 OpenClaw 工作空间</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 openai 流程引导中跳过 openclaw 步骤</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在智能体规范中处理无提供商的聊天状态</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除 binstall 元数据并修复功能缩进</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固会话创建等待和 anthro cargo 环境</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">当启动二进制文件过期时重建网关</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">将保险库描述包装在带边框的卡片中以实现视觉分离</span></div>
   </div>
 </div>
 <div class="day-section">
