@@ -65,7 +65,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-25 周三 · 26条提交</div>
-  <div class="day-summary">💡 今天主要围绕 AionUi 项目的自动更新功能和构建系统进行了集中优化，实现了 electron-builder 自动更新机制并解决了相关的 CI 构建问题。修复了多个平台兼容性问题，包括 Windows NSIS 安装程序、7zip 压缩处理以及跨架构构建的缓存策略。同时完善了 UI 交互体验，解决了确认对话框中长文本显示和 Switch 组件的交互问题，并优化了测试流程和 CI 缓存配置。</div>
+  <div class="day-summary">💡 今天主要围绕 AionUi 项目的自动更新功能和构建系统进行了集中优化，实现了 electron-builder 自动更新机制并解决了相关的 CI/CD 流程问题。修复了多个平台兼容性问题，包括 Windows NSIS 安装程序、7zip 压缩处理以及跨架构构建的缓存策略。同时完善了 UI 组件的显示逻辑，解决了确认对话框中长文本导致的布局问题，并优化了测试配置和代码格式化流程。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加测试并优化 CI 缓存</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">实现 electron-builder 自动更新功能</span></div>
@@ -97,7 +97,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-24 周二 · 26条提交</div>
-  <div class="day-summary">💡 今天 AionUi 项目发布了 1.8.17 版本，主要围绕技能管理优化和 LaTeX 数学公式支持展开工作。核心改进包括实现技能延迟加载机制、新增对 LaTeX 数学分隔符的支持，以及针对 Gemini 和 MiniMax 模型的多项稳定性修复。同时完善了 CI/CD 流程，提取了可重用构建工作流并优化了多平台构建摘要展示。</div>
+  <div class="day-summary">💡 今天 AionUi 项目发布了 1.8.17 版本，主要围绕技能管理优化和 LaTeX 数学公式支持展开工作。核心改进包括实现技能延迟加载机制、新增对 LaTeX 数学分隔符的支持，以及针对 Gemini 和 MiniMax 模型的多项稳定性修复。同时完善了 CI/CD 流程，提取了可复用构建工作流并优化了多平台构建摘要展示。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新版本至 1.8.17</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持 \[...\] 和 \(...\) LaTeX 数学分隔符</span></div>
@@ -112,11 +112,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">检测来自 MiniMax M2.5 的孤立 &lt;/think&gt; 结束标签</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">压缩历史记录中的大型工具响应以防止上下文溢出</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加载 _builtin 技能时对意外错误发出警告</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 fix/ci-vitest-test-path 的 bug 修复同步到可重用工作流</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 fix/ci-vitest-test-path 的 bug 修复同步到可复用工作流</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">向 package.json 添加 Node.js 引擎版本约束</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">将各平台构建摘要合并到单个作业中</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">使 MSVC ARM64 工具链安装非阻塞</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">提取可重用构建工作流以消除重复</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">提取可复用构建工作流以消除重复</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(lint): 修复 prettier 格式化并替换测试中的 no-explicit-any (#969)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(ui): 防止摘要消息项的水平溢出 (#968)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">WIP: fix(gemini): 压缩历史记录中的大型工具响应以防止上下文溢出 (#960)</span></div>

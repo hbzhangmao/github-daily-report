@@ -65,32 +65,32 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-26 周四 · 19条提交</div>
-  <div class="day-summary">💡 今天 OpenClaw 项目主要围绕安全强化和架构优化展开工作，重点修复了多个认证和授权相关的安全漏洞，包括 trusted-proxy、hooks URL 解析、以及各通信渠道的反应入口授权问题。同时进行了大量代码重构，统一了跨渠道的认证流程和路由模块，提升了系统的安全性和代码可维护性。此外还补充了缺失的回归测试用例，并完成了依赖项更新。</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于安全加固和架构优化工作。团队重点强化了多个关键组件的安全防护，包括 hooks URL 解析、浏览器 WebSocket 认证链、以及各类反应入口的授权机制。同时进行了大量代码重构，统一了反应认证流程和公告投递管道，并拆分了浏览器认证和路由模块以提升代码可维护性。此外还修复了调度指示器卡死和 API 密钥撤销识别等关键问题。</div>
   <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加 hooks bind-host 强化覆盖</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加缺失的 announce 投递回归测试</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">阻止 trusted-proxy control-ui 节点绕过</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在后续运行器中调用 markDispatchIdle 以防止指示器卡住 (#26881)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">强化 hooks URL 解析 (#26864)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">区分已撤销的 API 密钥和临时认证错误 (#25754)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">强化 discord 和 slack 反应入口授权</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">强化浏览器 websocket 认证链</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">强化浏览器 trace/download 临时路径处理</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">强制执行 telegram 反应授权</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新依赖项和锁定文件</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">注意 trusted-proxy control-ui 强化</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">拆分浏览器认证强化路径</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">统一跨渠道的反应入口策略守卫</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">统一子代理 announce 投递管道</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">拆分 act 路由模块并去重路径守卫</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">简化 telegram 事件授权流程</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">统一反应认证流程和表驱动测试</span></div>
-    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">在代理处理器模拟中保留配置导出</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add hooks bind-host hardening coverage</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add missing announce delivery regressions</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">block trusted-proxy control-ui node bypass</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">call markDispatchIdle in followup runner to prevent stuck indicator (#26881)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">harden hooks URL parsing (#26864)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">distinguish revoked API keys from transient auth errors (#25754)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">harden discord and slack reaction ingress authorization</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">harden browser websocket auth chain</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">harden browser trace/download temp path handling</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">enforce telegram reaction authorization</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">update dependencies and lockfile</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">note trusted-proxy control-ui hardening</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">split browser auth hardening paths</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">unify reaction ingress policy guards across channels</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">unify subagent announce delivery pipeline</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">split act route modules and dedupe path guards</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">simplify telegram event authorization flow</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">unify reaction auth flow and table-drive tests</span></div>
+    <div class="entry"><span class="emoji">🧪</span><span class="cat-tag tag-测试">测试</span><span class="summary">preserve config exports in agent handler mock</span></div>
   </div>
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-25 周三 · 26条提交</div>
-  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于语音交互功能的重构和完善，包括重新设计语音模式布局、实现麦克风管理器和转录 UI 等核心组件。同时进行了大量安全加固工作，修复了多个身份验证、文件上传和权限控制相关的安全漏洞。此外还完成了 UI 布局优化、二维码扫描功能集成以及 Android 构建工具的版本升级。整体上是一个功能增强与安全修复并重的开发周期。</div>
+  <div class="day-summary">💡 今天 OpenClaw 项目主要聚焦于语音交互功能的重构和完善，包括重新设计语音模式布局、实现麦克风管理器和转录 UI 等核心组件。同时进行了大量安全加固工作，修复了多个身份验证、文件上传和权限控制相关的安全漏洞。此外还完成了 UI 布局优化、二维码扫描功能集成以及 Android 构建系统的现代化升级。整体上是一个功能增强与安全强化并重的开发周期。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加溢出空载荷回归测试覆盖 (#26905)</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">feature/OPENCLAW_IMAGE</span></div>
