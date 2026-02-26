@@ -732,7 +732,7 @@
         },
         {
           "emoji": "🔀",
-          "summary": "Fix: 修复当 LLM 返回字典参数时的内存整合 TypeError (#1061)",
+          "summary": "Fix: 修复 LLM 返回字典参数时的内存整合 TypeError (#1061)",
           "cat": "合并PR"
         },
         {
@@ -757,7 +757,7 @@
         }
       ],
       "count": 26,
-      "summary": "今天主要完成了 v0.1.4.post2 版本的发布工作，重点优化了系统稳定性和用户体验。核心改进包括稳定系统提示以提高缓存重用率、优化 Slack 消息格式处理，以及支持飞书富文本消息中的图片显示功能。同时修复了多个关键问题，如 API 密钥动态解析、心跳机制优化和跨平台 PATH 配置支持，整体提升了系统的可靠性和易用性。"
+      "summary": "今天主要完成了 v0.1.4.post2 版本的发布工作，重点优化了系统稳定性和用户体验。核心改进包括稳定系统提示以提高缓存重用率、优化 Slack 消息格式处理、支持飞书富文本消息显示图片等功能增强。同时修复了多个关键问题，如 API 密钥动态解析、心跳机制优化、以及跨平台 PATH 配置支持，整体提升了系统的可靠性和易用性。"
     }
   },
   "openclaw": {
@@ -1385,108 +1385,108 @@
         }
       ],
       "count": 26,
-      "summary": "今天 OpenClaw 项目主要聚焦于语音交互功能的重构和完善，包括重新设计语音模式布局、实现麦克风管理器和转录 UI 等核心组件。同时进行了大量安全加固工作，修复了多个身份验证、文件上传和权限控制相关的安全漏洞。此外还完成了 UI 布局优化、二维码扫描功能集成以及 Android 构建系统的现代化升级。整体上是一个功能增强与安全强化并重的开发周期。"
+      "summary": "今天 OpenClaw 项目主要聚焦于语音交互功能的重构和用户体验优化，完成了麦克风管理器、语音转录 UI 和全高度对话布局的核心实现。同时进行了大量安全加固工作，包括身份验证流程完善、文件上传路径验证和防止符号链接逃逸等关键修复。此外还推进了移动端适配，新增二维码扫描入门体验和窄屏布局支持，并完成了 Android Gradle Plugin 9 的技术栈升级。"
     },
     "2026-02-26": {
       "entries": [
         {
           "emoji": "✨",
-          "summary": "add hooks bind-host hardening coverage",
+          "summary": "添加 hooks bind-host 强化覆盖",
           "cat": "新功能"
         },
         {
           "emoji": "✨",
-          "summary": "add missing announce delivery regressions",
+          "summary": "添加缺失的 announce 投递回归测试",
           "cat": "新功能"
         },
         {
           "emoji": "🐛",
-          "summary": "block trusted-proxy control-ui node bypass",
+          "summary": "阻止 trusted-proxy control-ui 节点绕过",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "call markDispatchIdle in followup runner to prevent stuck indicator (#26881)",
+          "summary": "在后续运行器中调用 markDispatchIdle 以防止指示器卡住 (#26881)",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "harden hooks URL parsing (#26864)",
+          "summary": "强化 hooks URL 解析 (#26864)",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "distinguish revoked API keys from transient auth errors (#25754)",
+          "summary": "区分已撤销的 API 密钥和临时认证错误 (#25754)",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "harden discord and slack reaction ingress authorization",
+          "summary": "强化 discord 和 slack 反应入口授权",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "harden browser websocket auth chain",
+          "summary": "强化浏览器 websocket 认证链",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "harden browser trace/download temp path handling",
+          "summary": "强化浏览器 trace/download 临时路径处理",
           "cat": "修复"
         },
         {
           "emoji": "🐛",
-          "summary": "enforce telegram reaction authorization",
+          "summary": "强制执行 telegram 反应授权",
           "cat": "修复"
         },
         {
           "emoji": "📦",
-          "summary": "update dependencies and lockfile",
+          "summary": "更新依赖项和锁定文件",
           "cat": "发布"
         },
         {
           "emoji": "📝",
-          "summary": "note trusted-proxy control-ui hardening",
+          "summary": "注意 trusted-proxy control-ui 强化",
           "cat": "文档"
         },
         {
           "emoji": "♻️",
-          "summary": "split browser auth hardening paths",
+          "summary": "拆分浏览器认证强化路径",
           "cat": "重构"
         },
         {
           "emoji": "♻️",
-          "summary": "unify reaction ingress policy guards across channels",
+          "summary": "统一跨渠道的反应入口策略守卫",
           "cat": "重构"
         },
         {
           "emoji": "♻️",
-          "summary": "unify subagent announce delivery pipeline",
+          "summary": "统一子代理 announce 投递管道",
           "cat": "重构"
         },
         {
           "emoji": "♻️",
-          "summary": "split act route modules and dedupe path guards",
+          "summary": "拆分 act 路由模块并去重路径守卫",
           "cat": "重构"
         },
         {
           "emoji": "♻️",
-          "summary": "simplify telegram event authorization flow",
+          "summary": "简化 telegram 事件授权流程",
           "cat": "重构"
         },
         {
           "emoji": "♻️",
-          "summary": "unify reaction auth flow and table-drive tests",
+          "summary": "统一反应认证流程和表驱动测试",
           "cat": "重构"
         },
         {
           "emoji": "🧪",
-          "summary": "preserve config exports in agent handler mock",
+          "summary": "在代理处理器模拟中保留配置导出",
           "cat": "测试"
         }
       ],
       "count": 19,
-      "summary": "今天 OpenClaw 项目主要聚焦于安全加固和架构优化工作。团队重点强化了多个关键组件的安全防护，包括 hooks URL 解析、浏览器 WebSocket 认证链、以及各类反应入口的授权机制。同时进行了大量代码重构，统一了反应认证流程和公告投递管道，并拆分了浏览器认证和路由模块以提升代码可维护性。此外还修复了调度指示器卡死和 API 密钥撤销识别等关键问题。"
+      "summary": ""
     }
   },
   "aionui": {
@@ -1971,7 +1971,7 @@
         }
       ],
       "count": 26,
-      "summary": "今天主要围绕 AionUi 项目的自动更新功能和构建系统进行了集中优化，实现了 electron-builder 自动更新机制并解决了相关的 CI/CD 流程问题。修复了多个平台兼容性问题，包括 Windows NSIS 安装程序、7zip 压缩处理以及跨架构构建的缓存策略。同时完善了 UI 组件的显示逻辑，解决了确认对话框中长文本导致的布局问题，并优化了测试配置和代码格式化流程。"
+      "summary": "今天 AionUi 项目主要聚焦于自动更新功能的完整实现和构建流程优化，包括 electron-builder 自动更新机制的集成和相关 CI 缓存策略调整。同时进行了大量 bug 修复工作，重点解决了 Windows 平台 NSIS 安装程序问题、UI 组件显示异常以及构建流程中的各类兼容性问题。此外还完善了测试框架配置，优化了 vitest 运行参数并加强了代码质量检查流程。"
     }
   },
   "moltis": {
@@ -2403,7 +2403,7 @@
         },
         {
           "emoji": "🐛",
-          "summary": "加固反向代理 TLS 和 websocket 处理 (#230)",
+          "summary": "加强反向代理 TLS 和 websocket 处理 (#230)",
           "cat": "修复"
         },
         {
@@ -2423,7 +2423,7 @@
         }
       ],
       "count": 9,
-      "summary": "今天 moltis 项目主要围绕安全性和用户体验优化展开工作，新增了环境变量静态加密保险库功能，并完善了仓库技能展示和身份选择器。同时进行了大量稳定性修复，包括服务错误处理规范化、反向代理 TLS 加固以及跨平台兼容性问题解决。此外还推进了代码重构，将错误处理迁移到更规范的 thiserror 枚举体系。"
+      "summary": "今天 moltis 项目主要围绕安全性和用户体验优化展开工作，新增了环境变量静态加密保险库功能，并完善了仓库技能展示和身份选择器。同时修复了多个关键问题，包括 Linux ARM64 架构兼容性、反向代理 TLS 处理和服务错误映射规范化。此外还进行了错误处理机制的重构，将 crates 迁移到更规范的 thiserror 枚举类型。"
     },
     "2026-02-23": {
       "entries": [
@@ -2626,7 +2626,7 @@
         }
       ],
       "count": 17,
-      "summary": "今天 moltis 项目主要聚焦在功能扩展和集成能力建设，新增了国际化支持、Microsoft Teams 和 CalDAV 集成、多智能体角色管理等核心功能模块。同时完善了 OpenClaw 导入工具链和 OpenAI websocket 流传输的可配置性，提升了系统的扩展性和用户体验。此外团队还进行了大量代码质量优化，修复了 Rust 代码格式化、智能体状态处理和会话管理等方面的问题。"
+      "summary": "今天 moltis 项目主要聚焦在功能扩展和集成能力建设，新增了国际化支持、Microsoft Teams 和 CalDAV 集成、多智能体角色管理等核心功能模块。同时完善了 OpenClaw 导入工具链和 OpenAI websocket 流传输的可配置性，提升了系统的互操作性。此外团队还修复了多个 Rust 代码规范问题和智能体流程中的边界情况处理，整体推进了平台的稳定性和国际化能力。"
     }
   },
   "zeroclaw": {
@@ -3057,7 +3057,7 @@
         }
       ],
       "count": 18,
-      "summary": "今天 PicoClaw 项目主要聚焦于稳定性提升和基础设施优化，完成了多项关键修复包括跨平台构建问题、配置管理和会话处理等核心功能。同时推进了 web 代理支持的重要特性开发，并通过代码重构和死代码清理进一步提升了项目质量。此外还完善了社区建设相关的文档和徽章展示功能。"
+      "summary": "今天 PicoClaw 项目主要聚焦于稳定性提升和功能完善，集中处理了多个关键 bug 修复，包括配置管理、会话处理和跨平台构建问题。同时推进了 web 代理功能的改进，新增了微信和 Discord 社区徽章支持。此外还进行了代码重构清理，启用了死代码检测机制来提升代码质量。"
     },
     "2026-02-23": {
       "entries": [
@@ -3240,7 +3240,7 @@
         },
         {
           "emoji": "🔀",
-          "summary": "修复：多工具调用结果被错误丢弃导致 LLM API 400 (#730)",
+          "summary": "修复：多工具调用结果错误丢弃导致 LLM API 400 (#730)",
           "cat": "合并PR"
         },
         {
@@ -3260,7 +3260,7 @@
         }
       ],
       "count": 22,
-      "summary": "今天主要进行了代码质量优化工作，启用了多个 Go 语言 linter 规则包括 whitespace、wastedassign、misspell 等，并完成了相关的代码格式化修复。同时推进了系统架构改进，实现了基于 mtime 的系统提示缓存机制，并将命令行结构迁移到 Cobra 框架。此外还增强了发布流程，在 goreleaser 中新增了 rpm/deb 包支持和 loongarch64 架构支持，修复了多工具调用和代理支持相关的问题。"
+      "summary": "今天主要进行了代码质量优化工作，启用了多个 golangci-lint 检查器（包括 whitespace、wastedassign、predeclared 等）来提升代码规范性。同时完成了重要的架构重构，将命令结构迁移到基于 Cobra 的实现，并修复了系统提示缓存和多工具调用等关键问题。此外还增强了发布流程，在 goreleaser 中新增了 rpm/deb 包支持和 loongarch64 架构支持。"
     }
   }
 }
