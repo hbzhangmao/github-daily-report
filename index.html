@@ -65,7 +65,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-25 周三 · 12条提交</div>
-  <div class="day-summary">💡 今天主要围绕子代理管理和系统稳定性进行了重点优化，新增了 /stop 命令支持通过会话跟踪取消正在运行的子代理，并完善了并行任务的取消机制。同时在执行配置方面增加了 pathAppend 选项来扩展子进程的 PATH 环境变量，提升了系统的可配置性。此外还引入了稳定系统层和不受信任运行时上下文层的架构改进，为项目的安全性和可扩展性奠定了基础。</div>
+  <div class="day-summary">💡 今天主要围绕子代理管理和系统架构优化展开工作，重点实现了 /stop 命令的会话跟踪取消功能，完善了并行子代理的调度机制。同时新增了 pathAppend 配置选项来扩展子进程的 PATH 环境变量，并对运行时上下文系统进行了重构，添加了稳定系统层和不可信运行时上下文层。此外还修复了多个与任务调度、命令系统扩展性相关的问题，整体提升了系统的稳定性和可维护性。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">/stop 通过会话跟踪取消生成的子代理</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在 exec 配置文档中添加 pathAppend 选项</span></div>
@@ -75,10 +75,10 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">澄清平台特定的路径分隔符</span></div>
     <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">在配置表中缩短 pathAppend 描述</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: /stop 通过会话跟踪取消生成的子代理 (#1180)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: 添加稳定系统层 + 不受信任的运行时上下文层 (#1126)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: 添加稳定系统层 + 不可信运行时上下文层 (#1126)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat/fix(exec): 添加 path_append 配置以扩展子进程的 PATH (#1083)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: 为启用思考的模型在消息中保留 reasoning_content (#1074)</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">简化运行时上下文注入 — 删除 JSON/去重，保留不受信任标签</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">简化运行时上下文注入 — 删除 JSON/去重，保留不可信标签</span></div>
   </div>
 </div>
 <div class="day-section">

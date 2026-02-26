@@ -65,7 +65,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-24 周二 · 26条提交</div>
-  <div class="day-summary">💡 今天 ZeroClaw 项目主要聚焦于功能完善和测试覆盖提升，新增了多项核心功能包括 OAuth 稳定化、群组门控机制、对话管理命令等。同时大幅扩展了回归测试覆盖范围，涵盖 provider parser、telegram、shell 等关键模块。此外完成了多个重要 bug 修复，特别是编译器检测、API 密钥安全和配置错误处理方面的问题。整体上项目在功能迭代和质量保障两个维度都有显著进展。</div>
+  <div class="day-summary">💡 今天 ZeroClaw 项目主要围绕功能稳定性和用户体验优化展开工作，重点完善了 OAuth 认证流程、provider 模型集成以及 Telegram 机器人的群组管控功能。同时大幅扩展了回归测试覆盖范围，涵盖 parser、cron、telegram 和 shell 等核心模块，并修复了多个编译和配置相关的关键问题。此外还增强了 OpenAI Codex 的视觉支持能力，优化了浏览器调用逻辑和配置错误检测机制。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为 provider parser cron 和 telegram 添加回归测试覆盖</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">稳定 codex oauth 并添加 provider 模型连接工作流</span></div>
@@ -90,7 +90,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 /api/config 中屏蔽 feishu/qdrant 和路由 API 密钥</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 gateway API 测试中使用 schema 配置类型</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固 redirect/browser_open 并恢复屏蔽的密钥</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复发布工作流中的 shellcheck 引用</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复发布工作流中的 shellcheck 引号问题</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 #1505 后的 loop_ 测试格式</span></div>
     <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 74 条较次要的提交未展示</span></div>
   </div>
