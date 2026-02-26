@@ -65,21 +65,21 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-25 周三 · 26条提交</div>
-  <div class="day-summary">💡 今天 AionUi 项目主要聚焦于自动更新功能的完整实现和构建流程优化，包括 electron-builder 自动更新机制的集成和相关 CI 缓存策略调整。同时进行了大量 bug 修复工作，重点解决了 Windows 平台 NSIS 安装程序问题、UI 组件显示异常以及构建流程中的各类兼容性问题。此外还完善了测试框架配置，优化了 vitest 运行参数并加强了代码质量检查流程。</div>
+  <div class="day-summary">💡 今天主要围绕 AionUi 项目的自动更新功能和构建系统进行了集中优化，实现了 electron-builder 自动更新机制并完善了相关测试。同时解决了多个构建和发布流程中的关键问题，包括修复 Windows NSIS 安装程序、优化 CI 缓存策略、以及处理跨平台构建的兼容性问题。此外还修复了 UI 组件中的显示异常，如 Switch 组件切换 bug 和确认对话框长内容的布局问题。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加测试并优化 CI 缓存</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">实现 electron-builder 自动更新功能</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从 vitest 运行命令中移除显式的 tests 文件夹</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 markdown 发布说明而非原始 HTML</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复更新检查 404、缺失 yml 构件和预发布检测问题</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复更新检查 404、缺失 yml 构建产物和预发布检测</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 Windows 原生模块重建中添加 exit 0 以重置退出码</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">从缓存键中移除架构以避免 Linux 多架构构建中的逗号</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 quitAndInstall 返回类型以匹配 IPC 定义</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">修复 Switch 切换 bug、null 崩溃、缺失发布资源</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">prettier 格式化并添加 electron-builder 二进制文件缓存</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">增加 waitForPidFile 超时时间并完成 i18n 更新翻译</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决 pre-commit 钩子失败问题</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决自动更新相关文件的 CI 失败问题</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决 pre-commit 钩子失败</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">解决自动更新相关文件的 CI 失败</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除 mainWindow 参数，添加 triggerEventForTest，修复测试</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为自动更新服务添加 electron-log 依赖</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">为确认对话框中的长标题添加省略号截断</span></div>

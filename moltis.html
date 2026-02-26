@@ -65,7 +65,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="day-section">
   <div class="day-header">2026-02-25 周三 · 17条提交</div>
-  <div class="day-summary">💡 今天 moltis 项目主要聚焦在功能扩展和集成能力建设，新增了国际化支持、Microsoft Teams 和 CalDAV 集成、多智能体角色管理等核心功能模块。同时完善了 OpenClaw 导入工具链和 OpenAI websocket 流传输的可配置性，提升了系统的互操作性。此外团队还修复了多个 Rust 代码规范问题和智能体流程中的边界情况处理，整体推进了平台的稳定性和国际化能力。</div>
+  <div class="day-summary">💡 今天 moltis 项目主要聚焦在功能扩展和集成能力建设，新增了国际化支持、Microsoft Teams 和 CalDAV 集成、多智能体角色管理等核心功能模块。同时完善了 OpenClaw 导入工具链和 OpenAI websocket 流传输的可配置性，提升了系统的互操作性。此外团队还修复了多个 Rust 代码规范问题和智能体流程中的边界情况处理，保证了代码质量和系统稳定性。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">国际化 (i18n) 支持英语和法语本地化 (#237)</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在加密设置页面添加保险库算法描述</span></div>
@@ -88,14 +88,14 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 </div>
 <div class="day-section">
   <div class="day-header">2026-02-24 周二 · 9条提交</div>
-  <div class="day-summary">💡 今天 moltis 项目主要围绕安全性和用户体验优化展开工作，新增了环境变量静态加密保险库功能，并完善了仓库技能展示和身份选择器。同时修复了多个关键问题，包括 Linux ARM64 架构兼容性、反向代理 TLS 处理和服务错误映射规范化。此外还进行了错误处理机制的重构，将 crates 迁移到更规范的 thiserror 枚举类型。</div>
+  <div class="day-summary">💡 今天 moltis 项目主要围绕安全性和用户体验优化展开工作，新增了环境变量静态加密保险库功能，并完善了仓库技能展示和身份选择器。同时进行了大量稳定性修复，包括服务错误处理规范化、反向代理 TLS 加固以及跨平台兼容性问题解决。此外还推进了代码重构，将错误处理迁移到更规范的 thiserror 枚举体系。</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">为环境变量添加静态加密保险库 (#219)</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">在仓库卡片中添加可浏览的技能列表</span></div>
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">扩展身份 emoji 选择器选项 (#206)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">规范化服务错误映射和导航预期</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在 linux/aarch64 上跳过 jemalloc (#229)</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加强反向代理 TLS 和 websocket 处理 (#230)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">加固反向代理 TLS 和 websocket 处理 (#230)</span></div>
     <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将功能标志转发到 moltis-web 可选依赖</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将 crates 迁移到类型化的 thiserror 枚举 (#226)</span></div>
     <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">移除 validate.rs 中的尾随空白</span></div>
