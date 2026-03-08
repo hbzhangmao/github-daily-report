@@ -1853,7 +1853,7 @@
         },
         {
           "emoji": "📊",
-          "summary": "还有 57 条较次要的提交未展示",
+          "summary": "还有 58 条较次要的提交未展示",
           "cat": "其他"
         }
       ],
@@ -1938,11 +1938,6 @@
           "cat": "重构"
         },
         {
-          "emoji": "♻️",
-          "summary": "share route policy evaluation in chat monitors",
-          "cat": "重构"
-        },
-        {
           "emoji": "🧪",
           "summary": "Update gateway-status.test.ts",
           "cat": "测试"
@@ -1953,7 +1948,7 @@
           "cat": "其他"
         }
       ],
-      "count": 18,
+      "count": 17,
       "summary": ""
     }
   },
