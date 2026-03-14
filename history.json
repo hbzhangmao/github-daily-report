@@ -2114,6 +2114,11 @@
         },
         {
           "emoji": "🐛",
+          "summary": "tighten pairing token blank handling",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
           "summary": "keep oversized chat replies readable (#45559)",
           "cat": "修复"
         },
@@ -2208,13 +2213,8 @@
           "cat": "修复"
         },
         {
-          "emoji": "📝",
-          "summary": "reorder changelog highlights by user impact",
-          "cat": "文档"
-        },
-        {
           "emoji": "📊",
-          "summary": "还有 66 条较次要的提交未展示",
+          "summary": "还有 69 条较次要的提交未展示",
           "cat": "其他"
         }
       ],
@@ -2239,11 +2239,6 @@
           "cat": "修复"
         },
         {
-          "emoji": "🐛",
-          "summary": "UI: fix chat context notice icon sizing (#45533)",
-          "cat": "修复"
-        },
-        {
           "emoji": "🧪",
           "summary": "extract provider usage load coverage",
           "cat": "测试"
@@ -2257,19 +2252,9 @@
           "emoji": "🧪",
           "summary": "tighten safe bin policy coverage",
           "cat": "测试"
-        },
-        {
-          "emoji": "🧪",
-          "summary": "tighten channel summary coverage",
-          "cat": "测试"
-        },
-        {
-          "emoji": "🧪",
-          "summary": "tighten transport ready coverage",
-          "cat": "测试"
         }
       ],
-      "count": 9,
+      "count": 6,
       "summary": ""
     }
   },
