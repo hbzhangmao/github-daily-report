@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 moltis-org/moltis 简报</h1>
-    <div class="meta">更新于 2026-03-08 · 最近10天 · 共125条提交</div>
+    <div class="meta">更新于 2026-03-14 · 最近10天 · 共113条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" >nanobot</a>
@@ -61,9 +61,30 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">⚙️ Moltis 是一个用 Rust 构建的个人 AI 助手，单二进制文件部署，支持多 LLM 提供商、长期记忆、沙箱执行、语音交互、MCP 工具和多渠道接入（Web、Telegram、API）。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 1.9K · 🍴 0.2K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/moltis-org/moltis" target="_blank">github.com/moltis-org/moltis</a> · ⭐ 2.2K · 🍴 0.2K</div>
   </div>
   <div class="day-section">
+  <div class="day-header">2026-03-13 周五 · 6条提交</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">persist aborted partial history (#418)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">fix QMD install instructions (#402)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">improve onboarding password autofill hints (#406)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">keep onboarding accessible after auth reset (#415)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">clarify cron setup modal copy (#409)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">strip HTML tags from plain fallback (#404)</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-03-12 周四 · 5条提交</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">support generic provider env bootstrap (#401)</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">support secret remote MCP URLs and headers (#416)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">harden apple container bootstrap execs (#405)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">address installation feedback from user testing (#398)</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">support legacy memory embedding keys (#400)</span></div>
+  </div>
+</div>
+<div class="day-section">
   <div class="day-header">2026-03-07 周六 · 3条提交</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">tabs to filter chats between sessions and cron (#338)</span></div>
@@ -207,41 +228,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">update deploy templates to 0.8.36</span></div>
     <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">release 0.8.36</span></div>
     <div class="entry"><span class="emoji">📊</span><span class="cat-tag tag-其他">其他</span><span class="summary">还有 3 条较次要的提交未展示</span></div>
-  </div>
-</div>
-<div class="day-section">
-  <div class="day-header">2026-02-15 周日 · 13条提交</div>
-  <div class="day-summary">💡 今天 moltis 项目主要进行了稳定性修复和版本发布工作，集中解决了内存管理、系统提示、浏览器工具回退机制等核心功能问题。团队修复了跨平台兼容性问题，包括 macOS 沙盒助手的条件编译和 Linux CI 构建错误。同时完成了从 0.8.31 到 0.8.35 的连续版本迭代，表明项目正处于快速迭代优化阶段。</div>
-  <div class="entries">
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">引导 memory_save 指向主题文件以保持上下文精简</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">在系统提示中添加 memory_save 和 memory-anchor 提示</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">browser 工具在没有容器运行时时回退到主机</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">移除 clippy 标记的不必要路径限定</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">使用 cfg 门控 macOS 专用沙盒助手以修复 Linux CI 上的死代码错误</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">环境注入、沙盒恢复、UI 修复、提供商改进 (#108)</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板到 0.8.34</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.35</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.34</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板到 0.8.33</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.33</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.32</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">发布 0.8.31</span></div>
-  </div>
-</div>
-<div class="day-section">
-  <div class="day-header">2026-02-14 周六 · 10条提交</div>
-  <div class="day-summary">💡 今天主要完成了 moltis 项目 0.8.29 版本的发布准备工作，重点优化了语音功能的持久化回退机制和启动流程的日志记录。同时对移动端的引导和聊天用户体验进行了优化，修复了文件监视器相关问题并完善了系统提示注入功能。此外还对提供商模型的异步处理和启动界面的视觉效果进行了细节改进。</div>
-  <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加持久语音回退和启动密钥/绑定横幅日志</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加引导提供商模型计时日志</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">将 MEMORY.md 注入系统提示并修复文件监视器</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">更新部署模板到 0.8.29</span></div>
-    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">准备 0.8.29 版本发布</span></div>
-    <div class="entry"><span class="emoji">⚙️</span><span class="cat-tag tag-配置">配置</span><span class="summary">移动端引导/聊天 UX 优化基于合并的主分支 (#126)</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 README</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">重新排序引导屏幕</span></div>
-    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">优化启动日志中设置代码横幅的强调显示</span></div>
-    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">使提供商模型保存注册表刷新异步化</span></div>
   </div>
 </div>
 

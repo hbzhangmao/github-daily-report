@@ -48,7 +48,7 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
 <div class="container">
   <div class="header">
     <h1>📋 HKUDS/nanobot 简报</h1>
-    <div class="meta">更新于 2026-03-08 · 最近10天 · 共187条提交</div>
+    <div class="meta">更新于 2026-03-14 · 最近10天 · 共222条提交</div>
   </div>
   <div class="nav">
     <a href="index.html" class=active>nanobot</a>
@@ -61,9 +61,63 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
   </div>
   <div class="project-intro">
     <div class="intro-text">🤖 NanoBot 是一个轻量级 AI 助手框架，支持多渠道接入（飞书、钉钉等）、技能扩展、定时任务等功能。由 HKUDS 开发维护。</div>
-    <div class="intro-link">🔗 <a href="https://github.com/HKUDS/nanobot" target="_blank">github.com/HKUDS/nanobot</a> · ⭐ 30.0K · 🍴 4.9K</div>
+    <div class="intro-link">🔗 <a href="https://github.com/HKUDS/nanobot" target="_blank">github.com/HKUDS/nanobot</a> · ⭐ 33.2K · 🍴 5.5K</div>
   </div>
   <div class="day-section">
+  <div class="day-header">2026-03-13 周五 · 21条提交</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">multi-provider web search + Jina Reader fetch</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">update .gitignore to add .docs</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">langsmith callback 防覆盖 + 加 optional dep</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">upgrade setup-python, add system deps, simplify test assertions</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">validate save_memory payload and raw-archive on repeated failure</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">fallback to tool_choice=auto when provider rejects forced function call</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">use -m nanobot for Windows compatibility</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">catch BaseException in MCP connection to handle CancelledError</span></div>
+    <div class="entry"><span class="emoji">📦</span><span class="cat-tag tag-发布">发布</span><span class="summary">bump wecom-aibot-sdk-python to &gt;=0.1.5</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">update web search configuration instruction</span></div>
+    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">correct BaiLian dashscope apiBase endpoint</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">chore: bump wecom-aibot-sdk-python to &gt;=0.1.5 (#1981)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(web): add configurable web search providers with key-missing fallback (#398)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">Integrate Langsmith for conversation tracking (#1920)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">docs: correct BaiLian dashscope apiBase endpoint (#1949)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(ci): add GitHub Actions workflow for test directory (#1916)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(memory): validate save_memory payload before persisting (#1810)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(restart): use -m nanobot for Windows compatibility (#1958)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">[紧急]修复we_chat在pyproject.toml配置的问题 (#1919)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(qq): restore plain text replies for legacy clients (#1941)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: catch BaseException in MCP connection to handle CancelledError (#1953)</span></div>
+  </div>
+</div>
+<div class="day-section">
+  <div class="day-header">2026-03-12 周四 · 23条提交</div>
+  <div class="entries">
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add GitHub Actions workflow for test directory</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">add support for Ollama local models in ProvidersConfig</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">update nanobot key features</span></div>
+    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">Add /restart command: restart the bot process from any channel</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">restore plain text replies for legacy clients</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">use explicit function name in tool_choice for DashScope compatibility</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">remove duplicate dim/arrow prefix in interactive progress line</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">improve local provider auto-selection and update docs for VolcEngine/BytePlus</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">preserve interactive CLI formatting for async subagent output</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">Simplify reply context extraction, fix slash commands broken by reply injec...</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">feishu bot mention detection — user_id can be None, not just empty string</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">raise tool result history limit to 16k and force save_memory in consolidation</span></div>
+    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">raise persisted tool result limit to 16k</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: preserve interactive CLI formatting for async subagent output (#1930)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat: Add VolcEngine and BytePlus (Pay-per-use &amp; Coding Plan) support (#1608)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(telegram): support reply-to-message context (text and media) (#1900)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(feishu): add global group mention policy (#1768)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">feat(channels): add "restart" command (#1751)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: force save_memory in consolidation (#1909)</span></div>
+    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix: wecom-aibot-sdk-python should use pypi version (#1897)</span></div>
+    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">Simplify feishu group_policy: default to mention, clean up mention detection</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">Integrate Langsmith for conversation tracking</span></div>
+    <div class="entry"><span class="emoji">📌</span><span class="cat-tag tag-其他">其他</span><span class="summary">[紧急]修复we_chat在pyproject.toml配置的问题</span></div>
+  </div>
+</div>
+<div class="day-section">
   <div class="day-header">2026-03-07 周六 · 26条提交</div>
   <div class="entries">
     <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">support group at messages without regressing msg_seq deduplication or start...</span></div>
@@ -283,27 +337,6 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(telegram): split long messages to avoid Message is too long error (#694)</span></div>
     <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(telegram): Slash commands failing access check due to missing username in sender_id (#701)</span></div>
     <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">simplify Slack markdown-to-mrkdwn conversion</span></div>
-  </div>
-</div>
-<div class="day-section">
-  <div class="day-header">2026-02-15 周日 · 5条提交</div>
-  <div class="day-summary">💡 今天主要围绕 Slack 消息处理功能进行了优化和完善，实现了 markdown 转换能力并解决了长消息发送失败的问题。通过重构将消息拆分逻辑提取为独立的辅助函数，提升了代码的可维护性。同时更新了项目文档结构和新闻模块，为项目的后续发展奠定了更好的基础。</div>
-  <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">实现 Slack 消息的 markdown 转换</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">更新新闻部分</span></div>
-    <div class="entry"><span class="emoji">🐛</span><span class="cat-tag tag-修复">修复</span><span class="summary">拆分长消息以避免消息过长错误</span></div>
-    <div class="entry"><span class="emoji">📝</span><span class="cat-tag tag-文档">文档</span><span class="summary">更新 readme 结构</span></div>
-    <div class="entry"><span class="emoji">♻️</span><span class="cat-tag tag-重构">重构</span><span class="summary">将消息拆分提取为辅助函数</span></div>
-  </div>
-</div>
-<div class="day-section">
-  <div class="day-header">2026-02-14 周六 · 4条提交</div>
-  <div class="day-summary">💡 今天主要围绕消息内容处理能力进行了增强，新增了本地化帖子内容格式支持和富文本消息提取功能。同时完成了飞书富文本内容接收的集成工作，并修复了 LiteLLM 调用时的 max_tokens 参数限制问题。整体聚焦在提升多平台内容兼容性和消息处理的稳定性上。</div>
-  <div class="entries">
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">支持直接和本地化帖子内容格式</span></div>
-    <div class="entry"><span class="emoji">✨</span><span class="cat-tag tag-新功能">新功能</span><span class="summary">添加富文本消息内容提取功能</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">fix(providers): 在调用 LiteLLM 前将 max_tokens 限制为 &gt;= 1 (#617)</span></div>
-    <div class="entry"><span class="emoji">🔀</span><span class="cat-tag tag-合并PR">合并PR</span><span class="summary">增加支持飞书富文本内容接收。Add support for receiving Feishu rich text content. (#629)</span></div>
   </div>
 </div>
 

@@ -1,62 +1,5 @@
 {
   "nanobot": {
-    "2026-02-15": {
-      "entries": [
-        {
-          "emoji": "✨",
-          "summary": "实现 Slack 消息的 markdown 转换",
-          "cat": "新功能"
-        },
-        {
-          "emoji": "✨",
-          "summary": "更新新闻部分",
-          "cat": "新功能"
-        },
-        {
-          "emoji": "🐛",
-          "summary": "拆分长消息以避免消息过长错误",
-          "cat": "修复"
-        },
-        {
-          "emoji": "📝",
-          "summary": "更新 readme 结构",
-          "cat": "文档"
-        },
-        {
-          "emoji": "♻️",
-          "summary": "将消息拆分提取为辅助函数",
-          "cat": "重构"
-        }
-      ],
-      "count": 5,
-      "summary": "今天主要围绕 Slack 消息处理功能进行了优化和完善，实现了 markdown 转换能力并解决了长消息发送失败的问题。通过重构将消息拆分逻辑提取为独立的辅助函数，提升了代码的可维护性。同时更新了项目文档结构和新闻模块，为项目的后续发展奠定了更好的基础。"
-    },
-    "2026-02-14": {
-      "entries": [
-        {
-          "emoji": "✨",
-          "summary": "支持直接和本地化帖子内容格式",
-          "cat": "新功能"
-        },
-        {
-          "emoji": "✨",
-          "summary": "添加富文本消息内容提取功能",
-          "cat": "新功能"
-        },
-        {
-          "emoji": "🔀",
-          "summary": "fix(providers): 在调用 LiteLLM 前将 max_tokens 限制为 >= 1 (#617)",
-          "cat": "合并PR"
-        },
-        {
-          "emoji": "🔀",
-          "summary": "增加支持飞书富文本内容接收。Add support for receiving Feishu rich text content. (#629)",
-          "cat": "合并PR"
-        }
-      ],
-      "count": 4,
-      "summary": "今天主要围绕消息内容处理能力进行了增强，新增了本地化帖子内容格式支持和富文本消息提取功能。同时完成了飞书富文本内容接收的集成工作，并修复了 LiteLLM 调用时的 max_tokens 参数限制问题。整体聚焦在提升多平台内容兼容性和消息处理的稳定性上。"
-    },
     "2026-02-16": {
       "entries": [
         {
@@ -994,50 +937,241 @@
       ],
       "count": 26,
       "summary": ""
+    },
+    "2026-03-13": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "multi-provider web search + Jina Reader fetch",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "update .gitignore to add .docs",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "langsmith callback 防覆盖 + 加 optional dep",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "upgrade setup-python, add system deps, simplify test assertions",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "validate save_memory payload and raw-archive on repeated failure",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "fallback to tool_choice=auto when provider rejects forced function call",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "use -m nanobot for Windows compatibility",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "catch BaseException in MCP connection to handle CancelledError",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📦",
+          "summary": "bump wecom-aibot-sdk-python to >=0.1.5",
+          "cat": "发布"
+        },
+        {
+          "emoji": "📝",
+          "summary": "update web search configuration instruction",
+          "cat": "文档"
+        },
+        {
+          "emoji": "📝",
+          "summary": "correct BaiLian dashscope apiBase endpoint",
+          "cat": "文档"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "chore: bump wecom-aibot-sdk-python to >=0.1.5 (#1981)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "feat(web): add configurable web search providers with key-missing fallback (#398)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "Integrate Langsmith for conversation tracking (#1920)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "docs: correct BaiLian dashscope apiBase endpoint (#1949)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "feat(ci): add GitHub Actions workflow for test directory (#1916)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(memory): validate save_memory payload before persisting (#1810)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(restart): use -m nanobot for Windows compatibility (#1958)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "[紧急]修复we_chat在pyproject.toml配置的问题 (#1919)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(qq): restore plain text replies for legacy clients (#1941)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix: catch BaseException in MCP connection to handle CancelledError (#1953)",
+          "cat": "合并PR"
+        }
+      ],
+      "count": 21,
+      "summary": ""
+    },
+    "2026-03-12": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "add GitHub Actions workflow for test directory",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add support for Ollama local models in ProvidersConfig",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "update nanobot key features",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "Add /restart command: restart the bot process from any channel",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "restore plain text replies for legacy clients",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "use explicit function name in tool_choice for DashScope compatibility",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "remove duplicate dim/arrow prefix in interactive progress line",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "improve local provider auto-selection and update docs for VolcEngine/BytePlus",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "preserve interactive CLI formatting for async subagent output",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "Simplify reply context extraction, fix slash commands broken by reply injec...",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "feishu bot mention detection — user_id can be None, not just empty string",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "raise tool result history limit to 16k and force save_memory in consolidation",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "raise persisted tool result limit to 16k",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix: preserve interactive CLI formatting for async subagent output (#1930)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "feat: Add VolcEngine and BytePlus (Pay-per-use & Coding Plan) support (#1608)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "feat(telegram): support reply-to-message context (text and media) (#1900)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "feat(feishu): add global group mention policy (#1768)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "feat(channels): add \"restart\" command (#1751)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix: force save_memory in consolidation (#1909)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix: wecom-aibot-sdk-python should use pypi version (#1897)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "Simplify feishu group_policy: default to mention, clean up mention detection",
+          "cat": "重构"
+        },
+        {
+          "emoji": "📌",
+          "summary": "Integrate Langsmith for conversation tracking",
+          "cat": "其他"
+        },
+        {
+          "emoji": "📌",
+          "summary": "[紧急]修复we_chat在pyproject.toml配置的问题",
+          "cat": "其他"
+        }
+      ],
+      "count": 23,
+      "summary": ""
     }
   },
   "openclaw": {
-    "2026-02-15": {
-      "entries": [
-        {
-          "emoji": "♻️",
-          "summary": "去重认证选择环境清理",
-          "cat": "重构"
-        },
-        {
-          "emoji": "♻️",
-          "summary": "简化配置 IO 环境快照",
-          "cat": "重构"
-        },
-        {
-          "emoji": "♻️",
-          "summary": "在网关 WebSocket 测试框架中重用环境快照",
-          "cat": "重构"
-        },
-        {
-          "emoji": "♻️",
-          "summary": "清理网关工具环境恢复",
-          "cat": "重构"
-        },
-        {
-          "emoji": "♻️",
-          "summary": "简化模型认证环境恢复",
-          "cat": "重构"
-        },
-        {
-          "emoji": "♻️",
-          "summary": "去重入门认证环境清理",
-          "cat": "重构"
-        },
-        {
-          "emoji": "♻️",
-          "summary": "重用环境快照助手",
-          "cat": "重构"
-        }
-      ],
-      "count": 7,
-      "summary": "今天 OpenClaw 项目主要围绕环境管理和认证模块进行了大规模重构优化。重点工作集中在简化配置 IO、网关 WebSocket 测试框架以及模型认证等核心组件的环境快照机制，通过去重和重用策略显著提升了环境恢复的效率。整体重构涉及认证选择、网关工具、入门认证等多个模块的环境清理逻辑，为系统的稳定性和可维护性奠定了更好的基础。"
-    },
     "2026-02-16": {
       "entries": [
         {
@@ -1950,6 +2084,208 @@
       ],
       "count": 17,
       "summary": ""
+    },
+    "2026-03-14": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "add parallels windows smoke harness",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add home relative path coverage",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add state migration coverage",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add device bootstrap coverage",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add gateway tls helper coverage",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "tighten target error hint coverage",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "tighten package tag prefix matching",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "note upcoming security fixes",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "resolve current ci regressions",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "preserve non-ASCII filenames in file uploads (#33912) (#34262)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "tighten bonjour whitespace error coverage",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "share models list forward compat fixtures",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "share gateway status auth fixtures",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "force-stop lingering gateway client sockets",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "share startup auth token fixtures",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "share schtasks gateway script fixture",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "share venice model response fixtures",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "support bun lockfile detection",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "tighten runtime status detail coverage",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "tighten package tag and channel summary coverage",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "harden bootstrap and transport ready coverage",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "retry Telegram inbound media downloads over IPv4 fallback (#45327)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "stop dashboard chat history reload storm (#45541)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📝",
+          "summary": "reorder changelog highlights by user impact",
+          "cat": "文档"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "share cli install helpers",
+          "cat": "重构"
+        },
+        {
+          "emoji": "📊",
+          "summary": "还有 63 条较次要的提交未展示",
+          "cat": "其他"
+        }
+      ],
+      "count": 26,
+      "summary": ""
+    },
+    "2026-03-13": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "add archive staging helper coverage",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "harden browser existing-session flows",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "tighten duration formatter coverage",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "tighten safe bin runtime policy coverage",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "UI: fix chat context notice icon sizing (#45533)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "tighten device identity helper coverage",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🧪",
+          "summary": "extract provider usage load coverage",
+          "cat": "测试"
+        },
+        {
+          "emoji": "🧪",
+          "summary": "tighten fetch helper coverage",
+          "cat": "测试"
+        },
+        {
+          "emoji": "🧪",
+          "summary": "tighten safe bin policy coverage",
+          "cat": "测试"
+        },
+        {
+          "emoji": "🧪",
+          "summary": "tighten channel summary coverage",
+          "cat": "测试"
+        },
+        {
+          "emoji": "🧪",
+          "summary": "tighten transport ready coverage",
+          "cat": "测试"
+        },
+        {
+          "emoji": "🧪",
+          "summary": "tighten brew helper coverage",
+          "cat": "测试"
+        }
+      ],
+      "count": 12,
+      "summary": ""
     }
   },
   "aionui": {
@@ -2003,47 +2339,6 @@
       ],
       "count": 9,
       "summary": "今天 AionUi 项目主要进行了版本维护和渠道功能优化工作。完成了 1.8.11 版本的发布，修复了 Telegram 和 Lark 渠道的响应操作按钮问题，同时处理了一些格式相关的 bug 修复。通过多个 PR 合并，项目文档也得到了相应更新，整体聚焦在稳定性提升和用户体验优化上。"
-    },
-    "2026-02-14": {
-      "entries": [
-        {
-          "emoji": "✨",
-          "summary": "更新钉钉文档以提升用户体验",
-          "cat": "新功能"
-        },
-        {
-          "emoji": "🐛",
-          "summary": "在流清理时解析 Promise 以防止调用者挂起",
-          "cat": "修复"
-        },
-        {
-          "emoji": "🐛",
-          "summary": "防止工具调用时 DingTalk AI Card 流中断",
-          "cat": "修复"
-        },
-        {
-          "emoji": "📦",
-          "summary": "版本升级至 1.8.10",
-          "cat": "发布"
-        },
-        {
-          "emoji": "🔀",
-          "summary": "chore: 版本升级至 1.8.10 (#878)",
-          "cat": "合并PR"
-        },
-        {
-          "emoji": "🔀",
-          "summary": "fix(channels): 防止工具调用时 DingTalk AI Card 流中断 (#877)",
-          "cat": "合并PR"
-        },
-        {
-          "emoji": "🔀",
-          "summary": "feat: 更新钉钉文档以提升用户体验 (#875)",
-          "cat": "合并PR"
-        }
-      ],
-      "count": 7,
-      "summary": "今天主要围绕钉钉集成功能进行了优化和修复工作，重点解决了 DingTalk AI Card 在工具调用时的流中断问题，并完善了相关文档以提升用户体验。同时修复了流清理过程中的 Promise 解析问题，防止调用者出现挂起状态。完成了这些改进后，项目版本升级至 1.8.10 并正式发布。"
     },
     "2026-02-16": {
       "entries": [
@@ -2531,6 +2826,243 @@
       ],
       "count": 18,
       "summary": ""
+    },
+    "2026-03-13": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "add retry mechanism for bun install in build job",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add post-merge steps to bump-version command",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "新增会话 Minimap 并增强主题缩略图预览 (#1154)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "register starOffice module, add missing keys, fix eof",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "merge main into pr-1205-main-compatible, resolve conflicts",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "filter cross-session events to prevent message contamination",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "optimize large text preview and unify limits",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "trim rendered chunk for large text tabs",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "reduce tab switch lag with large file tabs",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "reset agentAssistantFallbackText in sendMessage and improve readability",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "avoid UI freeze for large text preview",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "add chat.history fallback for Gateway-suppressed responses",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📦",
+          "summary": "bump version to 1.8.27",
+          "cat": "发布"
+        },
+        {
+          "emoji": "📦",
+          "summary": "improve bump-version workflow steps",
+          "cat": "发布"
+        },
+        {
+          "emoji": "📦",
+          "summary": "update bun.lock for dnd-kit dependencies",
+          "cat": "发布"
+        },
+        {
+          "emoji": "⚙️",
+          "summary": "merge duplicate themeCssSync imports into one line",
+          "cat": "配置"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "ci: add retry for bun install in build job (#1294)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "chore: add post-merge steps to bump-version command (#1293)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "chore: bump version to 1.8.27 (#1292)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(preview): optimize large text preview and unify limits (#1289)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(star-office): rebase #1205 on main and restore monitor UX (#1250)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(openclaw): fix gateway streaming reliability and add history fallback (#1256)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "chore: improve bump-version workflow steps (#1282)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "feat(conversation): add drag-and-drop sorting for conversation history (#1138)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "📌",
+          "summary": "format i18n-keys.d.ts with prettier",
+          "cat": "其他"
+        }
+      ],
+      "count": 25,
+      "summary": ""
+    },
+    "2026-03-12": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "add agent dropdown for workspace sessions",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "wait for URL hash to settle before proceeding in navigateTo",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "add loadingText prop and ARIA accessibility attributes",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "iflow/qwen connection failure due to Electron env pollution",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "align favicon delivery with renderer assets",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "remove stale workspace entries from expanded state",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "prevent workspace collapse arrow from re-expanding",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "apply prettier formatting fixes to drag-and-drop files",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "restore conversation history injection on session rebuild",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📦",
+          "summary": "bump version to 1.8.26",
+          "cat": "发布"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "chore: bump version to 1.8.26 (#1279)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(acp): iflow and qwen fail to start — Electron inherits stale Node.js env (#1278)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(i18n): real-time bidirectional language sync between desktop and WebUI (#1189)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(conversation): remove stale workspace entries from expanded state (#1271)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "feat(acp): add context usage indicator for ACP-connected CC and Codex sessions (#1207)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(gemini): restore conversation history injection on session rebuild (#1268)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🧪",
+          "summary": "remove E2E tests from PR workflow",
+          "cat": "测试"
+        },
+        {
+          "emoji": "🧪",
+          "summary": "format slashCommandMenu test with prettier",
+          "cat": "测试"
+        },
+        {
+          "emoji": "📌",
+          "summary": "remove unused i18next-browser-languagedetector dependency",
+          "cat": "其他"
+        },
+        {
+          "emoji": "📌",
+          "summary": "Codex/pr workspace last directory (#1265)",
+          "cat": "其他"
+        }
+      ],
+      "count": 20,
+      "summary": ""
     }
   },
   "moltis": {
@@ -2669,133 +3201,6 @@
       ],
       "count": 26,
       "summary": ""
-    },
-    "2026-02-15": {
-      "entries": [
-        {
-          "emoji": "🐛",
-          "summary": "引导 memory_save 指向主题文件以保持上下文精简",
-          "cat": "修复"
-        },
-        {
-          "emoji": "🐛",
-          "summary": "在系统提示中添加 memory_save 和 memory-anchor 提示",
-          "cat": "修复"
-        },
-        {
-          "emoji": "🐛",
-          "summary": "browser 工具在没有容器运行时时回退到主机",
-          "cat": "修复"
-        },
-        {
-          "emoji": "🐛",
-          "summary": "移除 clippy 标记的不必要路径限定",
-          "cat": "修复"
-        },
-        {
-          "emoji": "🐛",
-          "summary": "使用 cfg 门控 macOS 专用沙盒助手以修复 Linux CI 上的死代码错误",
-          "cat": "修复"
-        },
-        {
-          "emoji": "🐛",
-          "summary": "环境注入、沙盒恢复、UI 修复、提供商改进 (#108)",
-          "cat": "修复"
-        },
-        {
-          "emoji": "📦",
-          "summary": "更新部署模板到 0.8.34",
-          "cat": "发布"
-        },
-        {
-          "emoji": "📦",
-          "summary": "发布 0.8.35",
-          "cat": "发布"
-        },
-        {
-          "emoji": "📦",
-          "summary": "发布 0.8.34",
-          "cat": "发布"
-        },
-        {
-          "emoji": "📦",
-          "summary": "更新部署模板到 0.8.33",
-          "cat": "发布"
-        },
-        {
-          "emoji": "📦",
-          "summary": "发布 0.8.33",
-          "cat": "发布"
-        },
-        {
-          "emoji": "📦",
-          "summary": "发布 0.8.32",
-          "cat": "发布"
-        },
-        {
-          "emoji": "📦",
-          "summary": "发布 0.8.31",
-          "cat": "发布"
-        }
-      ],
-      "count": 13,
-      "summary": "今天 moltis 项目主要进行了稳定性修复和版本发布工作，集中解决了内存管理、系统提示、浏览器工具回退机制等核心功能问题。团队修复了跨平台兼容性问题，包括 macOS 沙盒助手的条件编译和 Linux CI 构建错误。同时完成了从 0.8.31 到 0.8.35 的连续版本迭代，表明项目正处于快速迭代优化阶段。"
-    },
-    "2026-02-14": {
-      "entries": [
-        {
-          "emoji": "✨",
-          "summary": "添加持久语音回退和启动密钥/绑定横幅日志",
-          "cat": "新功能"
-        },
-        {
-          "emoji": "✨",
-          "summary": "添加引导提供商模型计时日志",
-          "cat": "新功能"
-        },
-        {
-          "emoji": "🐛",
-          "summary": "将 MEMORY.md 注入系统提示并修复文件监视器",
-          "cat": "修复"
-        },
-        {
-          "emoji": "📦",
-          "summary": "更新部署模板到 0.8.29",
-          "cat": "发布"
-        },
-        {
-          "emoji": "📦",
-          "summary": "准备 0.8.29 版本发布",
-          "cat": "发布"
-        },
-        {
-          "emoji": "⚙️",
-          "summary": "移动端引导/聊天 UX 优化基于合并的主分支 (#126)",
-          "cat": "配置"
-        },
-        {
-          "emoji": "📝",
-          "summary": "更新 README",
-          "cat": "文档"
-        },
-        {
-          "emoji": "♻️",
-          "summary": "重新排序引导屏幕",
-          "cat": "重构"
-        },
-        {
-          "emoji": "📌",
-          "summary": "优化启动日志中设置代码横幅的强调显示",
-          "cat": "其他"
-        },
-        {
-          "emoji": "📌",
-          "summary": "使提供商模型保存注册表刷新异步化",
-          "cat": "其他"
-        }
-      ],
-      "count": 10,
-      "summary": "今天主要完成了 moltis 项目 0.8.29 版本的发布准备工作，重点优化了语音功能的持久化回退机制和启动流程的日志记录。同时对移动端的引导和聊天用户体验进行了优化，修复了文件监视器相关问题并完善了系统提示注入功能。此外还对提供商模型的异步处理和启动界面的视觉效果进行了细节改进。"
     },
     "2026-02-17": {
       "entries": [
@@ -3218,6 +3623,73 @@
       ],
       "count": 1,
       "summary": ""
+    },
+    "2026-03-13": {
+      "entries": [
+        {
+          "emoji": "🐛",
+          "summary": "persist aborted partial history (#418)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "fix QMD install instructions (#402)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "improve onboarding password autofill hints (#406)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "keep onboarding accessible after auth reset (#415)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "clarify cron setup modal copy (#409)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "strip HTML tags from plain fallback (#404)",
+          "cat": "修复"
+        }
+      ],
+      "count": 6,
+      "summary": ""
+    },
+    "2026-03-12": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "support generic provider env bootstrap (#401)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "support secret remote MCP URLs and headers (#416)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "harden apple container bootstrap execs (#405)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "address installation feedback from user testing (#398)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "support legacy memory embedding keys (#400)",
+          "cat": "修复"
+        }
+      ],
+      "count": 5,
+      "summary": ""
     }
   },
   "zeroclaw": {
@@ -3477,6 +3949,278 @@
         }
       ],
       "count": 20,
+      "summary": ""
+    },
+    "2026-03-13": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "支持交互会话状态持久化与恢复 (#3421)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add documentation hub translations for all 30 languages (#3450)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add dynamic node discovery and capability advertisement (#3448)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "preserve message draft in agent chat across view switches (#3443)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "electric blue dashboard restyle with animations and logo (#3445)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "on-demand MCP tool loading via tool_search (#3446)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add Windows support for shell tool_call execution (#3442)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add read markers and typing notifications (#3441)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add cron run history API and dashboard panel (#3440)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add WeCom (WeChat Enterprise) Bot Webhook channel (#3439)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add ack_reactions config to disable channel reactions (#3438)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add Debian-based container variant with shell tools (#3437)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add tool_filter_groups for per-turn MCP tool schema filtering (#3395)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add MCP subsystem tools layer with multi-transport client (#3394)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "support custom HTTP headers for LLM API requests (#3423)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "skip unparseable job rows instead of aborting the scheduler (#3405)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "use RELEASE_TOKEN for beta release tag creation (#3366)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "support custom API path suffix for custom: endpoints (#3447)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "subscribe to thread message events in polling mode (#3435)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "expose MCP tools to delegate subagents (#3436)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "support verbose backend selection (#3374)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "respect allowed_roots in tool-level path pre-checks (#3434)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "resolve Matrix channel compilation errors with channel-matrix feature (#3433)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "unblock strict 32-bit no-default-features builds (#3375)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "use cfg-conditional AtomicU32 fallback for 32-bit targets in mcp_client (#3432)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📊",
+          "summary": "还有 16 条较次要的提交未展示",
+          "cat": "其他"
+        }
+      ],
+      "count": 26,
+      "summary": ""
+    },
+    "2026-03-12": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "make HTTP request timeout configurable (#2926)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add tool_call_dedup_exempt config to bypass within-turn dedup (#2978)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add `channel send` CLI command for outbound messages (#2907)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add Azure OpenAI provider support (#3246)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add 32-bit system support via feature gates (#3245)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add auto-expanding multiline chat composer (#3185)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add webhook-audit builtin hook (#3212)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add channel-feishu feature alias for channel-lark (#3105)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add vision support for Anthropic provider (#3177)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add per-message copy button on hover (#3178)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "make email subject configurable (#3190)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add --reinit flag to prevent accidental config overwrite (#3102)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add features documentation (#3107)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add branching model section to CONTRIBUTING.md (#3237)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "pin release workflows to ubuntu-latest to fix glibc cache mismatch",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "prevent first-turn photo duplication in memory context (#2403)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "allow absolute paths within workspace when workspace_only is set (#2880)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "handle websocket Ping frames and read errors in Discord gateway",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "restore multi-source WebSocket auth token extraction (#2884)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "remove shadowed variable bindings in test functions (#2443)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "use byte-level stdin reads to prevent CJK input crash",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "strip URLs before high-entropy token extraction (#3064) (#3321)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "resolve Brave API key lazily with decryption support (#3078) (#3320)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "use char-boundary-safe slicing in scrub_credentials (#3024) (#3319)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "drop MutexGuard before .await in WhatsApp Web listen (#3315)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📊",
+          "summary": "还有 31 条较次要的提交未展示",
+          "cat": "其他"
+        }
+      ],
+      "count": 26,
       "summary": ""
     }
   },
@@ -4165,6 +4909,183 @@
         }
       ],
       "count": 26,
+      "summary": ""
+    },
+    "2026-03-13": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "#434 added NetBSD support for picoclaw, but since then, picoclaw-launcher{-...",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "use a global WebSocket for Pico chat sessions (#1507)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add restart-required state for default model changes (#1499)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add NetBSD to the list of released platforms (#434)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add model command to set default model (#1250)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "✨",
+          "summary": "add ModelScope as OpenAI-compatible provider (#1486)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "populate account bindings metadata (#1456)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "Fix the issue where the cursor moves inaccurately left and right after ente...",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "safety guard incorrectly blocks commands with URLs (#1254)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "Fix/Add warning tips for MCP initialization when no valid servers configure...",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "prevent allowlist ID entries from matching usernames (#1406)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "add anthropic-messages protocol for native Anthropic Messages API support  ...",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "fix 3rd party logger not correct output (#1482)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "⚙️",
+          "summary": "make gateway aware of config.json change (#1187)",
+          "cat": "配置"
+        },
+        {
+          "emoji": "📝",
+          "summary": "update volcengine doc (#1481)",
+          "cat": "文档"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(skill): tighten weather location matching guidance (#1441)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(web): restore the last active chat session (#1385)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix(web): correct SVG MIME type to image/svg+xml (#1429)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "♻️",
+          "summary": "split gateway logs out of the status endpoint (#1504)",
+          "cat": "重构"
+        },
+        {
+          "emoji": "📌",
+          "summary": "enhance skill installer (#1252)",
+          "cat": "其他"
+        }
+      ],
+      "count": 20,
+      "summary": ""
+    },
+    "2026-03-12": {
+      "entries": [
+        {
+          "emoji": "✨",
+          "summary": "update model name and add VolcEngine coding plan (#1412)",
+          "cat": "新功能"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "tighten weather location matching guidance",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "limit webhook request body size to prevent DoS (#1413)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "stream inbound media downloads to disk (#1436)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "correct SVG MIME type to image/svg+xml",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "render ansi logs with wrapped lines (#1425)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "reuse single nightly tag, no per-day tags (#1415)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "allow horizontal scroll in raw json editor (#1386)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
+          "summary": "stop stale typing loops on overwrite (#1392)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "📝",
+          "summary": "update wechat qrcode (#1394)",
+          "cat": "文档"
+        },
+        {
+          "emoji": "📝",
+          "summary": "remove stale TOOLS.md references (#1388)",
+          "cat": "文档"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "refactor(web): redesign config pages and extract raw JSON editor (#1421)",
+          "cat": "合并PR"
+        },
+        {
+          "emoji": "🔀",
+          "summary": "fix: keep raw JSON editor full-height in Firefox (#1377)",
+          "cat": "合并PR"
+        }
+      ],
+      "count": 13,
       "summary": ""
     }
   }
