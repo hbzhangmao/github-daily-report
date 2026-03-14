@@ -2114,6 +2114,11 @@
         },
         {
           "emoji": "🐛",
+          "summary": "keep oversized chat replies readable (#45559)",
+          "cat": "修复"
+        },
+        {
+          "emoji": "🐛",
           "summary": "tighten target error hint coverage",
           "cat": "修复"
         },
@@ -2208,13 +2213,8 @@
           "cat": "文档"
         },
         {
-          "emoji": "♻️",
-          "summary": "share cli install helpers",
-          "cat": "重构"
-        },
-        {
           "emoji": "📊",
-          "summary": "还有 63 条较次要的提交未展示",
+          "summary": "还有 66 条较次要的提交未展示",
           "cat": "其他"
         }
       ],
@@ -2223,11 +2223,6 @@
     },
     "2026-03-13": {
       "entries": [
-        {
-          "emoji": "✨",
-          "summary": "add archive staging helper coverage",
-          "cat": "新功能"
-        },
         {
           "emoji": "🐛",
           "summary": "harden browser existing-session flows",
@@ -2246,11 +2241,6 @@
         {
           "emoji": "🐛",
           "summary": "UI: fix chat context notice icon sizing (#45533)",
-          "cat": "修复"
-        },
-        {
-          "emoji": "🐛",
-          "summary": "tighten device identity helper coverage",
           "cat": "修复"
         },
         {
@@ -2277,14 +2267,9 @@
           "emoji": "🧪",
           "summary": "tighten transport ready coverage",
           "cat": "测试"
-        },
-        {
-          "emoji": "🧪",
-          "summary": "tighten brew helper coverage",
-          "cat": "测试"
         }
       ],
-      "count": 12,
+      "count": 9,
       "summary": ""
     }
   },
